@@ -5,6 +5,27 @@ const pct=v=>Number.isFinite(v)?(v>=0?"+":"")+v.toFixed(1)+"%":"—";
 const money=v=>Number.isFinite(v)?"$"+v.toFixed(v>=100?2:3):"—";
 const zoneText=z=>z&&Number.isFinite(z.low)&&Number.isFinite(z.high)?money(z.low)+"–"+money(z.high):"—";
 function badge(text,type=""){return '<span class="badge '+type+'">'+text+'</span>'}
+function swingView(r){
+  const dd=r.demand_distance_pct, sd=r.supply_distance_pct, rsi=r.rsi;
+  const trendBull=r.trend==="bullish";
+  const weeklyBull=r.weekly_trend==="bullish";
+  const fresh=(r.demand_retests??99)<=1;
+  const strong=(r.departure_atr??0)>=1.8;
+  const nearDemand=dd!=null&&dd<=1.5;
+  const enoughRoom=sd==null||sd>=3.5;
+  const rsiOk=rsi!=null&&rsi>=40&&rsi<=70;
+
+  if(r.score>=82&&nearDemand&&fresh&&strong&&trendBull&&weeklyBull&&enoughRoom&&rsiOk){
+    return {cls:"favorable",label:"Looks favorable now",detail:"Near demand, fresh/strong zone, bullish daily + weekly trend, and reasonable room before supply."};
+  }
+  if(sd!=null&&sd<=2){
+    return {cls:"caution",label:"Watch — supply is close",detail:"The setup ranks well, but nearby supply limits the swing-trade room right now."};
+  }
+  if(r.score>=72&&dd!=null&&dd<=3&&fresh&&(trendBull||weeklyBull)){
+    return {cls:"watch",label:"Watch for entry",detail:"Promising setup, but I’d want a cleaner reaction/confirmation from demand before treating it as a stronger swing entry."};
+  }
+  return {cls:"avoid",label:"Not attractive right now",detail:"The current combination of zone location, trend, freshness, RSI and room to supply is not strong enough for a high-confidence swing setup."};
+}
 
 function render(){
   const q=search.value.trim().toLowerCase();
@@ -26,6 +47,14 @@ function render(){
     n.querySelector(".demand").textContent=zoneText(r.demand_zone);
     n.querySelector(".supply").textContent=zoneText(r.supply_zone);
     n.querySelector(".rsi").textContent=r.rsi==null?"—":r.rsi.toFixed(0);
+
+    const swing=n.querySelector(".swing-view");
+    if(i===0){
+      const sv=swingView(r);
+      swing.classList.remove("hidden");
+      swing.classList.add(sv.cls);
+      swing.innerHTML='<span class="swing-kicker">SWING VIEW • RIGHT NOW</span><b>'+sv.label+'</b><small>'+sv.detail+'</small>';
+    }
 
     const b=[];
     if(r.demand_distance_pct!=null&&r.demand_distance_pct<=1)b.push(badge("At demand","positive"));
