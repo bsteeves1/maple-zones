@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T21:52:05.688586+00:00",
+  "generated_at": "2026-09-30T22:04:03.958891+00:00",
   "method": "daily supply-demand heuristic v3 broad-universe",
   "universe_size": 553,
   "symbols_scored": 436,
@@ -13552,6 +13552,44 @@
       ]
     },
     {
+      "symbol": "HISA.NE",
+      "name": "Evolve High Interest Savings Account Fund",
+      "type": "etf",
+      "price": 50.02,
+      "score": 40.0,
+      "rsi": 40.7,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 0.12,
+      "demand_zone": {
+        "low": 50.0,
+        "high": 50.02000045776367,
+        "i": 372,
+        "departure_atr": 1.83,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 50.08000183105469,
+        "high": 50.09000015258789,
+        "i": 350,
+        "departure_atr": 6.79,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 4,
+      "departure_atr": 1.83,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bearish"
+      ]
+    },
+    {
       "symbol": "NA.TO",
       "name": "National Bank of Canada",
       "type": "stock",
@@ -15320,43 +15358,6 @@
       "reasons": [
         "No valid nearby demand zone found",
         "Good room before opposing supply",
-        "Daily trend is bearish",
-        "Weekly trend is bearish"
-      ]
-    },
-    {
-      "symbol": "HISA.NE",
-      "name": "Evolve High Interest Savings Account Fund",
-      "type": "etf",
-      "price": 50.02,
-      "score": 24.9,
-      "rsi": 42.9,
-      "trend": "bearish",
-      "weekly_trend": "bearish",
-      "demand_distance_pct": 0.02,
-      "supply_distance_pct": 0.12,
-      "demand_zone": {
-        "low": 50.0,
-        "high": 50.0099983215332,
-        "i": 20,
-        "departure_atr": 1.45,
-        "retests": 18,
-        "valid": true
-      },
-      "supply_zone": {
-        "low": 50.08000183105469,
-        "high": 50.09000015258789,
-        "i": 350,
-        "departure_atr": 6.79,
-        "retests": 1,
-        "valid": true
-      },
-      "demand_retests": 18,
-      "demand_age_bars": 355,
-      "departure_atr": 1.45,
-      "reasons": [
-        "Price is sitting at/very near demand",
-        "Very close to opposing supply",
         "Daily trend is bearish",
         "Weekly trend is bearish"
       ]
