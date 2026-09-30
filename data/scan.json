@@ -1,18 +1,248 @@
 {
-  "generated_at": "2026-09-30T15:27:25.926617+00:00",
-  "method": "daily supply-demand heuristic v2",
+  "generated_at": "2026-09-30T15:35:14.767028+00:00",
+  "method": "daily supply-demand heuristic v3 broad-universe",
+  "universe_size": 245,
+  "symbols_scored": 188,
   "results": [
+    {
+      "symbol": "WN.TO",
+      "name": "George Weston",
+      "type": "stock",
+      "price": 101.35,
+      "score": 96.6,
+      "rsi": 54.7,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 0.37,
+      "supply_distance_pct": 4.46,
+      "demand_zone": {
+        "low": 99.77999877929688,
+        "high": 100.97000122070312,
+        "i": 373,
+        "departure_atr": 1.3,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 105.87000274658203,
+        "high": 107.94000244140625,
+        "i": 334,
+        "departure_atr": 1.74,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 4,
+      "departure_atr": 1.3,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "GFL.TO",
+      "name": "GFL Environmental",
+      "type": "stock",
+      "price": 59.85,
+      "score": 92.5,
+      "rsi": 59.9,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 1.75,
+      "supply_distance_pct": 3.44,
+      "demand_zone": {
+        "low": 57.29999923706055,
+        "high": 58.79999923706055,
+        "i": 367,
+        "departure_atr": 2.86,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 61.90999984741211,
+        "high": 62.959999084472656,
+        "i": 255,
+        "departure_atr": 1.78,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 10,
+      "departure_atr": 2.86,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Strong departure from demand",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "BNS.TO",
+      "name": "Bank of Nova Scotia",
+      "type": "stock",
+      "price": 130.37,
+      "score": 88.7,
+      "rsi": 57.2,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 0.13,
+      "supply_distance_pct": 1.43,
+      "demand_zone": {
+        "low": 128.4499969482422,
+        "high": 130.1999969482422,
+        "i": 367,
+        "departure_atr": 2.01,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 132.24000549316406,
+        "high": 134.5,
+        "i": 371,
+        "departure_atr": 1.49,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 10,
+      "departure_atr": 2.01,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "XGRO.TO",
+      "name": "iShares Core Growth ETF Portfolio",
+      "type": "etf",
+      "price": 38.68,
+      "score": 87.8,
+      "rsi": 60.1,
+      "trend": "mixed",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 0.7,
+      "supply_distance_pct": 1.09,
+      "demand_zone": {
+        "low": 38.06999969482422,
+        "high": 38.40999984741211,
+        "i": 367,
+        "departure_atr": 2.96,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 39.099998474121094,
+        "high": 39.2400016784668,
+        "i": 371,
+        "departure_atr": 2.32,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 10,
+      "departure_atr": 2.96,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "VGRO.TO",
+      "name": "Vanguard Growth ETF Portfolio",
+      "type": "etf",
+      "price": 47.86,
+      "score": 87.7,
+      "rsi": 62.7,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 1.04,
+      "supply_distance_pct": 0.88,
+      "demand_zone": {
+        "low": 46.95000076293945,
+        "high": 47.36000061035156,
+        "i": 367,
+        "departure_atr": 3.12,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 48.279998779296875,
+        "high": 48.459999084472656,
+        "i": 371,
+        "departure_atr": 1.94,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 10,
+      "departure_atr": 3.12,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bullish"
+      ]
+    },
+    {
+      "symbol": "ZUE.TO",
+      "name": "BMO S&P 500 Hedged to CAD Index ETF",
+      "type": "etf",
+      "price": 102.73,
+      "score": 87.6,
+      "rsi": 57.5,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 1.06,
+      "supply_distance_pct": 0.37,
+      "demand_zone": {
+        "low": 100.38999938964844,
+        "high": 101.63999938964844,
+        "i": 367,
+        "departure_atr": 3.77,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 103.11000061035156,
+        "high": 103.83000183105469,
+        "i": 355,
+        "departure_atr": 2.38,
+        "retests": 3,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 10,
+      "departure_atr": 3.77,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bullish"
+      ]
+    },
     {
       "symbol": "XEQT.TO",
       "name": "iShares Core Equity ETF Portfolio",
       "type": "etf",
-      "price": 45.75,
-      "score": 87.6,
-      "rsi": 63.1,
+      "price": 45.78,
+      "score": 87.2,
+      "rsi": 63.4,
       "trend": "bullish",
       "weekly_trend": "bullish",
-      "demand_distance_pct": 1.07,
-      "supply_distance_pct": 0.98,
+      "demand_distance_pct": 1.14,
+      "supply_distance_pct": 0.92,
       "demand_zone": {
         "low": 44.7400016784668,
         "high": 45.2599983215332,
@@ -41,15 +271,542 @@
       ]
     },
     {
+      "symbol": "VSP.TO",
+      "name": "Vanguard S&P 500 Index ETF CAD-Hedged",
+      "type": "etf",
+      "price": 120.52,
+      "score": 87.0,
+      "rsi": 58.1,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 1.16,
+      "supply_distance_pct": 0.3,
+      "demand_zone": {
+        "low": 117.5999984741211,
+        "high": 119.12000274658203,
+        "i": 367,
+        "departure_atr": 3.45,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 120.87999725341797,
+        "high": 121.69999694824219,
+        "i": 355,
+        "departure_atr": 1.9,
+        "retests": 3,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 10,
+      "departure_atr": 3.45,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bullish"
+      ]
+    },
+    {
+      "symbol": "ZEQT.TO",
+      "name": "BMO All-Equity ETF",
+      "type": "etf",
+      "price": 23.57,
+      "score": 86.6,
+      "rsi": 60.3,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 1.23,
+      "supply_distance_pct": 0.04,
+      "demand_zone": {
+        "low": 23.020000457763672,
+        "high": 23.280000686645508,
+        "i": 367,
+        "departure_atr": 3.61,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 23.579999923706055,
+        "high": 24.06999969482422,
+        "i": 370,
+        "departure_atr": 1.85,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 10,
+      "departure_atr": 3.61,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bullish"
+      ]
+    },
+    {
+      "symbol": "IFP.TO",
+      "name": "Interfor",
+      "type": "stock",
+      "price": 14.72,
+      "score": 86.4,
+      "rsi": 57.0,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 0.27,
+      "supply_distance_pct": 1.15,
+      "demand_zone": {
+        "low": 14.260000228881836,
+        "high": 14.680000305175781,
+        "i": 370,
+        "departure_atr": 1.2,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 14.890000343322754,
+        "high": 15.279999732971191,
+        "i": 350,
+        "departure_atr": 1.8,
+        "retests": 4,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 7,
+      "departure_atr": 1.2,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Limited room before supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "VEQT.TO",
+      "name": "Vanguard All-Equity ETF Portfolio",
+      "type": "etf",
+      "price": 62.36,
+      "score": 86.0,
+      "rsi": 64.4,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 1.33,
+      "supply_distance_pct": 0.79,
+      "demand_zone": {
+        "low": 60.849998474121094,
+        "high": 61.529998779296875,
+        "i": 367,
+        "departure_atr": 3.03,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 62.849998474121094,
+        "high": 63.130001068115234,
+        "i": 371,
+        "departure_atr": 1.77,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 10,
+      "departure_atr": 3.03,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bullish"
+      ]
+    },
+    {
+      "symbol": "XSP.TO",
+      "name": "iShares Core S&P 500 Index ETF CAD-Hedged",
+      "type": "etf",
+      "price": 77.37,
+      "score": 85.2,
+      "rsi": 60.0,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 1.46,
+      "supply_distance_pct": 0.04,
+      "demand_zone": {
+        "low": 75.27999877929688,
+        "high": 76.23999786376953,
+        "i": 367,
+        "departure_atr": 3.56,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 77.4000015258789,
+        "high": 77.94999694824219,
+        "i": 355,
+        "departure_atr": 2.1,
+        "retests": 3,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 10,
+      "departure_atr": 3.56,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bullish"
+      ]
+    },
+    {
+      "symbol": "ZEM.TO",
+      "name": "BMO MSCI Emerging Markets Index ETF",
+      "type": "etf",
+      "price": 34.06,
+      "score": 84.8,
+      "rsi": 56.2,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 2.38,
+      "supply_distance_pct": 1.59,
+      "demand_zone": {
+        "low": 32.849998474121094,
+        "high": 33.25,
+        "i": 366,
+        "departure_atr": 2.08,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 34.599998474121094,
+        "high": 35.0099983215332,
+        "i": 371,
+        "departure_atr": 1.45,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 11,
+      "departure_atr": 2.08,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "Daily trend is bullish"
+      ]
+    },
+    {
+      "symbol": "ETHY.TO",
+      "name": "Purpose Ether Yield ETF",
+      "type": "etf",
+      "price": 1.67,
+      "score": 84.0,
+      "rsi": 63.2,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 6.59,
+      "supply_distance_pct": 4.19,
+      "demand_zone": {
+        "low": 1.4700000286102295,
+        "high": 1.559999942779541,
+        "i": 366,
+        "departure_atr": 2.72,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 1.7400000095367432,
+        "high": 1.7999999523162842,
+        "i": 282,
+        "departure_atr": 3.3,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 11,
+      "departure_atr": 2.72,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "DCBO.TO",
+      "name": "Docebo",
+      "type": "stock",
+      "price": 32.89,
+      "score": 84.0,
+      "rsi": 53.3,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 12.71,
+      "supply_distance_pct": 3.56,
+      "demand_zone": {
+        "low": 28.1299991607666,
+        "high": 28.709999084472656,
+        "i": 339,
+        "departure_atr": 3.17,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 34.060001373291016,
+        "high": 35.599998474121094,
+        "i": 366,
+        "departure_atr": 1.24,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 38,
+      "departure_atr": 3.17,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "ETHH-B.TO",
+      "name": "Purpose Ether ETF",
+      "type": "etf",
+      "price": 12.71,
+      "score": 83.0,
+      "rsi": 69.6,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 9.28,
+      "supply_distance_pct": 8.34,
+      "demand_zone": {
+        "low": 10.970000267028809,
+        "high": 11.529999732971191,
+        "i": 366,
+        "departure_atr": 3.29,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 13.770000457763672,
+        "high": 13.850000381469727,
+        "i": 208,
+        "departure_atr": 5.81,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 11,
+      "departure_atr": 3.29,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Good room before opposing supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "FM.TO",
+      "name": "First Quantum Minerals",
+      "type": "stock",
+      "price": 31.1,
+      "score": 82.6,
+      "rsi": 26.8,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 45.66,
+      "demand_zone": {
+        "low": 30.25,
+        "high": 31.329999923706055,
+        "i": 249,
+        "departure_atr": 2.28,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 45.29999923706055,
+        "high": 46.849998474121094,
+        "i": 361,
+        "departure_atr": 1.69,
+        "retests": 3,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 128,
+      "departure_atr": 2.28,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand",
+        "Good room before opposing supply"
+      ]
+    },
+    {
+      "symbol": "XEC.TO",
+      "name": "iShares Core MSCI Emerging Markets IMI Index ETF",
+      "type": "etf",
+      "price": 45.06,
+      "score": 82.1,
+      "rsi": 58.2,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 3.15,
+      "supply_distance_pct": 1.44,
+      "demand_zone": {
+        "low": 43.31999969482422,
+        "high": 43.63999938964844,
+        "i": 366,
+        "departure_atr": 2.33,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 45.709999084472656,
+        "high": 46.11000061035156,
+        "i": 371,
+        "departure_atr": 1.88,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 11,
+      "departure_atr": 2.33,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "CS.TO",
+      "name": "Capstone Copper",
+      "type": "stock",
+      "price": 14.15,
+      "score": 80.9,
+      "rsi": 45.1,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 1.13,
+      "supply_distance_pct": 10.46,
+      "demand_zone": {
+        "low": 13.329999923706055,
+        "high": 13.989999771118164,
+        "i": 367,
+        "departure_atr": 1.66,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 15.630000114440918,
+        "high": 16.670000076293945,
+        "i": 361,
+        "departure_atr": 2.91,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 10,
+      "departure_atr": 1.66,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand has only one retest",
+        "Good room before opposing supply",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "COPP.TO",
+      "name": "Global X Copper Producers Index ETF",
+      "type": "etf",
+      "price": 60.77,
+      "score": 80.8,
+      "rsi": 46.0,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 1.0,
+      "supply_distance_pct": 5.32,
+      "demand_zone": {
+        "low": 58.25,
+        "high": 60.15999984741211,
+        "i": 367,
+        "departure_atr": 1.8,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 64.0,
+        "high": 65.16000366210938,
+        "i": 371,
+        "departure_atr": 1.42,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 10,
+      "departure_atr": 1.8,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "CTC-A.TO",
+      "name": "Canadian Tire",
+      "type": "stock",
+      "price": 192.96,
+      "score": 80.5,
+      "rsi": 58.8,
+      "trend": "mixed",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 1.88,
+      "supply_distance_pct": 3.74,
+      "demand_zone": {
+        "low": 185.47000122070312,
+        "high": 189.3300018310547,
+        "i": 366,
+        "departure_atr": 1.67,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 200.17999267578125,
+        "high": 204.36000061035156,
+        "i": 348,
+        "departure_atr": 1.84,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 11,
+      "departure_atr": 1.67,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand has only one retest",
+        "Weekly trend agrees bullish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
       "symbol": "VFV.TO",
       "name": "Vanguard S&P 500 Index ETF",
       "type": "etf",
-      "price": 194.1,
-      "score": 80.3,
-      "rsi": 75.3,
+      "price": 194.2,
+      "score": 80.0,
+      "rsi": 75.4,
       "trend": "bullish",
       "weekly_trend": "bullish",
-      "demand_distance_pct": 2.94,
+      "demand_distance_pct": 2.99,
       "supply_distance_pct": null,
       "demand_zone": {
         "low": 186.75,
@@ -72,15 +829,51 @@
       ]
     },
     {
+      "symbol": "OR.TO",
+      "name": "Osisko Gold Royalties",
+      "type": "stock",
+      "price": 48.5,
+      "score": 80.0,
+      "rsi": 45.7,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 5.03,
+      "demand_zone": {
+        "low": 48.2400016784668,
+        "high": 49.400001525878906,
+        "i": 365,
+        "departure_atr": 1.45,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 50.939998626708984,
+        "high": 53.099998474121094,
+        "i": 371,
+        "departure_atr": 1.86,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 12,
+      "departure_atr": 1.45,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
       "symbol": "ZSP.TO",
       "name": "BMO S&P 500 Index ETF",
       "type": "etf",
-      "price": 119.86,
-      "score": 79.8,
-      "rsi": 75.4,
+      "price": 119.97,
+      "score": 79.2,
+      "rsi": 75.7,
       "trend": "bullish",
       "weekly_trend": "bullish",
-      "demand_distance_pct": 3.04,
+      "demand_distance_pct": 3.13,
       "supply_distance_pct": null,
       "demand_zone": {
         "low": 115.2300033569336,
@@ -134,15 +927,707 @@
       ]
     },
     {
+      "symbol": "XUS.TO",
+      "name": "iShares Core S&P 500 Index ETF",
+      "type": "etf",
+      "price": 67.74,
+      "score": 78.6,
+      "rsi": 77.2,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 3.23,
+      "supply_distance_pct": null,
+      "demand_zone": {
+        "low": 64.98999786376953,
+        "high": 65.55000305175781,
+        "i": 367,
+        "departure_atr": 4.38,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": null,
+      "demand_retests": 0,
+      "demand_age_bars": 10,
+      "departure_atr": 4.38,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish",
+        "RSI is stretched"
+      ]
+    },
+    {
+      "symbol": "ZGRO.TO",
+      "name": "BMO Growth ETF",
+      "type": "etf",
+      "price": 19.485,
+      "score": 78.3,
+      "rsi": 59.8,
+      "trend": "mixed",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 0.95,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 19.15999984741211,
+        "high": 19.299999237060547,
+        "i": 367,
+        "departure_atr": 3.17,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 19.469999313354492,
+        "high": 19.790000915527344,
+        "i": 303,
+        "departure_atr": 2.04,
+        "retests": 8,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 10,
+      "departure_atr": 3.17,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "GWO.TO",
+      "name": "Great-West Lifeco",
+      "type": "stock",
+      "price": 89.94,
+      "score": 76.4,
+      "rsi": 44.6,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 1.43,
+      "supply_distance_pct": null,
+      "demand_zone": {
+        "low": 87.5199966430664,
+        "high": 88.6500015258789,
+        "i": 357,
+        "departure_atr": 2.65,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": null,
+      "demand_retests": 0,
+      "demand_age_bars": 20,
+      "departure_atr": 2.65,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand"
+      ]
+    },
+    {
+      "symbol": "XAW.TO",
+      "name": "iShares Core MSCI All Country World ex Canada Index ETF",
+      "type": "etf",
+      "price": 59.73,
+      "score": 76.1,
+      "rsi": 68.7,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 1.77,
+      "supply_distance_pct": 0.23,
+      "demand_zone": {
+        "low": 57.790000915527344,
+        "high": 58.66999816894531,
+        "i": 367,
+        "departure_atr": 2.42,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 59.869998931884766,
+        "high": 60.02000045776367,
+        "i": 371,
+        "departure_atr": 1.5,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 10,
+      "departure_atr": 2.42,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bullish"
+      ]
+    },
+    {
+      "symbol": "IGM.TO",
+      "name": "IGM Financial",
+      "type": "stock",
+      "price": 83.29,
+      "score": 76.0,
+      "rsi": 38.9,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 4.9,
+      "demand_zone": {
+        "low": 81.87999725341797,
+        "high": 84.3499984741211,
+        "i": 334,
+        "departure_atr": 4.83,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 87.37000274658203,
+        "high": 90.56999969482422,
+        "i": 364,
+        "departure_atr": 2.15,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 43,
+      "departure_atr": 4.83,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand"
+      ]
+    },
+    {
+      "symbol": "TFPM.TO",
+      "name": "Triple Flag Precious Metals",
+      "type": "stock",
+      "price": 43.75,
+      "score": 75.9,
+      "rsi": 42.2,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0.85,
+      "supply_distance_pct": 4.98,
+      "demand_zone": {
+        "low": 42.63999938964844,
+        "high": 43.380001068115234,
+        "i": 347,
+        "departure_atr": 2.81,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 45.93000030517578,
+        "high": 47.869998931884766,
+        "i": 371,
+        "departure_atr": 1.86,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 30,
+      "departure_atr": 2.81,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Strong departure from demand"
+      ]
+    },
+    {
+      "symbol": "XMA.TO",
+      "name": "iShares S&P/TSX Capped Materials Index ETF",
+      "type": "etf",
+      "price": 45.76,
+      "score": 74.7,
+      "rsi": 39.5,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0.22,
+      "supply_distance_pct": 6.08,
+      "demand_zone": {
+        "low": 45.06999969482422,
+        "high": 45.65999984741211,
+        "i": 347,
+        "departure_atr": 4.17,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 48.540000915527344,
+        "high": 50.33000183105469,
+        "i": 371,
+        "departure_atr": 2.29,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 30,
+      "departure_atr": 4.17,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand"
+      ]
+    },
+    {
+      "symbol": "WPM.TO",
+      "name": "Wheaton Precious Metals",
+      "type": "stock",
+      "price": 191.07,
+      "score": 74.1,
+      "rsi": 36.1,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 2.81,
+      "supply_distance_pct": 8.86,
+      "demand_zone": {
+        "low": 183.0500030517578,
+        "high": 185.6999969482422,
+        "i": 347,
+        "departure_atr": 4.7,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 208.0,
+        "high": 217.88999938964844,
+        "i": 371,
+        "departure_atr": 2.1,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 30,
+      "departure_atr": 4.7,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Good room before opposing supply"
+      ]
+    },
+    {
+      "symbol": "VXC.TO",
+      "name": "Vanguard FTSE Global All Cap ex Canada Index ETF",
+      "type": "etf",
+      "price": 85.8,
+      "score": 73.6,
+      "rsi": 66.7,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 2.24,
+      "supply_distance_pct": 0.58,
+      "demand_zone": {
+        "low": 83.23999786376953,
+        "high": 83.87999725341797,
+        "i": 367,
+        "departure_atr": 4.04,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 86.30000305175781,
+        "high": 86.51000213623047,
+        "i": 371,
+        "departure_atr": 1.51,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 10,
+      "departure_atr": 4.04,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bullish"
+      ]
+    },
+    {
+      "symbol": "XEF.TO",
+      "name": "iShares Core MSCI EAFE IMI Index ETF",
+      "type": "etf",
+      "price": 52.16,
+      "score": 73.5,
+      "rsi": 57.9,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 0.58,
+      "supply_distance_pct": 0.56,
+      "demand_zone": {
+        "low": 51.33000183105469,
+        "high": 51.86000061035156,
+        "i": 367,
+        "departure_atr": 1.44,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 52.45000076293945,
+        "high": 52.75,
+        "i": 360,
+        "departure_atr": 3.64,
+        "retests": 2,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 10,
+      "departure_atr": 1.44,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Very close to opposing supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "HYLD.TO",
+      "name": "Hamilton Enhanced U.S. Covered Call ETF",
+      "type": "etf",
+      "price": 15.98,
+      "score": 73.5,
+      "rsi": 60.2,
+      "trend": "mixed",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 1.75,
+      "supply_distance_pct": 0.75,
+      "demand_zone": {
+        "low": 15.460000038146973,
+        "high": 15.699999809265137,
+        "i": 367,
+        "departure_atr": 4.4,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 16.100000381469727,
+        "high": 16.299999237060547,
+        "i": 303,
+        "departure_atr": 1.27,
+        "retests": 7,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 10,
+      "departure_atr": 4.4,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "CHPS.TO",
+      "name": "Global X Semiconductor Index ETF",
+      "type": "etf",
+      "price": 90.62,
+      "score": 72.3,
+      "rsi": 73.5,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 11.88,
+      "supply_distance_pct": 3.33,
+      "demand_zone": {
+        "low": 78.25,
+        "high": 79.8499984741211,
+        "i": 359,
+        "departure_atr": 2.36,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 93.63999938964844,
+        "high": 97.05000305175781,
+        "i": 314,
+        "departure_atr": 2.73,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 18,
+      "departure_atr": 2.36,
+      "reasons": [
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "XBAL.TO",
+      "name": "iShares Core Balanced ETF Portfolio",
+      "type": "etf",
+      "price": 35.76,
+      "score": 72.0,
+      "rsi": 56.0,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0.17,
+      "supply_distance_pct": 1.12,
+      "demand_zone": {
+        "low": 35.470001220703125,
+        "high": 35.70000076293945,
+        "i": 367,
+        "departure_atr": 2.89,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 36.15999984741211,
+        "high": 36.310001373291016,
+        "i": 355,
+        "departure_atr": 2.63,
+        "retests": 2,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 10,
+      "departure_atr": 2.89,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "MFC.TO",
+      "name": "Manulife Financial",
+      "type": "stock",
+      "price": 60.905,
+      "score": 72.0,
+      "rsi": 57.0,
+      "trend": "mixed",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 2.21,
+      "supply_distance_pct": 1.86,
+      "demand_zone": {
+        "low": 58.97999954223633,
+        "high": 59.560001373291016,
+        "i": 362,
+        "departure_atr": 1.61,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 62.040000915527344,
+        "high": 63.0099983215332,
+        "i": 333,
+        "departure_atr": 1.42,
+        "retests": 3,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 15,
+      "departure_atr": 1.61,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Limited room before supply",
+        "Weekly trend agrees bullish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "WFG.TO",
+      "name": "West Fraser Timber",
+      "type": "stock",
+      "price": 101.45,
+      "score": 72.0,
+      "rsi": 67.2,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 0.4,
+      "supply_distance_pct": 0.32,
+      "demand_zone": {
+        "low": 99.04000091552734,
+        "high": 101.04000091552734,
+        "i": 370,
+        "departure_atr": 1.38,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 101.7699966430664,
+        "high": 105.0,
+        "i": 371,
+        "departure_atr": 1.89,
+        "retests": 2,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 7,
+      "departure_atr": 1.38,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Very close to opposing supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "ZWB.TO",
+      "name": "BMO Covered Call Canadian Banks ETF",
+      "type": "etf",
+      "price": 29.93,
+      "score": 71.4,
+      "rsi": 46.5,
+      "trend": "bearish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 3.07,
+      "demand_zone": {
+        "low": 29.610000610351562,
+        "high": 29.940000534057617,
+        "i": 357,
+        "departure_atr": 2.25,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 30.850000381469727,
+        "high": 31.190000534057617,
+        "i": 371,
+        "departure_atr": 2.11,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 20,
+      "departure_atr": 2.25,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand",
+        "Daily trend is bearish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "MRU.TO",
+      "name": "Metro",
+      "type": "stock",
+      "price": 90.55,
+      "score": 70.9,
+      "rsi": 58.6,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0.34,
+      "supply_distance_pct": 1.18,
+      "demand_zone": {
+        "low": 87.62999725341797,
+        "high": 90.23999786376953,
+        "i": 363,
+        "departure_atr": 2.52,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 91.62000274658203,
+        "high": 93.16999816894531,
+        "i": 371,
+        "departure_atr": 1.4,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 14,
+      "departure_atr": 2.52,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "ZEB.TO",
+      "name": "BMO Equal Weight Banks Index ETF",
+      "type": "etf",
+      "price": 73.76,
+      "score": 70.5,
+      "rsi": 47.8,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0.23,
+      "supply_distance_pct": 2.7,
+      "demand_zone": {
+        "low": 72.75,
+        "high": 73.58999633789062,
+        "i": 357,
+        "departure_atr": 2.31,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 75.75,
+        "high": 76.63999938964844,
+        "i": 371,
+        "departure_atr": 2.01,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 20,
+      "departure_atr": 2.31,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "VBAL.TO",
+      "name": "Vanguard Balanced ETF Portfolio",
+      "type": "etf",
+      "price": 39.64,
+      "score": 70.1,
+      "rsi": 59.7,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0.66,
+      "supply_distance_pct": 0.76,
+      "demand_zone": {
+        "low": 39.13999938964844,
+        "high": 39.380001068115234,
+        "i": 367,
+        "departure_atr": 3.17,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 39.939998626708984,
+        "high": 40.099998474121094,
+        "i": 355,
+        "departure_atr": 2.5,
+        "retests": 2,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 10,
+      "departure_atr": 3.17,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
       "symbol": "TEC.TO",
       "name": "TD Global Technology Leaders Index ETF",
       "type": "etf",
-      "price": 65.02,
+      "price": 65.07,
       "score": 70.0,
-      "rsi": 79.1,
+      "rsi": 79.3,
       "trend": "bullish",
       "weekly_trend": "bullish",
-      "demand_distance_pct": 5.78,
+      "demand_distance_pct": 5.86,
       "supply_distance_pct": null,
       "demand_zone": {
         "low": 60.70000076293945,
@@ -165,16 +1650,241 @@
       ]
     },
     {
+      "symbol": "DSG.TO",
+      "name": "Descartes Systems",
+      "type": "stock",
+      "price": 114.975,
+      "score": 70.0,
+      "rsi": 77.1,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 2.7,
+      "supply_distance_pct": 6.45,
+      "demand_zone": {
+        "low": 107.70999908447266,
+        "high": 111.87000274658203,
+        "i": 369,
+        "departure_atr": 1.48,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 122.38999938964844,
+        "high": 124.7699966430664,
+        "i": 200,
+        "departure_atr": 3.35,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 8,
+      "departure_atr": 1.48,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand has only one retest",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish",
+        "RSI is stretched"
+      ]
+    },
+    {
+      "symbol": "VIU.TO",
+      "name": "Vanguard FTSE Developed All Cap ex North America ETF",
+      "type": "etf",
+      "price": 50.37,
+      "score": 69.7,
+      "rsi": 55.8,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 0.87,
+      "supply_distance_pct": 0.89,
+      "demand_zone": {
+        "low": 49.599998474121094,
+        "high": 49.93000030517578,
+        "i": 363,
+        "departure_atr": 2.07,
+        "retests": 3,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 50.81999969482422,
+        "high": 51.04999923706055,
+        "i": 371,
+        "departure_atr": 1.87,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 3,
+      "demand_age_bars": 14,
+      "departure_atr": 2.07,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "SU.TO",
+      "name": "Suncor Energy",
+      "type": "stock",
+      "price": 97.53,
+      "score": 69.5,
+      "rsi": 55.6,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 2.29,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 94.08000183105469,
+        "high": 95.30000305175781,
+        "i": 364,
+        "departure_atr": 2.23,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 96.0,
+        "high": 100.23999786376953,
+        "i": 366,
+        "departure_atr": 1.81,
+        "retests": 2,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 13,
+      "departure_atr": 2.23,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "SLF.TO",
+      "name": "Sun Life Financial",
+      "type": "stock",
+      "price": 111.32,
+      "score": 68.1,
+      "rsi": 56.6,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 1.6,
+      "supply_distance_pct": 2.63,
+      "demand_zone": {
+        "low": 107.76000213623047,
+        "high": 109.54000091552734,
+        "i": 362,
+        "departure_atr": 1.91,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 114.25,
+        "high": 116.19999694824219,
+        "i": 340,
+        "departure_atr": 1.46,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 15,
+      "departure_atr": 1.91,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "HDIV.TO",
+      "name": "Hamilton Enhanced Multi-Sector Covered Call ETF",
+      "type": "etf",
+      "price": 23.18,
+      "score": 67.7,
+      "rsi": 41.0,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0.6,
+      "supply_distance_pct": 3.02,
+      "demand_zone": {
+        "low": 22.520000457763672,
+        "high": 23.040000915527344,
+        "i": 299,
+        "departure_atr": 1.87,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 23.8799991607666,
+        "high": 24.079999923706055,
+        "i": 359,
+        "departure_atr": 1.29,
+        "retests": 2,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 78,
+      "departure_atr": 1.87,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand"
+      ]
+    },
+    {
+      "symbol": "BTCC-B.TO",
+      "name": "Purpose Bitcoin ETF",
+      "type": "etf",
+      "price": 16.48,
+      "score": 67.0,
+      "rsi": 70.0,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 9.77,
+      "supply_distance_pct": 2.31,
+      "demand_zone": {
+        "low": 14.449999809265137,
+        "high": 14.869999885559082,
+        "i": 366,
+        "departure_atr": 2.63,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 16.860000610351562,
+        "high": 17.110000610351562,
+        "i": 208,
+        "departure_atr": 4.26,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 11,
+      "departure_atr": 2.63,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
       "symbol": "TD.TO",
       "name": "Toronto-Dominion Bank",
       "type": "stock",
-      "price": 168.04,
-      "score": 66.9,
+      "price": 168.02,
+      "score": 67.0,
       "rsi": 54.6,
       "trend": "mixed",
       "weekly_trend": "mixed",
-      "demand_distance_pct": 0.38,
-      "supply_distance_pct": 2.78,
+      "demand_distance_pct": 0.37,
+      "supply_distance_pct": 2.79,
       "demand_zone": {
         "low": 164.25,
         "high": 167.39999389648438,
@@ -202,16 +1912,448 @@
       ]
     },
     {
-      "symbol": "ENB.TO",
-      "name": "Enbridge",
+      "symbol": "ARX.TO",
+      "name": "ARC Resources",
       "type": "stock",
-      "price": 66.3,
-      "score": 64.2,
-      "rsi": 45.9,
+      "price": 33.91,
+      "score": 66.7,
+      "rsi": 90.4,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 8.32,
+      "supply_distance_pct": null,
+      "demand_zone": {
+        "low": 30.809999465942383,
+        "high": 31.09000015258789,
+        "i": 321,
+        "departure_atr": 2.04,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": null,
+      "demand_retests": 0,
+      "demand_age_bars": 7,
+      "departure_atr": 2.04,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish",
+        "RSI is stretched"
+      ]
+    },
+    {
+      "symbol": "TECK-B.TO",
+      "name": "Teck Resources",
+      "type": "stock",
+      "price": 93.91,
+      "score": 66.3,
+      "rsi": 57.8,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 5.35,
+      "supply_distance_pct": 1.63,
+      "demand_zone": {
+        "low": 87.25,
+        "high": 88.88999938964844,
+        "i": 347,
+        "departure_atr": 1.99,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 95.44000244140625,
+        "high": 97.66000366210938,
+        "i": 371,
+        "departure_atr": 1.77,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 30,
+      "departure_atr": 1.99,
+      "reasons": [
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "BANK.TO",
+      "name": "Evolve Canadian Banks and Lifecos Enhanced Yield Index Fund",
+      "type": "etf",
+      "price": 11.13,
+      "score": 66.0,
+      "rsi": 44.1,
+      "trend": "bearish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 4.04,
+      "demand_zone": {
+        "low": 10.989999771118164,
+        "high": 11.170000076293945,
+        "i": 357,
+        "departure_atr": 2.53,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 11.579999923706055,
+        "high": 11.770000457763672,
+        "i": 371,
+        "departure_atr": 1.67,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 20,
+      "departure_atr": 2.53,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "CCL-B.TO",
+      "name": "CCL Industries",
+      "type": "stock",
+      "price": 93.73,
+      "score": 65.8,
+      "rsi": 58.6,
+      "trend": "mixed",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 1.17,
+      "supply_distance_pct": 2.42,
+      "demand_zone": {
+        "low": 90.7300033569336,
+        "high": 92.62999725341797,
+        "i": 357,
+        "departure_atr": 2.06,
+        "retests": 3,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 96.0,
+        "high": 97.11000061035156,
+        "i": 368,
+        "departure_atr": 2.26,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 3,
+      "demand_age_bars": 20,
+      "departure_atr": 2.06,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "Weekly trend agrees bullish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "RCI-B.TO",
+      "name": "Rogers Communications",
+      "type": "stock",
+      "price": 43.82,
+      "score": 65.7,
+      "rsi": 16.9,
       "trend": "bearish",
       "weekly_trend": "bearish",
       "demand_distance_pct": 0,
-      "supply_distance_pct": 4.49,
+      "supply_distance_pct": 16.0,
+      "demand_zone": {
+        "low": 43.38999938964844,
+        "high": 44.150001525878906,
+        "i": 68,
+        "departure_atr": 1.79,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 50.83000183105469,
+        "high": 52.52000045776367,
+        "i": 359,
+        "departure_atr": 2.18,
+        "retests": 3,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 309,
+      "departure_atr": 1.79,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Good room before opposing supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "VEE.TO",
+      "name": "Vanguard FTSE Emerging Markets All Cap Index ETF",
+      "type": "etf",
+      "price": 50.7,
+      "score": 65.2,
+      "rsi": 58.9,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 1.81,
+      "supply_distance_pct": 0.95,
+      "demand_zone": {
+        "low": 49.45000076293945,
+        "high": 49.779998779296875,
+        "i": 349,
+        "departure_atr": 1.34,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 51.18000030517578,
+        "high": 52.11000061035156,
+        "i": 316,
+        "departure_atr": 2.01,
+        "retests": 2,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 28,
+      "departure_atr": 1.34,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Very close to opposing supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "ZDV.TO",
+      "name": "BMO Canadian Dividend ETF",
+      "type": "etf",
+      "price": 32.6,
+      "score": 65.1,
+      "rsi": 38.8,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0.58,
+      "supply_distance_pct": 2.15,
+      "demand_zone": {
+        "low": 32.189998626708984,
+        "high": 32.40999984741211,
+        "i": 319,
+        "departure_atr": 1.65,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 33.29999923706055,
+        "high": 33.369998931884766,
+        "i": 371,
+        "departure_atr": 2.27,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 58,
+      "departure_atr": 1.65,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand zone is fresh (untested)",
+        "Limited room before supply"
+      ]
+    },
+    {
+      "symbol": "ZWU.TO",
+      "name": "BMO Covered Call Utilities ETF",
+      "type": "etf",
+      "price": 10.75,
+      "score": 65.0,
+      "rsi": 12.9,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 5.67,
+      "demand_zone": {
+        "low": 10.6899995803833,
+        "high": 10.819999694824219,
+        "i": 31,
+        "departure_atr": 3.09,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 11.359999656677246,
+        "high": 11.460000038146973,
+        "i": 362,
+        "departure_atr": 1.92,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 346,
+      "departure_atr": 3.09,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "ZCN.TO",
+      "name": "BMO S&P/TSX Capped Composite Index ETF",
+      "type": "etf",
+      "price": 47.3,
+      "score": 64.7,
+      "rsi": 45.5,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0.08,
+      "supply_distance_pct": 2.64,
+      "demand_zone": {
+        "low": 46.79999923706055,
+        "high": 47.2599983215332,
+        "i": 327,
+        "departure_atr": 2.35,
+        "retests": 3,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 48.54999923706055,
+        "high": 48.900001525878906,
+        "i": 371,
+        "departure_atr": 2.02,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 3,
+      "demand_age_bars": 50,
+      "departure_atr": 2.35,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "NTR.TO",
+      "name": "Nutrien",
+      "type": "stock",
+      "price": 101.38,
+      "score": 64.6,
+      "rsi": 31.8,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0.69,
+      "supply_distance_pct": 3.25,
+      "demand_zone": {
+        "low": 99.37000274658203,
+        "high": 100.68000030517578,
+        "i": 352,
+        "departure_atr": 1.29,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 104.66999816894531,
+        "high": 107.20999908447266,
+        "i": 373,
+        "departure_atr": 1.54,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 25,
+      "departure_atr": 1.29,
+      "reasons": [
+        "Price is sitting at/very near demand"
+      ]
+    },
+    {
+      "symbol": "TIH.TO",
+      "name": "Toromont Industries",
+      "type": "stock",
+      "price": 226.34,
+      "score": 64.5,
+      "rsi": 82.0,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 11.09,
+      "supply_distance_pct": null,
+      "demand_zone": {
+        "low": 197.86000061035156,
+        "high": 201.24000549316406,
+        "i": 366,
+        "departure_atr": 1.76,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": null,
+      "demand_retests": 0,
+      "demand_age_bars": 11,
+      "departure_atr": 1.76,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish",
+        "RSI is stretched"
+      ]
+    },
+    {
+      "symbol": "HURA.TO",
+      "name": "Global X Uranium Index ETF",
+      "type": "etf",
+      "price": 46.4,
+      "score": 64.3,
+      "rsi": 31.4,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0.78,
+      "supply_distance_pct": 6.64,
+      "demand_zone": {
+        "low": 45.34000015258789,
+        "high": 46.040000915527344,
+        "i": 334,
+        "departure_atr": 3.84,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 49.47999954223633,
+        "high": 50.20000076293945,
+        "i": 371,
+        "departure_atr": 1.9,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 43,
+      "departure_atr": 3.84,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "ENB.TO",
+      "name": "Enbridge",
+      "type": "stock",
+      "price": 66.28,
+      "score": 64.2,
+      "rsi": 45.7,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 4.53,
       "demand_zone": {
         "low": 66.05999755859375,
         "high": 67.0,
@@ -240,16 +2382,453 @@
       ]
     },
     {
+      "symbol": "CVE.TO",
+      "name": "Cenovus Energy",
+      "type": "stock",
+      "price": 44.79,
+      "score": 64.1,
+      "rsi": 41.7,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 2.5,
+      "supply_distance_pct": 3.24,
+      "demand_zone": {
+        "low": 41.7599983215332,
+        "high": 43.66999816894531,
+        "i": 353,
+        "departure_atr": 1.21,
+        "retests": 3,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 46.2400016784668,
+        "high": 47.45000076293945,
+        "i": 366,
+        "departure_atr": 1.88,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 3,
+      "demand_age_bars": 24,
+      "departure_atr": 1.21,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "CLS.TO",
+      "name": "Celestica",
+      "type": "stock",
+      "price": 506.0,
+      "score": 64.1,
+      "rsi": 63.4,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 10.84,
+      "supply_distance_pct": 0.5,
+      "demand_zone": {
+        "low": 435.6600036621094,
+        "high": 451.1600036621094,
+        "i": 365,
+        "departure_atr": 2.21,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 508.5400085449219,
+        "high": 532.0,
+        "i": 338,
+        "departure_atr": 2.01,
+        "retests": 2,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 12,
+      "departure_atr": 2.21,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "HXT.TO",
+      "name": "Global X S&P/TSX 60 Index ETF",
+      "type": "etf",
+      "price": 94.4,
+      "score": 63.8,
+      "rsi": 50.2,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 1.99,
+      "demand_zone": {
+        "low": 94.18000030517578,
+        "high": 94.5999984741211,
+        "i": 363,
+        "departure_atr": 1.3,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 96.27999877929688,
+        "high": 96.80999755859375,
+        "i": 371,
+        "departure_atr": 2.03,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 14,
+      "departure_atr": 1.3,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Limited room before supply",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "XIC.TO",
+      "name": "iShares Core S&P/TSX Capped Composite ETF",
+      "type": "etf",
+      "price": 56.43,
+      "score": 63.7,
+      "rsi": 45.4,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0.14,
+      "supply_distance_pct": 2.66,
+      "demand_zone": {
+        "low": 55.810001373291016,
+        "high": 56.349998474121094,
+        "i": 327,
+        "departure_atr": 2.27,
+        "retests": 3,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 57.93000030517578,
+        "high": 58.31999969482422,
+        "i": 371,
+        "departure_atr": 2.58,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 3,
+      "demand_age_bars": 50,
+      "departure_atr": 2.27,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "XEG.TO",
+      "name": "iShares S&P/TSX Capped Energy Index ETF",
+      "type": "etf",
+      "price": 28.29,
+      "score": 63.5,
+      "rsi": 43.1,
+      "trend": "mixed",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 7.99,
+      "supply_distance_pct": 3.04,
+      "demand_zone": {
+        "low": 25.81999969482422,
+        "high": 26.030000686645508,
+        "i": 340,
+        "departure_atr": 2.01,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 29.149999618530273,
+        "high": 30.110000610351562,
+        "i": 366,
+        "departure_atr": 2.04,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 37,
+      "departure_atr": 2.01,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "CHR.TO",
+      "name": "Chorus Aviation",
+      "type": "stock",
+      "price": 30.64,
+      "score": 63.5,
+      "rsi": 80.0,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 9.5,
+      "supply_distance_pct": null,
+      "demand_zone": {
+        "low": 27.420000076293945,
+        "high": 27.729999542236328,
+        "i": 366,
+        "departure_atr": 1.64,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": null,
+      "demand_retests": 0,
+      "demand_age_bars": 11,
+      "departure_atr": 1.64,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish",
+        "RSI is stretched"
+      ]
+    },
+    {
+      "symbol": "DOO.TO",
+      "name": "BRP",
+      "type": "stock",
+      "price": 80.53,
+      "score": 63.1,
+      "rsi": 37.4,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0.98,
+      "supply_distance_pct": 9.93,
+      "demand_zone": {
+        "low": 75.47000122070312,
+        "high": 79.73999786376953,
+        "i": 292,
+        "departure_atr": 2.8,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 88.52999877929688,
+        "high": 97.41999816894531,
+        "i": 347,
+        "departure_atr": 1.4,
+        "retests": 2,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 85,
+      "departure_atr": 2.8,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Good room before opposing supply",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "AC.TO",
+      "name": "Air Canada",
+      "type": "stock",
+      "price": 27.165,
+      "score": 63.0,
+      "rsi": 44.7,
+      "trend": "mixed",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 3.0,
+      "supply_distance_pct": 1.67,
+      "demand_zone": {
+        "low": 25.200000762939453,
+        "high": 26.350000381469727,
+        "i": 341,
+        "departure_atr": 6.44,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 27.6200008392334,
+        "high": 29.0,
+        "i": 373,
+        "departure_atr": 3.88,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 36,
+      "departure_atr": 6.44,
+      "reasons": [
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "WCP.TO",
+      "name": "Whitecap Resources",
+      "type": "stock",
+      "price": 17.745,
+      "score": 62.8,
+      "rsi": 39.1,
+      "trend": "mixed",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 4.82,
+      "supply_distance_pct": 4.25,
+      "demand_zone": {
+        "low": 16.6200008392334,
+        "high": 16.889999389648438,
+        "i": 344,
+        "departure_atr": 1.93,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 18.5,
+        "high": 18.770000457763672,
+        "i": 373,
+        "departure_atr": 2.12,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 33,
+      "departure_atr": 1.93,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "L.TO",
+      "name": "Loblaw",
+      "type": "stock",
+      "price": 62.43,
+      "score": 62.8,
+      "rsi": 55.3,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 0.11,
+      "demand_zone": {
+        "low": 60.95000076293945,
+        "high": 62.75,
+        "i": 363,
+        "departure_atr": 1.55,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 62.5,
+        "high": 63.529998779296875,
+        "i": 360,
+        "departure_atr": 2.26,
+        "retests": 2,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 14,
+      "departure_atr": 1.55,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Very close to opposing supply",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "FFH.TO",
+      "name": "Fairfax Financial",
+      "type": "stock",
+      "price": 2210.0601,
+      "score": 62.7,
+      "rsi": 48.2,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 4.24,
+      "demand_zone": {
+        "low": 2178.39990234375,
+        "high": 2218.1201171875,
+        "i": 362,
+        "departure_atr": 1.54,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 2303.820068359375,
+        "high": 2343.179931640625,
+        "i": 368,
+        "departure_atr": 1.6,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 15,
+      "departure_atr": 1.54,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Daily trend is bearish",
+        "Weekly trend is bearish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "RBA.TO",
+      "name": "RB Global",
+      "type": "stock",
+      "price": 116.005,
+      "score": 61.9,
+      "rsi": 63.0,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 3.01,
+      "supply_distance_pct": 38.61,
+      "demand_zone": {
+        "low": 110.37000274658203,
+        "high": 112.51000213623047,
+        "i": 363,
+        "departure_atr": 3.09,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 160.7899932861328,
+        "high": 164.58999633789062,
+        "i": 318,
+        "departure_atr": 1.76,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 14,
+      "departure_atr": 3.09,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Good room before opposing supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
       "symbol": "CP.TO",
       "name": "Canadian Pacific Kansas City",
       "type": "stock",
-      "price": 122.62,
-      "score": 61.8,
-      "rsi": 48.6,
+      "price": 122.7,
+      "score": 61.5,
+      "rsi": 48.9,
       "trend": "bearish",
       "weekly_trend": "mixed",
-      "demand_distance_pct": 0,
-      "supply_distance_pct": 1.27,
+      "demand_distance_pct": 0.05,
+      "supply_distance_pct": 1.21,
       "demand_zone": {
         "low": 121.04000091552734,
         "high": 122.63999938964844,
@@ -278,15 +2857,1109 @@
       ]
     },
     {
+      "symbol": "GRT-UN.TO",
+      "name": "Granite REIT",
+      "type": "stock",
+      "price": 84.39,
+      "score": 61.5,
+      "rsi": 48.7,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 1.1,
+      "supply_distance_pct": 4.89,
+      "demand_zone": {
+        "low": 81.43000030517578,
+        "high": 83.45999908447266,
+        "i": 373,
+        "departure_atr": 1.71,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 88.5199966430664,
+        "high": 89.33999633789062,
+        "i": 360,
+        "departure_atr": 2.72,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 4,
+      "departure_atr": 1.71,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Daily trend is bearish",
+        "Weekly trend is bearish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "XEI.TO",
+      "name": "iShares S&P/TSX Composite High Dividend Index ETF",
+      "type": "etf",
+      "price": 38.9,
+      "score": 61.4,
+      "rsi": 31.9,
+      "trend": "bearish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 2.13,
+      "demand_zone": {
+        "low": 38.7400016784668,
+        "high": 39.0,
+        "i": 315,
+        "departure_atr": 2.25,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 39.72999954223633,
+        "high": 39.959999084472656,
+        "i": 368,
+        "departure_atr": 1.48,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 62,
+      "departure_atr": 2.25,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "ZEA.TO",
+      "name": "BMO MSCI EAFE Index ETF",
+      "type": "etf",
+      "price": 31.65,
+      "score": 61.3,
+      "rsi": 54.8,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0.16,
+      "supply_distance_pct": 0.95,
+      "demand_zone": {
+        "low": 31.260000228881836,
+        "high": 31.600000381469727,
+        "i": 367,
+        "departure_atr": 2.1,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 31.950000762939453,
+        "high": 32.16999816894531,
+        "i": 360,
+        "departure_atr": 3.42,
+        "retests": 2,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 10,
+      "departure_atr": 2.1,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "DML.TO",
+      "name": "Denison Mines",
+      "type": "stock",
+      "price": 3.74,
+      "score": 61.2,
+      "rsi": 25.5,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0.8,
+      "supply_distance_pct": 8.82,
+      "demand_zone": {
+        "low": 3.5799999237060547,
+        "high": 3.7100000381469727,
+        "i": 188,
+        "departure_atr": 4.19,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 4.070000171661377,
+        "high": 4.170000076293945,
+        "i": 371,
+        "departure_atr": 2.34,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 189,
+      "departure_atr": 4.19,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand",
+        "Good room before opposing supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "POW.TO",
+      "name": "Power Corporation of Canada",
+      "type": "stock",
+      "price": 90.26,
+      "score": 60.3,
+      "rsi": 38.8,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 4.2,
+      "demand_zone": {
+        "low": 88.5,
+        "high": 90.79000091552734,
+        "i": 322,
+        "departure_atr": 1.36,
+        "retests": 6,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 94.05000305175781,
+        "high": 95.7300033569336,
+        "i": 360,
+        "departure_atr": 2.58,
+        "retests": 3,
+        "valid": true
+      },
+      "demand_retests": 6,
+      "demand_age_bars": 55,
+      "departure_atr": 1.36,
+      "reasons": [
+        "Price is sitting at/very near demand"
+      ]
+    },
+    {
+      "symbol": "XLB.TO",
+      "name": "iShares Core Canadian Long Term Bond Index ETF",
+      "type": "etf",
+      "price": 17.44,
+      "score": 60.0,
+      "rsi": 47.5,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 2.41,
+      "demand_zone": {
+        "low": 17.440000534057617,
+        "high": 17.489999771118164,
+        "i": 365,
+        "departure_atr": 3.22,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 17.860000610351562,
+        "high": 17.920000076293945,
+        "i": 371,
+        "departure_atr": 3.34,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 12,
+      "departure_atr": 3.22,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "BMO.TO",
+      "name": "Bank of Montreal",
+      "type": "stock",
+      "price": 238.93,
+      "score": 60.0,
+      "rsi": 47.1,
+      "trend": "bearish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 1.69,
+      "supply_distance_pct": 2.65,
+      "demand_zone": {
+        "low": 232.00999450683594,
+        "high": 234.88999938964844,
+        "i": 357,
+        "departure_atr": 2.22,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 245.25,
+        "high": 249.58999633789062,
+        "i": 371,
+        "departure_atr": 1.64,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 20,
+      "departure_atr": 2.22,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "IVN.TO",
+      "name": "Ivanhoe Mines",
+      "type": "stock",
+      "price": 11.94,
+      "score": 60.0,
+      "rsi": 36.1,
+      "trend": "mixed",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 1.51,
+      "supply_distance_pct": 4.69,
+      "demand_zone": {
+        "low": 11.329999923706055,
+        "high": 11.760000228881836,
+        "i": 357,
+        "departure_atr": 1.2,
+        "retests": 3,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 12.5,
+        "high": 12.920000076293945,
+        "i": 371,
+        "departure_atr": 1.71,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 3,
+      "demand_age_bars": 20,
+      "departure_atr": 1.2,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "CCO.TO",
+      "name": "Cameco",
+      "type": "stock",
+      "price": 124.875,
+      "score": 59.9,
+      "rsi": 32.9,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 1.85,
+      "supply_distance_pct": 12.72,
+      "demand_zone": {
+        "low": 117.75,
+        "high": 122.55999755859375,
+        "i": 334,
+        "departure_atr": 2.85,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 140.75999450683594,
+        "high": 143.4499969482422,
+        "i": 361,
+        "departure_atr": 1.28,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 43,
+      "departure_atr": 2.85,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Good room before opposing supply",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "KEY.TO",
+      "name": "Keyera",
+      "type": "stock",
+      "price": 51.095,
+      "score": 59.8,
+      "rsi": 26.1,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0.87,
+      "supply_distance_pct": 5.16,
+      "demand_zone": {
+        "low": 48.599998474121094,
+        "high": 50.650001525878906,
+        "i": 277,
+        "departure_atr": 2.77,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 53.72999954223633,
+        "high": 55.09000015258789,
+        "i": 369,
+        "departure_atr": 1.4,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 100,
+      "departure_atr": 2.77,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "IMO.TO",
+      "name": "Imperial Oil",
+      "type": "stock",
+      "price": 175.92,
+      "score": 59.7,
+      "rsi": 41.2,
+      "trend": "bearish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0.15,
+      "supply_distance_pct": 4.54,
+      "demand_zone": {
+        "low": 171.89999389648438,
+        "high": 175.66000366210938,
+        "i": 340,
+        "departure_atr": 1.77,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 183.91000366210938,
+        "high": 189.5,
+        "i": 366,
+        "departure_atr": 1.67,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 37,
+      "departure_atr": 1.77,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "NFI.TO",
+      "name": "NFI Group",
+      "type": "stock",
+      "price": 24.57,
+      "score": 59.5,
+      "rsi": 64.0,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 4.31,
+      "supply_distance_pct": 2.81,
+      "demand_zone": {
+        "low": 23.030000686645508,
+        "high": 23.510000228881836,
+        "i": 366,
+        "departure_atr": 1.5,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 25.260000228881836,
+        "high": 25.729999542236328,
+        "i": 337,
+        "departure_atr": 1.41,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 11,
+      "departure_atr": 1.5,
+      "reasons": [
+        "Limited room before supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "BEPC.TO",
+      "name": "Brookfield Renewable",
+      "type": "stock",
+      "price": 40.23,
+      "score": 59.0,
+      "rsi": 33.6,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 4.65,
+      "demand_zone": {
+        "low": 39.459999084472656,
+        "high": 40.22999954223633,
+        "i": 43,
+        "departure_atr": 2.33,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 42.099998474121094,
+        "high": 42.7599983215332,
+        "i": 371,
+        "departure_atr": 2.27,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 334,
+      "departure_atr": 2.33,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "ZEO.TO",
+      "name": "BMO Equal Weight Oil & Gas Index ETF",
+      "type": "etf",
+      "price": 106.8,
+      "score": 58.9,
+      "rsi": 37.6,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 1.17,
+      "supply_distance_pct": 1.65,
+      "demand_zone": {
+        "low": 104.41999816894531,
+        "high": 105.55000305175781,
+        "i": 340,
+        "departure_atr": 1.82,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 108.55999755859375,
+        "high": 109.69000244140625,
+        "i": 373,
+        "departure_atr": 1.85,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 37,
+      "departure_atr": 1.82,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Limited room before supply"
+      ]
+    },
+    {
+      "symbol": "ATZ.TO",
+      "name": "Aritzia",
+      "type": "stock",
+      "price": 121.22,
+      "score": 58.8,
+      "rsi": 45.9,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 1.83,
+      "supply_distance_pct": 3.34,
+      "demand_zone": {
+        "low": 114.9000015258789,
+        "high": 119.0,
+        "i": 373,
+        "departure_atr": 1.92,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 125.2699966430664,
+        "high": 130.13999938964844,
+        "i": 371,
+        "departure_atr": 2.41,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 4,
+      "departure_atr": 1.92,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "BTCY.TO",
+      "name": "Purpose Bitcoin Yield ETF",
+      "type": "etf",
+      "price": 5.31,
+      "score": 58.7,
+      "rsi": 65.7,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 8.29,
+      "supply_distance_pct": 0.94,
+      "demand_zone": {
+        "low": 4.699999809265137,
+        "high": 4.869999885559082,
+        "i": 366,
+        "departure_atr": 2.41,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 5.360000133514404,
+        "high": 5.510000228881836,
+        "i": 289,
+        "departure_atr": 2.74,
+        "retests": 2,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 11,
+      "departure_atr": 2.41,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "CPX.TO",
+      "name": "Capital Power",
+      "type": "stock",
+      "price": 61.0,
+      "score": 58.6,
+      "rsi": 45.7,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 2.57,
+      "supply_distance_pct": 3.39,
+      "demand_zone": {
+        "low": 57.93000030517578,
+        "high": 59.43000030517578,
+        "i": 366,
+        "departure_atr": 2.82,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 63.06999969482422,
+        "high": 64.9000015258789,
+        "i": 361,
+        "departure_atr": 2.78,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 11,
+      "departure_atr": 2.82,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "OTEX.TO",
+      "name": "OpenText",
+      "type": "stock",
+      "price": 31.97,
+      "score": 58.4,
+      "rsi": 55.1,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 2.1,
+      "supply_distance_pct": 8.38,
+      "demand_zone": {
+        "low": 30.149999618530273,
+        "high": 31.299999237060547,
+        "i": 330,
+        "departure_atr": 3.82,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 34.650001525878906,
+        "high": 35.41999816894531,
+        "i": 355,
+        "departure_atr": 2.29,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 47,
+      "departure_atr": 3.82,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Strong departure from demand",
+        "Good room before opposing supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "CM.TO",
+      "name": "CIBC",
+      "type": "stock",
+      "price": 157.44,
+      "score": 58.2,
+      "rsi": 47.5,
+      "trend": "bearish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 2.67,
+      "demand_zone": {
+        "low": 156.1300048828125,
+        "high": 157.4600067138672,
+        "i": 373,
+        "departure_atr": 1.23,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 161.64999389648438,
+        "high": 163.5,
+        "i": 371,
+        "departure_atr": 2.04,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 4,
+      "departure_atr": 1.23,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Limited room before supply",
+        "Daily trend is bearish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "ONEX.TO",
+      "name": "Onex",
+      "type": "stock",
+      "price": 101.71,
+      "score": 58.1,
+      "rsi": 31.4,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 6.42,
+      "demand_zone": {
+        "low": 100.94999694824219,
+        "high": 102.01000213623047,
+        "i": 255,
+        "departure_atr": 1.59,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 108.23999786376953,
+        "high": 110.63999938964844,
+        "i": 364,
+        "departure_atr": 1.33,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 122,
+      "departure_atr": 1.59,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "KXS.TO",
+      "name": "Kinaxis",
+      "type": "stock",
+      "price": 179.78,
+      "score": 58.0,
+      "rsi": 73.4,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 7.53,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 162.52000427246094,
+        "high": 166.24000549316406,
+        "i": 362,
+        "departure_atr": 2.33,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 179.50999450683594,
+        "high": 180.16000366210938,
+        "i": 368,
+        "departure_atr": 1.39,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 15,
+      "departure_atr": 2.33,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "AEM.TO",
+      "name": "Agnico Eagle Mines",
+      "type": "stock",
+      "price": 262.29,
+      "score": 58.0,
+      "rsi": 42.6,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 3.08,
+      "supply_distance_pct": 5.88,
+      "demand_zone": {
+        "low": 248.1699981689453,
+        "high": 254.1999969482422,
+        "i": 344,
+        "departure_atr": 1.39,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 277.7200012207031,
+        "high": 287.760009765625,
+        "i": 371,
+        "departure_atr": 1.85,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 33,
+      "departure_atr": 1.39,
+      "reasons": [
+        "Demand zone is fresh (untested)"
+      ]
+    },
+    {
+      "symbol": "CDZ.TO",
+      "name": "iShares S&P/TSX Canadian Dividend Aristocrats Index ETF",
+      "type": "etf",
+      "price": 45.05,
+      "score": 57.5,
+      "rsi": 47.1,
+      "trend": "bearish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 1.09,
+      "supply_distance_pct": 0.89,
+      "demand_zone": {
+        "low": 44.20000076293945,
+        "high": 44.560001373291016,
+        "i": 281,
+        "departure_atr": 3.29,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 45.45000076293945,
+        "high": 45.7400016784668,
+        "i": 371,
+        "departure_atr": 2.03,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 96,
+      "departure_atr": 3.29,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "ERO.TO",
+      "name": "Ero Copper",
+      "type": "stock",
+      "price": 52.29,
+      "score": 57.4,
+      "rsi": 62.0,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 11.67,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 44.29999923706055,
+        "high": 46.189998626708984,
+        "i": 367,
+        "departure_atr": 1.37,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 50.709999084472656,
+        "high": 54.16999816894531,
+        "i": 361,
+        "departure_atr": 1.54,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 10,
+      "departure_atr": 1.37,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Very close to opposing supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "ZNQ.TO",
+      "name": "BMO NASDAQ 100 Equity Index ETF",
+      "type": "etf",
+      "price": 140.3,
+      "score": 57.3,
+      "rsi": 78.9,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 7.06,
+      "supply_distance_pct": null,
+      "demand_zone": {
+        "low": 130.0,
+        "high": 130.39999389648438,
+        "i": 358,
+        "departure_atr": 1.99,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": null,
+      "demand_retests": 2,
+      "demand_age_bars": 19,
+      "departure_atr": 1.99,
+      "reasons": [
+        "Strong departure from demand",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish",
+        "RSI is stretched"
+      ]
+    },
+    {
+      "symbol": "HXQ.TO",
+      "name": "Global X NASDAQ-100 Index ETF",
+      "type": "etf",
+      "price": 124.83,
+      "score": 57.1,
+      "rsi": 78.7,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 6.86,
+      "supply_distance_pct": null,
+      "demand_zone": {
+        "low": 115.75,
+        "high": 116.2699966430664,
+        "i": 358,
+        "departure_atr": 1.96,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": null,
+      "demand_retests": 2,
+      "demand_age_bars": 19,
+      "departure_atr": 1.96,
+      "reasons": [
+        "Strong departure from demand",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish",
+        "RSI is stretched"
+      ]
+    },
+    {
+      "symbol": "HMAX.TO",
+      "name": "Hamilton Canadian Financials Yield Maximizer ETF",
+      "type": "etf",
+      "price": 17.24,
+      "score": 56.5,
+      "rsi": 44.5,
+      "trend": "bearish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 3.07,
+      "demand_zone": {
+        "low": 17.190000534057617,
+        "high": 17.3799991607666,
+        "i": 357,
+        "departure_atr": 2.14,
+        "retests": 4,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 17.770000457763672,
+        "high": 17.950000762939453,
+        "i": 371,
+        "departure_atr": 1.94,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 4,
+      "demand_age_bars": 20,
+      "departure_atr": 2.14,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "BN.TO",
+      "name": "Brookfield Corporation",
+      "type": "stock",
+      "price": 51.57,
+      "score": 56.2,
+      "rsi": 41.7,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 3.26,
+      "demand_zone": {
+        "low": 51.310001373291016,
+        "high": 51.93000030517578,
+        "i": 367,
+        "departure_atr": 1.6,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 53.25,
+        "high": 54.060001373291016,
+        "i": 371,
+        "departure_atr": 1.92,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 10,
+      "departure_atr": 1.6,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "QQC.TO",
+      "name": "Invesco NASDAQ 100 Index ETF",
+      "type": "etf",
+      "price": 51.61,
+      "score": 56.0,
+      "rsi": 78.6,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 6.9,
+      "supply_distance_pct": null,
+      "demand_zone": {
+        "low": 47.790000915527344,
+        "high": 48.04999923706055,
+        "i": 358,
+        "departure_atr": 1.82,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": null,
+      "demand_retests": 2,
+      "demand_age_bars": 19,
+      "departure_atr": 1.82,
+      "reasons": [
+        "Strong departure from demand",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish",
+        "RSI is stretched"
+      ]
+    },
+    {
+      "symbol": "XFN.TO",
+      "name": "iShares S&P/TSX Capped Financials Index ETF",
+      "type": "etf",
+      "price": 91.73,
+      "score": 56.0,
+      "rsi": 46.5,
+      "trend": "bearish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 2.7,
+      "demand_zone": {
+        "low": 91.38999938964844,
+        "high": 92.38999938964844,
+        "i": 357,
+        "departure_atr": 2.46,
+        "retests": 4,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 94.20999908447266,
+        "high": 95.27999877929688,
+        "i": 371,
+        "departure_atr": 2.1,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 4,
+      "demand_age_bars": 20,
+      "departure_atr": 2.46,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "Daily trend is bearish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
       "symbol": "CNR.TO",
       "name": "Canadian National Railway",
       "type": "stock",
-      "price": 171.15,
-      "score": 56.2,
-      "rsi": 62.1,
+      "price": 171.23,
+      "score": 55.9,
+      "rsi": 62.3,
       "trend": "mixed",
       "weekly_trend": "mixed",
-      "demand_distance_pct": 2.53,
+      "demand_distance_pct": 2.58,
       "supply_distance_pct": 0,
       "demand_zone": {
         "low": 163.86000061035156,
@@ -316,16 +3989,276 @@
       ]
     },
     {
+      "symbol": "TRI.TO",
+      "name": "Thomson Reuters",
+      "type": "stock",
+      "price": 137.21,
+      "score": 55.8,
+      "rsi": 55.2,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 2.33,
+      "supply_distance_pct": 1.17,
+      "demand_zone": {
+        "low": 131.14999389648438,
+        "high": 134.00999450683594,
+        "i": 370,
+        "departure_atr": 1.42,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 138.80999755859375,
+        "high": 142.49000549316406,
+        "i": 373,
+        "departure_atr": 1.87,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 7,
+      "departure_atr": 1.42,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand has only one retest",
+        "Limited room before supply",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "CNQ.TO",
+      "name": "Canadian Natural Resources",
+      "type": "stock",
+      "price": 67.9,
+      "score": 55.4,
+      "rsi": 40.5,
+      "trend": "mixed",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 2.28,
+      "supply_distance_pct": 2.89,
+      "demand_zone": {
+        "low": 65.05000305175781,
+        "high": 66.3499984741211,
+        "i": 344,
+        "departure_atr": 1.59,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 69.86000061035156,
+        "high": 72.08000183105469,
+        "i": 366,
+        "departure_atr": 1.41,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 33,
+      "departure_atr": 1.59,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Limited room before supply",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "PPL.TO",
+      "name": "Pembina Pipeline",
+      "type": "stock",
+      "price": 63.62,
+      "score": 55.3,
+      "rsi": 26.6,
+      "trend": "bearish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 3.62,
+      "supply_distance_pct": 4.54,
+      "demand_zone": {
+        "low": 60.27000045776367,
+        "high": 61.31999969482422,
+        "i": 277,
+        "departure_atr": 2.64,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 66.51000213623047,
+        "high": 67.12999725341797,
+        "i": 369,
+        "departure_atr": 1.71,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 100,
+      "departure_atr": 2.64,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "ATS.TO",
+      "name": "ATS Corporation",
+      "type": "stock",
+      "price": 25.88,
+      "score": 55.3,
+      "rsi": 43.3,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 3.86,
+      "demand_zone": {
+        "low": 25.59000015258789,
+        "high": 26.469999313354492,
+        "i": 357,
+        "departure_atr": 2.11,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 26.8799991607666,
+        "high": 27.190000534057617,
+        "i": 360,
+        "departure_atr": 1.35,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 20,
+      "departure_atr": 2.11,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "WSP.TO",
+      "name": "WSP Global",
+      "type": "stock",
+      "price": 172.86,
+      "score": 55.2,
+      "rsi": 42.2,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 1.23,
+      "supply_distance_pct": 4.7,
+      "demand_zone": {
+        "low": 163.58999633789062,
+        "high": 170.74000549316406,
+        "i": 335,
+        "departure_atr": 2.39,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 180.97999572753906,
+        "high": 192.52999877929688,
+        "i": 371,
+        "departure_atr": 2.46,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 42,
+      "departure_atr": 2.39,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "TFII.TO",
+      "name": "TFI International",
+      "type": "stock",
+      "price": 171.015,
+      "score": 55.0,
+      "rsi": 29.1,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 2.96,
+      "demand_zone": {
+        "low": 166.7899932861328,
+        "high": 175.19000244140625,
+        "i": 262,
+        "departure_atr": 2.52,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 176.0800018310547,
+        "high": 179.97999572753906,
+        "i": 371,
+        "departure_atr": 1.2,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 115,
+      "departure_atr": 2.52,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "VCN.TO",
+      "name": "Vanguard FTSE Canada All Cap Index ETF",
+      "type": "etf",
+      "price": 71.9,
+      "score": 54.1,
+      "rsi": 46.4,
+      "trend": "bearish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0.14,
+      "supply_distance_pct": 2.07,
+      "demand_zone": {
+        "low": 71.06999969482422,
+        "high": 71.80000305175781,
+        "i": 327,
+        "departure_atr": 2.32,
+        "retests": 3,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 73.38999938964844,
+        "high": 73.9000015258789,
+        "i": 371,
+        "departure_atr": 1.9,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 3,
+      "demand_age_bars": 50,
+      "departure_atr": 2.32,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "Daily trend is bearish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
       "symbol": "XIU.TO",
       "name": "iShares S&P/TSX 60 Index ETF",
       "type": "etf",
-      "price": 52.55,
+      "price": 52.58,
       "score": 53.6,
-      "rsi": 49.9,
+      "rsi": 50.3,
       "trend": "bearish",
       "weekly_trend": "mixed",
       "demand_distance_pct": 0,
-      "supply_distance_pct": 2.04,
+      "supply_distance_pct": 1.98,
       "demand_zone": {
         "low": 52.43000030517578,
         "high": 52.709999084472656,
@@ -353,15 +4286,912 @@
       ]
     },
     {
+      "symbol": "STN.TO",
+      "name": "Stantec",
+      "type": "stock",
+      "price": 96.17,
+      "score": 53.6,
+      "rsi": 47.6,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 1.06,
+      "supply_distance_pct": 2.87,
+      "demand_zone": {
+        "low": 93.27999877929688,
+        "high": 95.1500015258789,
+        "i": 330,
+        "departure_atr": 3.15,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 98.93000030517578,
+        "high": 99.98999786376953,
+        "i": 368,
+        "departure_atr": 1.24,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 47,
+      "departure_atr": 3.15,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "XDIV.TO",
+      "name": "iShares Core MSCI Canadian Quality Dividend ETF",
+      "type": "etf",
+      "price": 45.33,
+      "score": 52.4,
+      "rsi": 40.1,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 2.82,
+      "supply_distance_pct": 2.03,
+      "demand_zone": {
+        "low": 43.599998474121094,
+        "high": 44.04999923706055,
+        "i": 315,
+        "departure_atr": 1.74,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 46.25,
+        "high": 46.540000915527344,
+        "i": 368,
+        "departure_atr": 1.42,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 62,
+      "departure_atr": 1.74,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Limited room before supply"
+      ]
+    },
+    {
+      "symbol": "ABX.TO",
+      "name": "Barrick Mining",
+      "type": "stock",
+      "price": 57.91,
+      "score": 52.2,
+      "rsi": 41.7,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 11.05,
+      "supply_distance_pct": 3.56,
+      "demand_zone": {
+        "low": 49.9900016784668,
+        "high": 51.5099983215332,
+        "i": 334,
+        "departure_atr": 1.85,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 59.970001220703125,
+        "high": 62.119998931884766,
+        "i": 371,
+        "departure_atr": 1.83,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 43,
+      "departure_atr": 1.85,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand"
+      ]
+    },
+    {
+      "symbol": "TOY.TO",
+      "name": "Spin Master",
+      "type": "stock",
+      "price": 20.33,
+      "score": 52.0,
+      "rsi": 64.6,
+      "trend": "mixed",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 4.67,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 19.190000534057617,
+        "high": 19.3799991607666,
+        "i": 363,
+        "departure_atr": 3.78,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 19.760000228881836,
+        "high": 20.915000915527344,
+        "i": 365,
+        "departure_atr": 1.21,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 14,
+      "departure_atr": 3.78,
+      "reasons": [
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Weekly trend agrees bullish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "SAP.TO",
+      "name": "Saputo",
+      "type": "stock",
+      "price": 40.0,
+      "score": 51.8,
+      "rsi": 55.4,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 1.9,
+      "demand_zone": {
+        "low": 39.540000915527344,
+        "high": 40.27000045776367,
+        "i": 373,
+        "departure_atr": 1.42,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 40.7599983215332,
+        "high": 41.18000030517578,
+        "i": 358,
+        "departure_atr": 1.24,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 4,
+      "departure_atr": 1.42,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Limited room before supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "VAB.TO",
+      "name": "Vanguard Canadian Aggregate Bond Index ETF",
+      "type": "etf",
+      "price": 22.22,
+      "score": 51.7,
+      "rsi": 49.4,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0.05,
+      "supply_distance_pct": 0.99,
+      "demand_zone": {
+        "low": 22.15999984741211,
+        "high": 22.209999084472656,
+        "i": 365,
+        "departure_atr": 2.67,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 22.440000534057617,
+        "high": 22.489999771118164,
+        "i": 371,
+        "departure_atr": 2.85,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 12,
+      "departure_atr": 2.67,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "EMP-A.TO",
+      "name": "Empire",
+      "type": "stock",
+      "price": 47.98,
+      "score": 51.5,
+      "rsi": 59.8,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 1.88,
+      "supply_distance_pct": 0.38,
+      "demand_zone": {
+        "low": 45.79999923706055,
+        "high": 47.08000183105469,
+        "i": 369,
+        "departure_atr": 1.54,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 48.15999984741211,
+        "high": 48.84000015258789,
+        "i": 353,
+        "departure_atr": 1.52,
+        "retests": 4,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 8,
+      "departure_atr": 1.54,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand has only one retest",
+        "Very close to opposing supply",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "XUT.TO",
+      "name": "iShares S&P/TSX Capped Utilities Index ETF",
+      "type": "etf",
+      "price": 33.86,
+      "score": 50.9,
+      "rsi": 46.1,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0.18,
+      "supply_distance_pct": 0.86,
+      "demand_zone": {
+        "low": 33.31999969482422,
+        "high": 33.79999923706055,
+        "i": 366,
+        "departure_atr": 2.87,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 34.150001525878906,
+        "high": 34.54999923706055,
+        "i": 371,
+        "departure_atr": 2.1,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 11,
+      "departure_atr": 2.87,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "TXF.TO",
+      "name": "CI Tech Giants Covered Call ETF",
+      "type": "etf",
+      "price": 27.55,
+      "score": 50.8,
+      "rsi": 69.6,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 5.63,
+      "supply_distance_pct": 0.15,
+      "demand_zone": {
+        "low": 25.670000076293945,
+        "high": 26.0,
+        "i": 365,
+        "departure_atr": 1.42,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 27.59000015258789,
+        "high": 27.799999237060547,
+        "i": 371,
+        "departure_atr": 1.55,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 12,
+      "departure_atr": 1.42,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Very close to opposing supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "QSR.TO",
+      "name": "Restaurant Brands International",
+      "type": "stock",
+      "price": 101.31,
+      "score": 50.7,
+      "rsi": 34.8,
+      "trend": "bearish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0.73,
+      "supply_distance_pct": 6.47,
+      "demand_zone": {
+        "low": 98.80000305175781,
+        "high": 100.56999969482422,
+        "i": 294,
+        "departure_atr": 1.71,
+        "retests": 4,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 107.86000061035156,
+        "high": 110.19000244140625,
+        "i": 365,
+        "departure_atr": 3.63,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 4,
+      "demand_age_bars": 83,
+      "departure_atr": 1.71,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "HR-UN.TO",
+      "name": "H&R REIT",
+      "type": "stock",
+      "price": 9.51,
+      "score": 50.7,
+      "rsi": 51.2,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 1.68,
+      "demand_zone": {
+        "low": 9.300000190734863,
+        "high": 9.579999923706055,
+        "i": 369,
+        "departure_atr": 1.29,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 9.670000076293945,
+        "high": 9.90999984741211,
+        "i": 362,
+        "departure_atr": 1.35,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 8,
+      "departure_atr": 1.29,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Limited room before supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "CU.TO",
+      "name": "Canadian Utilities",
+      "type": "stock",
+      "price": 50.61,
+      "score": 50.3,
+      "rsi": 51.3,
+      "trend": "bearish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 1.38,
+      "supply_distance_pct": 0.91,
+      "demand_zone": {
+        "low": 48.83000183105469,
+        "high": 49.90999984741211,
+        "i": 366,
+        "departure_atr": 2.28,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 51.06999969482422,
+        "high": 51.630001068115234,
+        "i": 362,
+        "departure_atr": 2.15,
+        "retests": 2,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 11,
+      "departure_atr": 2.28,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "HUC.TO",
+      "name": "Global X Crude Oil ETF",
+      "type": "etf",
+      "price": 26.26,
+      "score": 49.8,
+      "rsi": 85.3,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 6.78,
+      "supply_distance_pct": 1.33,
+      "demand_zone": {
+        "low": 24.299999237060547,
+        "high": 24.479999542236328,
+        "i": 355,
+        "departure_atr": 1.67,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 26.610000610351562,
+        "high": 27.149999618530273,
+        "i": 300,
+        "departure_atr": 3.24,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 22,
+      "departure_atr": 1.67,
+      "reasons": [
+        "Demand has only one retest",
+        "Limited room before supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish",
+        "RSI is stretched"
+      ]
+    },
+    {
+      "symbol": "NXE.TO",
+      "name": "NexGen Energy",
+      "type": "stock",
+      "price": 13.11,
+      "score": 49.3,
+      "rsi": 36.7,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 2.29,
+      "supply_distance_pct": 5.34,
+      "demand_zone": {
+        "low": 12.369999885559082,
+        "high": 12.8100004196167,
+        "i": 334,
+        "departure_atr": 2.45,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 13.8100004196167,
+        "high": 14.149999618530273,
+        "i": 371,
+        "departure_atr": 1.97,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 43,
+      "departure_atr": 2.45,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "BEP-UN.TO",
+      "name": "Brookfield Renewable Partners",
+      "type": "stock",
+      "price": 40.03,
+      "score": 49.1,
+      "rsi": 34.9,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 2.65,
+      "supply_distance_pct": 3.77,
+      "demand_zone": {
+        "low": 38.310001373291016,
+        "high": 38.970001220703125,
+        "i": 209,
+        "departure_atr": 3.62,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 41.540000915527344,
+        "high": 42.43000030517578,
+        "i": 371,
+        "departure_atr": 2.18,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 168,
+      "departure_atr": 3.62,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "ALA.TO",
+      "name": "AltaGas",
+      "type": "stock",
+      "price": 52.07,
+      "score": 49.1,
+      "rsi": 48.5,
+      "trend": "bearish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 2.65,
+      "demand_zone": {
+        "low": 51.290000915527344,
+        "high": 52.209999084472656,
+        "i": 315,
+        "departure_atr": 1.59,
+        "retests": 5,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 53.45000076293945,
+        "high": 54.0099983215332,
+        "i": 347,
+        "departure_atr": 1.4,
+        "retests": 3,
+        "valid": true
+      },
+      "demand_retests": 5,
+      "demand_age_bars": 62,
+      "departure_atr": 1.59,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Limited room before supply",
+        "Daily trend is bearish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "EMA.TO",
+      "name": "Emera",
+      "type": "stock",
+      "price": 68.2,
+      "score": 48.9,
+      "rsi": 47.3,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 0.43,
+      "demand_zone": {
+        "low": 67.16999816894531,
+        "high": 68.30000305175781,
+        "i": 366,
+        "departure_atr": 2.06,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 68.48999786376953,
+        "high": 69.05999755859375,
+        "i": 371,
+        "departure_atr": 1.77,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 11,
+      "departure_atr": 2.06,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "MG.TO",
+      "name": "Magna International",
+      "type": "stock",
+      "price": 91.755,
+      "score": 48.7,
+      "rsi": 54.5,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0.93,
+      "supply_distance_pct": 0.67,
+      "demand_zone": {
+        "low": 87.80000305175781,
+        "high": 90.9000015258789,
+        "i": 315,
+        "departure_atr": 1.99,
+        "retests": 6,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 92.37000274658203,
+        "high": 95.8499984741211,
+        "i": 360,
+        "departure_atr": 2.15,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 6,
+      "demand_age_bars": 62,
+      "departure_atr": 1.99,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "BIP-UN.TO",
+      "name": "Brookfield Infrastructure Partners",
+      "type": "stock",
+      "price": 50.58,
+      "score": 48.5,
+      "rsi": 50.1,
+      "trend": "mixed",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 1.72,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 48.52000045776367,
+        "high": 49.709999084472656,
+        "i": 373,
+        "departure_atr": 1.55,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 50.29999923706055,
+        "high": 51.0,
+        "i": 371,
+        "departure_atr": 1.56,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 4,
+      "departure_atr": 1.55,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Very close to opposing supply",
+        "Weekly trend is bearish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "BDGI.TO",
+      "name": "Badger Infrastructure Solutions",
+      "type": "stock",
+      "price": 96.41,
+      "score": 48.0,
+      "rsi": 91.1,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 8.89,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 80.7699966430664,
+        "high": 87.83999633789062,
+        "i": 334,
+        "departure_atr": 3.77,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 90.06999969482422,
+        "high": 99.45999908447266,
+        "i": 332,
+        "departure_atr": 2.56,
+        "retests": 2,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 43,
+      "departure_atr": 3.77,
+      "reasons": [
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "ZUT.TO",
+      "name": "BMO Equal Weight Utilities Index ETF",
+      "type": "etf",
+      "price": 27.68,
+      "score": 47.2,
+      "rsi": 47.3,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0.79,
+      "supply_distance_pct": 0.94,
+      "demand_zone": {
+        "low": 27.049999237060547,
+        "high": 27.459999084472656,
+        "i": 366,
+        "departure_atr": 3.13,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 27.940000534057617,
+        "high": 28.229999542236328,
+        "i": 371,
+        "departure_atr": 1.78,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 11,
+      "departure_atr": 3.13,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "DOL.TO",
+      "name": "Dollarama",
+      "type": "stock",
+      "price": 183.72,
+      "score": 47.0,
+      "rsi": 73.2,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 8.78,
+      "supply_distance_pct": 2.45,
+      "demand_zone": {
+        "low": 163.25,
+        "high": 167.58999633789062,
+        "i": 366,
+        "departure_atr": 2.66,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 188.22999572753906,
+        "high": 191.19000244140625,
+        "i": 348,
+        "departure_atr": 1.63,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 11,
+      "departure_atr": 2.66,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Limited room before supply"
+      ]
+    },
+    {
+      "symbol": "K.TO",
+      "name": "Kinross Gold",
+      "type": "stock",
+      "price": 34.25,
+      "score": 47.0,
+      "rsi": 29.2,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 5.43,
+      "supply_distance_pct": 14.1,
+      "demand_zone": {
+        "low": 31.440000534057617,
+        "high": 32.38999938964844,
+        "i": 336,
+        "departure_atr": 3.29,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 39.08000183105469,
+        "high": 40.630001068115234,
+        "i": 371,
+        "departure_atr": 4.3,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 41,
+      "departure_atr": 3.29,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Good room before opposing supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "XIT.TO",
+      "name": "iShares S&P/TSX Capped Information Technology Index ETF",
+      "type": "etf",
+      "price": 80.82,
+      "score": 46.7,
+      "rsi": 81.6,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 3.28,
+      "supply_distance_pct": 1.21,
+      "demand_zone": {
+        "low": 69.0,
+        "high": 78.16999816894531,
+        "i": 337,
+        "departure_atr": 1.75,
+        "retests": 4,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 81.80000305175781,
+        "high": 82.69999694824219,
+        "i": 197,
+        "departure_atr": 4.1,
+        "retests": 2,
+        "valid": true
+      },
+      "demand_retests": 4,
+      "demand_age_bars": 40,
+      "departure_atr": 1.75,
+      "reasons": [
+        "Limited room before supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish",
+        "RSI is stretched"
+      ]
+    },
+    {
       "symbol": "SHOP.TO",
       "name": "Shopify",
       "type": "stock",
-      "price": 214.49,
+      "price": 214.56,
       "score": 46.7,
-      "rsi": 75.3,
+      "rsi": 75.4,
       "trend": "bullish",
       "weekly_trend": "bullish",
-      "demand_distance_pct": 9.84,
+      "demand_distance_pct": 9.87,
       "supply_distance_pct": 0,
       "demand_zone": {
         "low": 177.0449981689453,
@@ -388,6 +5218,416 @@
         "Very close to opposing supply",
         "Daily trend is bullish",
         "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "FTT.TO",
+      "name": "Finning International",
+      "type": "stock",
+      "price": 107.71,
+      "score": 46.7,
+      "rsi": 82.4,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 14.78,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 90.4000015258789,
+        "high": 91.79000091552734,
+        "i": 366,
+        "departure_atr": 1.79,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 106.75,
+        "high": 109.0999984741211,
+        "i": 331,
+        "departure_atr": 4.21,
+        "retests": 2,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 11,
+      "departure_atr": 1.79,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Very close to opposing supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish",
+        "RSI is stretched"
+      ]
+    },
+    {
+      "symbol": "VDY.TO",
+      "name": "Vanguard FTSE Canadian High Dividend Yield ETF",
+      "type": "etf",
+      "price": 75.7,
+      "score": 45.5,
+      "rsi": 40.5,
+      "trend": "bearish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 2.26,
+      "demand_zone": {
+        "low": 75.1500015258789,
+        "high": 76.13999938964844,
+        "i": 315,
+        "departure_atr": 2.01,
+        "retests": 4,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 77.41000366210938,
+        "high": 77.5199966430664,
+        "i": 370,
+        "departure_atr": 2.2,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 4,
+      "demand_age_bars": 62,
+      "departure_atr": 2.01,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "FTS.TO",
+      "name": "Fortis",
+      "type": "stock",
+      "price": 75.46,
+      "score": 45.1,
+      "rsi": 50.7,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0.33,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 74.08999633789062,
+        "high": 75.20999908447266,
+        "i": 366,
+        "departure_atr": 1.84,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 75.33999633789062,
+        "high": 76.22000122070312,
+        "i": 371,
+        "departure_atr": 1.31,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 11,
+      "departure_atr": 1.84,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "HPS-A.TO",
+      "name": "Hammond Power Solutions",
+      "type": "stock",
+      "price": 283.24,
+      "score": 45.0,
+      "rsi": 69.9,
+      "trend": "mixed",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 17.06,
+      "supply_distance_pct": 0.67,
+      "demand_zone": {
+        "low": 230.3699951171875,
+        "high": 234.9199981689453,
+        "i": 367,
+        "departure_atr": 1.95,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 285.1300048828125,
+        "high": 303.6000061035156,
+        "i": 328,
+        "departure_atr": 1.2,
+        "retests": 2,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 10,
+      "departure_atr": 1.95,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "TRP.TO",
+      "name": "TC Energy",
+      "type": "stock",
+      "price": 82.58,
+      "score": 44.7,
+      "rsi": 31.2,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 2.42,
+      "demand_zone": {
+        "low": 81.51000213623047,
+        "high": 82.66000366210938,
+        "i": 266,
+        "departure_atr": 1.79,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 84.58000183105469,
+        "high": 86.19999694824219,
+        "i": 372,
+        "departure_atr": 1.45,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 111,
+      "departure_atr": 1.79,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Limited room before supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "ATD.TO",
+      "name": "Alimentation Couche-Tard",
+      "type": "stock",
+      "price": 77.69,
+      "score": 44.2,
+      "rsi": 37.0,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 4.34,
+      "demand_zone": {
+        "low": 76.80999755859375,
+        "high": 78.5,
+        "i": 289,
+        "departure_atr": 1.6,
+        "retests": 3,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 81.05999755859375,
+        "high": 82.4800033569336,
+        "i": 365,
+        "departure_atr": 1.68,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 3,
+      "demand_age_bars": 88,
+      "departure_atr": 1.6,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "KILO.TO",
+      "name": "Purpose Gold Bullion Fund",
+      "type": "etf",
+      "price": 58.6,
+      "score": 43.0,
+      "rsi": 35.8,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 2.83,
+      "supply_distance_pct": 5.24,
+      "demand_zone": {
+        "low": 56.29999923706055,
+        "high": 56.939998626708984,
+        "i": 326,
+        "departure_atr": 2.08,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 61.66999816894531,
+        "high": 61.88999938964844,
+        "i": 369,
+        "departure_atr": 1.32,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 51,
+      "departure_atr": 2.08,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "ZWC.TO",
+      "name": "BMO Canadian High Dividend Covered Call ETF",
+      "type": "etf",
+      "price": 22.145,
+      "score": 42.6,
+      "rsi": 32.7,
+      "trend": "bearish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0.07,
+      "supply_distance_pct": 2.87,
+      "demand_zone": {
+        "low": 22.0049991607666,
+        "high": 22.1299991607666,
+        "i": 292,
+        "departure_atr": 1.45,
+        "retests": 3,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 22.780000686645508,
+        "high": 22.8700008392334,
+        "i": 369,
+        "departure_atr": 1.37,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 3,
+      "demand_age_bars": 85,
+      "departure_atr": 1.45,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Limited room before supply",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "DIR-UN.TO",
+      "name": "Dream Industrial REIT",
+      "type": "stock",
+      "price": 12.76,
+      "score": 42.5,
+      "rsi": 44.0,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0.31,
+      "supply_distance_pct": 2.51,
+      "demand_zone": {
+        "low": 12.539999961853027,
+        "high": 12.720000267028809,
+        "i": 373,
+        "departure_atr": 1.37,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 13.079999923706055,
+        "high": 13.210000038146973,
+        "i": 365,
+        "departure_atr": 2.22,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 4,
+      "departure_atr": 1.37,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Limited room before supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "MDA.TO",
+      "name": "MDA Space",
+      "type": "stock",
+      "price": 42.67,
+      "score": 41.8,
+      "rsi": 64.3,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 7.31,
+      "supply_distance_pct": 38.79,
+      "demand_zone": {
+        "low": 38.150001525878906,
+        "high": 39.54999923706055,
+        "i": 358,
+        "departure_atr": 1.67,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 59.220001220703125,
+        "high": 60.45000076293945,
+        "i": 317,
+        "departure_atr": 3.09,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 19,
+      "departure_atr": 1.67,
+      "reasons": [
+        "Demand has only one retest",
+        "Good room before opposing supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "GSY.TO",
+      "name": "goeasy",
+      "type": "stock",
+      "price": 43.55,
+      "score": 41.8,
+      "rsi": 58.1,
+      "trend": "mixed",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 1.03,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 41.52000045776367,
+        "high": 43.099998474121094,
+        "i": 357,
+        "departure_atr": 1.32,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 42.959999084472656,
+        "high": 45.36000061035156,
+        "i": 359,
+        "departure_atr": 1.39,
+        "retests": 4,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 20,
+      "departure_atr": 1.32,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Very close to opposing supply",
+        "Weekly trend is bearish",
+        "RSI is constructive, not stretched"
       ]
     },
     {
@@ -428,16 +5668,163 @@
       ]
     },
     {
+      "symbol": "BIPC.TO",
+      "name": "Brookfield Infrastructure",
+      "type": "stock",
+      "price": 50.7,
+      "score": 41.2,
+      "rsi": 49.7,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 1.2,
+      "supply_distance_pct": 0.04,
+      "demand_zone": {
+        "low": 48.66999816894531,
+        "high": 50.09000015258789,
+        "i": 373,
+        "departure_atr": 1.5,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 50.720001220703125,
+        "high": 51.380001068115234,
+        "i": 371,
+        "departure_atr": 1.69,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 4,
+      "departure_atr": 1.5,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Very close to opposing supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "CAE.TO",
+      "name": "CAE",
+      "type": "stock",
+      "price": 34.28,
+      "score": 41.2,
+      "rsi": 60.4,
+      "trend": "mixed",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0.79,
+      "supply_distance_pct": 0.76,
+      "demand_zone": {
+        "low": 31.420000076293945,
+        "high": 34.0099983215332,
+        "i": 287,
+        "departure_atr": 1.94,
+        "retests": 6,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 34.540000915527344,
+        "high": 35.20000076293945,
+        "i": 353,
+        "departure_atr": 1.53,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 6,
+      "demand_age_bars": 90,
+      "departure_atr": 1.94,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Weekly trend is bearish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "BB.TO",
+      "name": "BlackBerry",
+      "type": "stock",
+      "price": 12.95,
+      "score": 40.7,
+      "rsi": 74.5,
+      "trend": "mixed",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 34.36,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 8.199999809265137,
+        "high": 8.5,
+        "i": 283,
+        "departure_atr": 1.41,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 12.119999885559082,
+        "high": 12.949999809265137,
+        "i": 371,
+        "departure_atr": 1.88,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 94,
+      "departure_atr": 1.41,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Very close to opposing supply",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "QBR-B.TO",
+      "name": "Quebecor",
+      "type": "stock",
+      "price": 60.66,
+      "score": 40.4,
+      "rsi": 37.2,
+      "trend": "bearish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 7.75,
+      "supply_distance_pct": 4.73,
+      "demand_zone": {
+        "low": 55.2599983215332,
+        "high": 55.959999084472656,
+        "i": 276,
+        "departure_atr": 1.62,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 63.529998779296875,
+        "high": 64.20999908447266,
+        "i": 373,
+        "departure_atr": 2.68,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 101,
+      "departure_atr": 1.62,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Daily trend is bearish"
+      ]
+    },
+    {
       "symbol": "RY.TO",
       "name": "Royal Bank of Canada",
       "type": "stock",
-      "price": 280.87,
+      "price": 280.63,
       "score": 40.0,
-      "rsi": 42.5,
+      "rsi": 42.1,
       "trend": "bearish",
       "weekly_trend": "mixed",
       "demand_distance_pct": 0,
-      "supply_distance_pct": 2.24,
+      "supply_distance_pct": 2.33,
       "demand_zone": {
         "low": 277.510009765625,
         "high": 282.6199951171875,
@@ -464,16 +5851,127 @@
       ]
     },
     {
+      "symbol": "NA.TO",
+      "name": "National Bank of Canada",
+      "type": "stock",
+      "price": 204.87,
+      "score": 39.9,
+      "rsi": 39.2,
+      "trend": "bearish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 13.19,
+      "supply_distance_pct": 4.7,
+      "demand_zone": {
+        "low": 174.14999389648438,
+        "high": 177.85000610351562,
+        "i": 244,
+        "departure_atr": 2.06,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 214.49000549316406,
+        "high": 215.97000122070312,
+        "i": 371,
+        "departure_atr": 1.92,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 133,
+      "departure_atr": 2.06,
+      "reasons": [
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "GIL.TO",
+      "name": "Gildan Activewear",
+      "type": "stock",
+      "price": 60.4,
+      "score": 38.8,
+      "rsi": 32.3,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 6.49,
+      "supply_distance_pct": 8.58,
+      "demand_zone": {
+        "low": 55.709999084472656,
+        "high": 56.47999954223633,
+        "i": 14,
+        "departure_atr": 1.42,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 65.58000183105469,
+        "high": 67.94999694824219,
+        "i": 371,
+        "departure_atr": 4.13,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 363,
+      "departure_atr": 1.42,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Good room before opposing supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "TA.TO",
+      "name": "TransAlta",
+      "type": "stock",
+      "price": 16.85,
+      "score": 37.9,
+      "rsi": 49.6,
+      "trend": "mixed",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 2.02,
+      "supply_distance_pct": 0.3,
+      "demand_zone": {
+        "low": 15.619999885559082,
+        "high": 16.510000228881836,
+        "i": 245,
+        "departure_atr": 2.89,
+        "retests": 6,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 16.899999618530273,
+        "high": 17.700000762939453,
+        "i": 353,
+        "departure_atr": 2.03,
+        "retests": 4,
+        "valid": true
+      },
+      "demand_retests": 6,
+      "demand_age_bars": 132,
+      "departure_atr": 2.89,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Weekly trend is bearish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
       "symbol": "XQQ.TO",
-      "name": "iShares NASDAQ 100 Index ETF (CAD-Hedged)",
+      "name": "iShares NASDAQ 100 Index ETF CAD-Hedged",
       "type": "etf",
-      "price": 74.2,
-      "score": 38.0,
-      "rsi": 70.3,
+      "price": 74.31,
+      "score": 37.2,
+      "rsi": 70.7,
       "trend": "bullish",
       "weekly_trend": "bullish",
-      "demand_distance_pct": 4.54,
-      "supply_distance_pct": 0,
+      "demand_distance_pct": 4.68,
+      "supply_distance_pct": 0.43,
       "demand_zone": {
         "low": 70.19999694824219,
         "high": 70.83000183105469,
@@ -483,10 +5981,10 @@
         "valid": true
       },
       "supply_zone": {
-        "low": 73.98999786376953,
-        "high": 74.75,
-        "i": 308,
-        "departure_atr": 1.88,
+        "low": 74.62999725341797,
+        "high": 75.02999877929688,
+        "i": 295,
+        "departure_atr": 4.39,
         "retests": 2,
         "valid": true
       },
@@ -500,41 +5998,848 @@
       ]
     },
     {
-      "symbol": "QQC.TO",
-      "name": "Invesco NASDAQ 100 Index ETF",
-      "type": "etf",
-      "price": 51.54,
-      "score": 38.0,
-      "rsi": 78.3,
-      "trend": "bullish",
-      "weekly_trend": "bullish",
-      "demand_distance_pct": 6.77,
+      "symbol": "BAM.TO",
+      "name": "Brookfield Asset Management",
+      "type": "stock",
+      "price": 63.38,
+      "score": 36.8,
+      "rsi": 36.5,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 2.22,
+      "demand_zone": {
+        "low": 61.93000030517578,
+        "high": 64.02999877929688,
+        "i": 313,
+        "departure_atr": 1.93,
+        "retests": 4,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 64.79000091552734,
+        "high": 65.61000061035156,
+        "i": 371,
+        "departure_atr": 1.55,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 4,
+      "demand_age_bars": 64,
+      "departure_atr": 1.93,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "LUN.TO",
+      "name": "Lundin Mining",
+      "type": "stock",
+      "price": 34.24,
+      "score": 36.0,
+      "rsi": 48.6,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 4.91,
+      "supply_distance_pct": 8.82,
+      "demand_zone": {
+        "low": 31.030000686645508,
+        "high": 32.560001373291016,
+        "i": 250,
+        "departure_atr": 2.51,
+        "retests": 4,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 37.2599983215332,
+        "high": 38.16999816894531,
+        "i": 362,
+        "departure_atr": 3.77,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 4,
+      "demand_age_bars": 127,
+      "departure_atr": 2.51,
+      "reasons": [
+        "Strong departure from demand",
+        "Good room before opposing supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "TOU.TO",
+      "name": "Tourmaline Oil",
+      "type": "stock",
+      "price": 60.89,
+      "score": 34.4,
+      "rsi": 44.0,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 1.61,
+      "supply_distance_pct": 2.13,
+      "demand_zone": {
+        "low": 59.02000045776367,
+        "high": 59.90999984741211,
+        "i": 371,
+        "departure_atr": 1.33,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 62.189998626708984,
+        "high": 64.52999877929688,
+        "i": 366,
+        "departure_atr": 2.55,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 6,
+      "departure_atr": 1.33,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand has only one retest",
+        "Limited room before supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "CRT-UN.TO",
+      "name": "CT REIT",
+      "type": "stock",
+      "price": 16.97,
+      "score": 33.6,
+      "rsi": 61.4,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 2.95,
       "supply_distance_pct": 0,
       "demand_zone": {
-        "low": 47.790000915527344,
-        "high": 48.04999923706055,
-        "i": 358,
-        "departure_atr": 1.82,
+        "low": 16.270000457763672,
+        "high": 16.469999313354492,
+        "i": 249,
+        "departure_atr": 1.86,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 16.8700008392334,
+        "high": 17.030000686645508,
+        "i": 372,
+        "departure_atr": 1.36,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 128,
+      "departure_atr": 1.86,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "SJ.TO",
+      "name": "Stella-Jones",
+      "type": "stock",
+      "price": 68.75,
+      "score": 33.4,
+      "rsi": 56.4,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 1.09,
+      "supply_distance_pct": 1.15,
+      "demand_zone": {
+        "low": 66.69999694824219,
+        "high": 68.0,
+        "i": 362,
+        "departure_atr": 1.44,
+        "retests": 3,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 69.54000091552734,
+        "high": 70.36000061035156,
+        "i": 371,
+        "departure_atr": 2.33,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 3,
+      "demand_age_bars": 15,
+      "departure_atr": 1.44,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Limited room before supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "SRU-UN.TO",
+      "name": "SmartCentres REIT",
+      "type": "stock",
+      "price": 26.7,
+      "score": 31.1,
+      "rsi": 45.7,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 3.56,
+      "supply_distance_pct": 0.37,
+      "demand_zone": {
+        "low": 25.579999923706055,
+        "high": 25.75,
+        "i": 189,
+        "departure_atr": 2.01,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 26.799999237060547,
+        "high": 27.0,
+        "i": 372,
+        "departure_atr": 1.93,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 188,
+      "departure_atr": 2.01,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "LSPD.TO",
+      "name": "Lightspeed Commerce",
+      "type": "stock",
+      "price": 13.99,
+      "score": 30.3,
+      "rsi": 59.2,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 4.36,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 12.65999984741211,
+        "high": 13.380000114440918,
+        "i": 309,
+        "departure_atr": 2.26,
+        "retests": 4,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 13.850000381469727,
+        "high": 14.3100004196167,
+        "i": 365,
+        "departure_atr": 1.97,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 4,
+      "demand_age_bars": 68,
+      "departure_atr": 2.26,
+      "reasons": [
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "EQB.TO",
+      "name": "EQB",
+      "type": "stock",
+      "price": 125.99,
+      "score": 30.3,
+      "rsi": 41.6,
+      "trend": "bearish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 11.76,
+      "supply_distance_pct": 5.5,
+      "demand_zone": {
+        "low": 107.36000061035156,
+        "high": 111.16999816894531,
+        "i": 250,
+        "departure_atr": 1.49,
         "retests": 2,
         "valid": true
       },
       "supply_zone": {
-        "low": 51.029998779296875,
-        "high": 51.56999969482422,
-        "i": 308,
-        "departure_atr": 1.73,
-        "retests": 2,
+        "low": 132.9199981689453,
+        "high": 134.72000122070312,
+        "i": 360,
+        "departure_atr": 1.32,
+        "retests": 0,
         "valid": true
       },
       "demand_retests": 2,
-      "demand_age_bars": 19,
-      "departure_atr": 1.82,
+      "demand_age_bars": 127,
+      "departure_atr": 1.49,
       "reasons": [
+        "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "BYD.TO",
+      "name": "Boyd Group Services",
+      "type": "stock",
+      "price": 111.92,
+      "score": 30.0,
+      "rsi": 48.4,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": null,
+      "supply_distance_pct": 11.69,
+      "demand_zone": null,
+      "supply_zone": {
+        "low": 125.0,
+        "high": 127.77999877929688,
+        "i": 365,
+        "departure_atr": 2.97,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": null,
+      "demand_age_bars": null,
+      "departure_atr": null,
+      "reasons": [
+        "No valid nearby demand zone found",
+        "Good room before opposing supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "HUG.TO",
+      "name": "Global X Gold ETF",
+      "type": "etf",
+      "price": 30.29,
+      "score": 29.8,
+      "rsi": 38.9,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 2.05,
+      "supply_distance_pct": 4.85,
+      "demand_zone": {
+        "low": 29.200000762939453,
+        "high": 29.670000076293945,
+        "i": 322,
+        "departure_atr": 1.34,
+        "retests": 4,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 31.760000228881836,
+        "high": 31.860000610351562,
+        "i": 369,
+        "departure_atr": 1.49,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 4,
+      "demand_age_bars": 55,
+      "departure_atr": 1.34,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "REI-UN.TO",
+      "name": "RioCan REIT",
+      "type": "stock",
+      "price": 20.695,
+      "score": 28.0,
+      "rsi": 51.0,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 8.87,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 18.709999084472656,
+        "high": 18.860000610351562,
+        "i": 250,
+        "departure_atr": 3.1,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 20.670000076293945,
+        "high": 20.8700008392334,
+        "i": 372,
+        "departure_atr": 1.48,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 127,
+      "departure_atr": 3.1,
+      "reasons": [
+        "Demand zone is fresh (untested)",
         "Strong departure from demand",
         "Very close to opposing supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "XRE.TO",
+      "name": "iShares S&P/TSX Capped REIT Index ETF",
+      "type": "etf",
+      "price": 15.59,
+      "score": 27.9,
+      "rsi": 49.5,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0.64,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 15.260000228881836,
+        "high": 15.489999771118164,
+        "i": 244,
+        "departure_atr": 1.42,
+        "retests": 3,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 15.539999961853027,
+        "high": 15.65999984741211,
+        "i": 372,
+        "departure_atr": 1.43,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 3,
+      "demand_age_bars": 133,
+      "departure_atr": 1.42,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Very close to opposing supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "AP-UN.TO",
+      "name": "Allied Properties REIT",
+      "type": "stock",
+      "price": 7.08,
+      "score": 25.0,
+      "rsi": 23.9,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": null,
+      "supply_distance_pct": 12.29,
+      "demand_zone": null,
+      "supply_zone": {
+        "low": 7.949999809265137,
+        "high": 8.039999961853027,
+        "i": 371,
+        "departure_atr": 2.73,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": null,
+      "demand_age_bars": null,
+      "departure_atr": null,
+      "reasons": [
+        "No valid nearby demand zone found",
+        "Good room before opposing supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "AFN.TO",
+      "name": "Ag Growth International",
+      "type": "stock",
+      "price": 8.39,
+      "score": 25.0,
+      "rsi": 28.7,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": null,
+      "supply_distance_pct": 61.14,
+      "demand_zone": null,
+      "supply_zone": {
+        "low": 13.520000457763672,
+        "high": 14.5600004196167,
+        "i": 360,
+        "departure_atr": 1.8,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": null,
+      "demand_age_bars": null,
+      "departure_atr": null,
+      "reasons": [
+        "No valid nearby demand zone found",
+        "Good room before opposing supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "ZRE.TO",
+      "name": "BMO Equal Weight REITs Index ETF",
+      "type": "etf",
+      "price": 22.4,
+      "score": 24.0,
+      "rsi": 54.0,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 5.8,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 20.8799991607666,
+        "high": 21.100000381469727,
+        "i": 31,
+        "departure_atr": 2.7,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 22.260000228881836,
+        "high": 22.440000534057617,
+        "i": 372,
+        "departure_atr": 3.52,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 346,
+      "departure_atr": 2.7,
+      "reasons": [
+        "Demand has only one retest",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "BCE.TO",
+      "name": "BCE",
+      "type": "stock",
+      "price": 28.96,
+      "score": 19.0,
+      "rsi": 16.8,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": null,
+      "supply_distance_pct": 5.56,
+      "demand_zone": null,
+      "supply_zone": {
+        "low": 30.56999969482422,
+        "high": 31.149999618530273,
+        "i": 371,
+        "departure_atr": 1.62,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": null,
+      "demand_age_bars": null,
+      "departure_atr": null,
+      "reasons": [
+        "No valid nearby demand zone found",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "T.TO",
+      "name": "TELUS",
+      "type": "stock",
+      "price": 11.94,
+      "score": 19.0,
+      "rsi": 32.4,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": null,
+      "supply_distance_pct": 6.03,
+      "demand_zone": null,
+      "supply_zone": {
+        "low": 12.65999984741211,
+        "high": 12.779999732971191,
+        "i": 366,
+        "departure_atr": 1.63,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": null,
+      "demand_age_bars": null,
+      "departure_atr": null,
+      "reasons": [
+        "No valid nearby demand zone found",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "IFC.TO",
+      "name": "Intact Financial",
+      "type": "stock",
+      "price": 243.68,
+      "score": 19.0,
+      "rsi": 29.2,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": null,
+      "supply_distance_pct": 6.79,
+      "demand_zone": null,
+      "supply_zone": {
+        "low": 260.2200012207031,
+        "high": 262.4800109863281,
+        "i": 368,
+        "departure_atr": 1.29,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": null,
+      "demand_age_bars": null,
+      "departure_atr": null,
+      "reasons": [
+        "No valid nearby demand zone found",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "NPI.TO",
+      "name": "Northland Power",
+      "type": "stock",
+      "price": 22.64,
+      "score": 18.4,
+      "rsi": 77.3,
+      "trend": "bullish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 6.1,
+      "supply_distance_pct": 0.75,
+      "demand_zone": {
+        "low": 20.329999923706055,
+        "high": 21.260000228881836,
+        "i": 344,
+        "departure_atr": 1.5,
+        "retests": 3,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 22.809999465942383,
+        "high": 23.190000534057617,
+        "i": 306,
+        "departure_atr": 1.26,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 3,
+      "demand_age_bars": 33,
+      "departure_atr": 1.5,
+      "reasons": [
+        "Very close to opposing supply",
         "Daily trend is bullish",
-        "Weekly trend agrees bullish",
         "RSI is stretched"
+      ]
+    },
+    {
+      "symbol": "AQN.TO",
+      "name": "Algonquin Power",
+      "type": "stock",
+      "price": 7.25,
+      "score": 17.0,
+      "rsi": 39.5,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": null,
+      "supply_distance_pct": 3.45,
+      "demand_zone": null,
+      "supply_zone": {
+        "low": 7.5,
+        "high": 7.570000171661377,
+        "i": 369,
+        "departure_atr": 2.61,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": null,
+      "demand_age_bars": null,
+      "departure_atr": null,
+      "reasons": [
+        "No valid nearby demand zone found",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "ZAG.TO",
+      "name": "BMO Aggregate Bond Index ETF",
+      "type": "etf",
+      "price": 13.31,
+      "score": 14.0,
+      "rsi": 45.9,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": null,
+      "supply_distance_pct": 1.28,
+      "demand_zone": null,
+      "supply_zone": {
+        "low": 13.479999542236328,
+        "high": 13.510000228881836,
+        "i": 371,
+        "departure_atr": 2.8,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": null,
+      "demand_age_bars": null,
+      "departure_atr": null,
+      "reasons": [
+        "No valid nearby demand zone found",
+        "Limited room before supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "XBB.TO",
+      "name": "iShares Core Canadian Universe Bond Index ETF",
+      "type": "etf",
+      "price": 27.18,
+      "score": 14.0,
+      "rsi": 45.1,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": null,
+      "supply_distance_pct": 1.29,
+      "demand_zone": null,
+      "supply_zone": {
+        "low": 27.530000686645508,
+        "high": 27.56999969482422,
+        "i": 371,
+        "departure_atr": 3.92,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": null,
+      "demand_age_bars": null,
+      "departure_atr": null,
+      "reasons": [
+        "No valid nearby demand zone found",
+        "Limited room before supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "ZFL.TO",
+      "name": "BMO Long Federal Bond Index ETF",
+      "type": "etf",
+      "price": 11.22,
+      "score": 14.0,
+      "rsi": 48.0,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": null,
+      "supply_distance_pct": 2.58,
+      "demand_zone": null,
+      "supply_zone": {
+        "low": 11.510000228881836,
+        "high": 11.539999961853027,
+        "i": 371,
+        "departure_atr": 3.2,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": null,
+      "demand_age_bars": null,
+      "departure_atr": null,
+      "reasons": [
+        "No valid nearby demand zone found",
+        "Limited room before supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "CAR-UN.TO",
+      "name": "Canadian Apartment Properties REIT",
+      "type": "stock",
+      "price": 31.73,
+      "score": 6.0,
+      "rsi": 46.5,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": null,
+      "supply_distance_pct": 0.32,
+      "demand_zone": null,
+      "supply_zone": {
+        "low": 31.829999923706055,
+        "high": 32.040000915527344,
+        "i": 371,
+        "departure_atr": 1.37,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": null,
+      "demand_age_bars": null,
+      "departure_atr": null,
+      "reasons": [
+        "No valid nearby demand zone found",
+        "Very close to opposing supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "XSB.TO",
+      "name": "iShares Core Canadian Short Term Bond Index ETF",
+      "type": "etf",
+      "price": 26.47,
+      "score": 0,
+      "rsi": 44.4,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": null,
+      "supply_distance_pct": 0.6,
+      "demand_zone": null,
+      "supply_zone": {
+        "low": 26.6299991607666,
+        "high": 26.649999618530273,
+        "i": 371,
+        "departure_atr": 3.59,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": null,
+      "demand_age_bars": null,
+      "departure_atr": null,
+      "reasons": [
+        "No valid nearby demand zone found",
+        "Very close to opposing supply",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
       ]
     }
   ]
