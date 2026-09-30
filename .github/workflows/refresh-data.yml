@@ -10,7 +10,7 @@ on:
       - "requirements.txt"
       - ".github/workflows/refresh-data.yml"
   schedule:
-    - cron: "15 13-21 * * 1-5"
+    - cron: "*/15 13-21 * * 1-5"
 
 permissions:
   contents: write
