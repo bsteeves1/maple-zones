@@ -17,7 +17,6 @@ function render(){
   list.innerHTML="";
   filtered.forEach((r,i)=>{
     const n=tpl.content.cloneNode(true);
-    const article=n.querySelector(".ticker-card");
     n.querySelector(".rank").textContent=i+1;
     n.querySelector(".symbol").textContent=r.symbol;
     n.querySelector(".name").textContent=r.name;
@@ -56,19 +55,42 @@ function render(){
   empty.classList.toggle("hidden",filtered.length!==0);
 }
 
-async function load(){
-  updated.textContent="Loading latest scan…";
+let lastGeneratedAt=null;
+let lastLoadAt=0;
+
+function formatStamp(iso){
+  const d=new Date(iso);
+  return d.toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"});
+}
+function formatTime(d){
+  return d.toLocaleTimeString([], {hour:"numeric",minute:"2-digit"});
+}
+async function fetchScan(){
+  const bust=Date.now();
+  const raw="https://raw.githubusercontent.com/bsteeves1/maple-zones/main/data/scan.json?ts="+bust;
+  const local="data/scan.json?ts="+bust;
   try{
-    const res=await fetch("data/scan.json?ts="+Date.now(),{cache:"no-store"});
-    if(!res.ok)throw new Error("No scan data");
-    const data=await res.json();
+    const r=await fetch(raw,{cache:"no-store"});
+    if(r.ok)return await r.json();
+  }catch(e){}
+  const r=await fetch(local,{cache:"no-store"});
+  if(!r.ok)throw new Error("No scan data");
+  return await r.json();
+}
+
+async function load(){
+  lastLoadAt=Date.now();
+  updated.textContent=lastGeneratedAt?"Checking for newer market data…":"Loading latest scan…";
+  try{
+    const data=await fetchScan();
     rows=(data.results||[]).sort((a,b)=>b.score-a.score);
-    const d=new Date(data.generated_at);
-    updated.textContent="Updated "+d.toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"});
+    lastGeneratedAt=data.generated_at||lastGeneratedAt;
+    const checked=new Date();
+    updated.textContent="Market data "+formatStamp(lastGeneratedAt)+" • checked "+formatTime(checked);
     render();
   }catch(e){
-    updated.textContent="Waiting for market-data refresh";
-    rows=[]; render();
+    updated.textContent=lastGeneratedAt?"Market data "+formatStamp(lastGeneratedAt)+" • refresh check failed":"Waiting for market-data refresh";
+    if(!lastGeneratedAt){rows=[];render();}
   }
 }
 search.addEventListener("input",render);
@@ -80,16 +102,8 @@ document.getElementById("filters").addEventListener("click",e=>{
 document.getElementById("refreshBtn").addEventListener("click",load);
 if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 
-const AUTO_REFRESH_MS=5*60*1000;
-let lastLoadAt=0;
-const originalLoad=load;
-load=async function(){
-  lastLoadAt=Date.now();
-  return originalLoad();
-};
-setInterval(()=>{
-  if(document.visibilityState==="visible")load();
-},AUTO_REFRESH_MS);
+const AUTO_REFRESH_MS=60*1000;
+setInterval(()=>{if(document.visibilityState==="visible")load();},AUTO_REFRESH_MS);
 document.addEventListener("visibilitychange",()=>{
   if(document.visibilityState==="visible"&&Date.now()-lastLoadAt>=AUTO_REFRESH_MS)load();
 });
