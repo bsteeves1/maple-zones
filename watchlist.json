@@ -2133,5 +2133,625 @@
     "symbol": "F.NE",
     "name": "Ford Motor CDR (CAD Hedged)",
     "type": "cdr"
+  },
+  {
+    "symbol": "SPY",
+    "name": "SPDR S&P 500 ETF Trust",
+    "type": "etf"
+  },
+  {
+    "symbol": "VOO",
+    "name": "Vanguard S&P 500 ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "IVV",
+    "name": "iShares Core S&P 500 ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "QQQ",
+    "name": "Invesco QQQ Trust",
+    "type": "etf"
+  },
+  {
+    "symbol": "QQQM",
+    "name": "Invesco NASDAQ 100 ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "DIA",
+    "name": "SPDR Dow Jones Industrial Average ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "IWM",
+    "name": "iShares Russell 2000 ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "VTI",
+    "name": "Vanguard Total Stock Market ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "VT",
+    "name": "Vanguard Total World Stock ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "SCHD",
+    "name": "Schwab U.S. Dividend Equity ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "VIG",
+    "name": "Vanguard Dividend Appreciation ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "DGRO",
+    "name": "iShares Core Dividend Growth ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "JEPI",
+    "name": "JPMorgan Equity Premium Income ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "JEPQ",
+    "name": "JPMorgan Nasdaq Equity Premium Income ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "XLK",
+    "name": "Technology Select Sector SPDR Fund",
+    "type": "etf"
+  },
+  {
+    "symbol": "XLF",
+    "name": "Financial Select Sector SPDR Fund",
+    "type": "etf"
+  },
+  {
+    "symbol": "XLE",
+    "name": "Energy Select Sector SPDR Fund",
+    "type": "etf"
+  },
+  {
+    "symbol": "XLV",
+    "name": "Health Care Select Sector SPDR Fund",
+    "type": "etf"
+  },
+  {
+    "symbol": "XLY",
+    "name": "Consumer Discretionary Select Sector SPDR Fund",
+    "type": "etf"
+  },
+  {
+    "symbol": "XLP",
+    "name": "Consumer Staples Select Sector SPDR Fund",
+    "type": "etf"
+  },
+  {
+    "symbol": "XLI",
+    "name": "Industrial Select Sector SPDR Fund",
+    "type": "etf"
+  },
+  {
+    "symbol": "XLU",
+    "name": "Utilities Select Sector SPDR Fund",
+    "type": "etf"
+  },
+  {
+    "symbol": "XLRE",
+    "name": "Real Estate Select Sector SPDR Fund",
+    "type": "etf"
+  },
+  {
+    "symbol": "SMH",
+    "name": "VanEck Semiconductor ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "SOXX",
+    "name": "iShares Semiconductor ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "ARKK",
+    "name": "ARK Innovation ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "GLD",
+    "name": "SPDR Gold Shares",
+    "type": "etf"
+  },
+  {
+    "symbol": "SLV",
+    "name": "iShares Silver Trust",
+    "type": "etf"
+  },
+  {
+    "symbol": "USO",
+    "name": "United States Oil Fund",
+    "type": "etf"
+  },
+  {
+    "symbol": "TLT",
+    "name": "iShares 20+ Year Treasury Bond ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "HYG",
+    "name": "iShares iBoxx High Yield Corporate Bond ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "LQD",
+    "name": "iShares iBoxx Investment Grade Corporate Bond ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "GOOG",
+    "name": "Alphabet Class C",
+    "type": "stock"
+  },
+  {
+    "symbol": "GOOGL",
+    "name": "Alphabet Class A",
+    "type": "stock"
+  },
+  {
+    "symbol": "AAPL",
+    "name": "Apple",
+    "type": "stock"
+  },
+  {
+    "symbol": "MSFT",
+    "name": "Microsoft",
+    "type": "stock"
+  },
+  {
+    "symbol": "NVDA",
+    "name": "NVIDIA",
+    "type": "stock"
+  },
+  {
+    "symbol": "AMZN",
+    "name": "Amazon",
+    "type": "stock"
+  },
+  {
+    "symbol": "META",
+    "name": "Meta Platforms",
+    "type": "stock"
+  },
+  {
+    "symbol": "TSLA",
+    "name": "Tesla",
+    "type": "stock"
+  },
+  {
+    "symbol": "AVGO",
+    "name": "Broadcom",
+    "type": "stock"
+  },
+  {
+    "symbol": "ORCL",
+    "name": "Oracle",
+    "type": "stock"
+  },
+  {
+    "symbol": "AMD",
+    "name": "Advanced Micro Devices",
+    "type": "stock"
+  },
+  {
+    "symbol": "NFLX",
+    "name": "Netflix",
+    "type": "stock"
+  },
+  {
+    "symbol": "CRM",
+    "name": "Salesforce",
+    "type": "stock"
+  },
+  {
+    "symbol": "ADBE",
+    "name": "Adobe",
+    "type": "stock"
+  },
+  {
+    "symbol": "INTC",
+    "name": "Intel",
+    "type": "stock"
+  },
+  {
+    "symbol": "QCOM",
+    "name": "Qualcomm",
+    "type": "stock"
+  },
+  {
+    "symbol": "CSCO",
+    "name": "Cisco Systems",
+    "type": "stock"
+  },
+  {
+    "symbol": "IBM",
+    "name": "IBM",
+    "type": "stock"
+  },
+  {
+    "symbol": "MU",
+    "name": "Micron Technology",
+    "type": "stock"
+  },
+  {
+    "symbol": "NOW",
+    "name": "ServiceNow",
+    "type": "stock"
+  },
+  {
+    "symbol": "PANW",
+    "name": "Palo Alto Networks",
+    "type": "stock"
+  },
+  {
+    "symbol": "PLTR",
+    "name": "Palantir Technologies",
+    "type": "stock"
+  },
+  {
+    "symbol": "UBER",
+    "name": "Uber Technologies",
+    "type": "stock"
+  },
+  {
+    "symbol": "SHOP",
+    "name": "Shopify US",
+    "type": "stock"
+  },
+  {
+    "symbol": "SNOW",
+    "name": "Snowflake",
+    "type": "stock"
+  },
+  {
+    "symbol": "CRWD",
+    "name": "CrowdStrike",
+    "type": "stock"
+  },
+  {
+    "symbol": "JPM",
+    "name": "JPMorgan Chase",
+    "type": "stock"
+  },
+  {
+    "symbol": "BAC",
+    "name": "Bank of America",
+    "type": "stock"
+  },
+  {
+    "symbol": "WFC",
+    "name": "Wells Fargo",
+    "type": "stock"
+  },
+  {
+    "symbol": "GS",
+    "name": "Goldman Sachs",
+    "type": "stock"
+  },
+  {
+    "symbol": "MS",
+    "name": "Morgan Stanley",
+    "type": "stock"
+  },
+  {
+    "symbol": "V",
+    "name": "Visa",
+    "type": "stock"
+  },
+  {
+    "symbol": "MA",
+    "name": "Mastercard",
+    "type": "stock"
+  },
+  {
+    "symbol": "AXP",
+    "name": "American Express",
+    "type": "stock"
+  },
+  {
+    "symbol": "BRK-B",
+    "name": "Berkshire Hathaway Class B",
+    "type": "stock"
+  },
+  {
+    "symbol": "BLK",
+    "name": "BlackRock",
+    "type": "stock"
+  },
+  {
+    "symbol": "SCHW",
+    "name": "Charles Schwab",
+    "type": "stock"
+  },
+  {
+    "symbol": "C",
+    "name": "Citigroup",
+    "type": "stock"
+  },
+  {
+    "symbol": "WMT",
+    "name": "Walmart",
+    "type": "stock"
+  },
+  {
+    "symbol": "COST",
+    "name": "Costco",
+    "type": "stock"
+  },
+  {
+    "symbol": "HD",
+    "name": "Home Depot",
+    "type": "stock"
+  },
+  {
+    "symbol": "LOW",
+    "name": "Lowe's",
+    "type": "stock"
+  },
+  {
+    "symbol": "TGT",
+    "name": "Target",
+    "type": "stock"
+  },
+  {
+    "symbol": "MCD",
+    "name": "McDonald's",
+    "type": "stock"
+  },
+  {
+    "symbol": "SBUX",
+    "name": "Starbucks",
+    "type": "stock"
+  },
+  {
+    "symbol": "NKE",
+    "name": "Nike",
+    "type": "stock"
+  },
+  {
+    "symbol": "DIS",
+    "name": "Walt Disney",
+    "type": "stock"
+  },
+  {
+    "symbol": "BKNG",
+    "name": "Booking Holdings",
+    "type": "stock"
+  },
+  {
+    "symbol": "KO",
+    "name": "Coca-Cola",
+    "type": "stock"
+  },
+  {
+    "symbol": "PEP",
+    "name": "PepsiCo",
+    "type": "stock"
+  },
+  {
+    "symbol": "PG",
+    "name": "Procter & Gamble",
+    "type": "stock"
+  },
+  {
+    "symbol": "PM",
+    "name": "Philip Morris",
+    "type": "stock"
+  },
+  {
+    "symbol": "MO",
+    "name": "Altria",
+    "type": "stock"
+  },
+  {
+    "symbol": "LLY",
+    "name": "Eli Lilly",
+    "type": "stock"
+  },
+  {
+    "symbol": "JNJ",
+    "name": "Johnson & Johnson",
+    "type": "stock"
+  },
+  {
+    "symbol": "UNH",
+    "name": "UnitedHealth Group",
+    "type": "stock"
+  },
+  {
+    "symbol": "ABBV",
+    "name": "AbbVie",
+    "type": "stock"
+  },
+  {
+    "symbol": "MRK",
+    "name": "Merck",
+    "type": "stock"
+  },
+  {
+    "symbol": "PFE",
+    "name": "Pfizer",
+    "type": "stock"
+  },
+  {
+    "symbol": "TMO",
+    "name": "Thermo Fisher Scientific",
+    "type": "stock"
+  },
+  {
+    "symbol": "ABT",
+    "name": "Abbott Laboratories",
+    "type": "stock"
+  },
+  {
+    "symbol": "DHR",
+    "name": "Danaher",
+    "type": "stock"
+  },
+  {
+    "symbol": "VRTX",
+    "name": "Vertex Pharmaceuticals",
+    "type": "stock"
+  },
+  {
+    "symbol": "XOM",
+    "name": "Exxon Mobil",
+    "type": "stock"
+  },
+  {
+    "symbol": "CVX",
+    "name": "Chevron",
+    "type": "stock"
+  },
+  {
+    "symbol": "COP",
+    "name": "ConocoPhillips",
+    "type": "stock"
+  },
+  {
+    "symbol": "SLB",
+    "name": "SLB",
+    "type": "stock"
+  },
+  {
+    "symbol": "EOG",
+    "name": "EOG Resources",
+    "type": "stock"
+  },
+  {
+    "symbol": "CAT",
+    "name": "Caterpillar",
+    "type": "stock"
+  },
+  {
+    "symbol": "DE",
+    "name": "Deere",
+    "type": "stock"
+  },
+  {
+    "symbol": "GE",
+    "name": "GE Aerospace",
+    "type": "stock"
+  },
+  {
+    "symbol": "HON",
+    "name": "Honeywell",
+    "type": "stock"
+  },
+  {
+    "symbol": "RTX",
+    "name": "RTX",
+    "type": "stock"
+  },
+  {
+    "symbol": "LMT",
+    "name": "Lockheed Martin",
+    "type": "stock"
+  },
+  {
+    "symbol": "BA",
+    "name": "Boeing",
+    "type": "stock"
+  },
+  {
+    "symbol": "UPS",
+    "name": "UPS",
+    "type": "stock"
+  },
+  {
+    "symbol": "FDX",
+    "name": "FedEx",
+    "type": "stock"
+  },
+  {
+    "symbol": "MMM",
+    "name": "3M",
+    "type": "stock"
+  },
+  {
+    "symbol": "NEE",
+    "name": "NextEra Energy",
+    "type": "stock"
+  },
+  {
+    "symbol": "SO",
+    "name": "Southern Company",
+    "type": "stock"
+  },
+  {
+    "symbol": "DUK",
+    "name": "Duke Energy",
+    "type": "stock"
+  },
+  {
+    "symbol": "AEP",
+    "name": "American Electric Power",
+    "type": "stock"
+  },
+  {
+    "symbol": "T",
+    "name": "AT&T",
+    "type": "stock"
+  },
+  {
+    "symbol": "VZ",
+    "name": "Verizon",
+    "type": "stock"
+  },
+  {
+    "symbol": "CMCSA",
+    "name": "Comcast",
+    "type": "stock"
+  },
+  {
+    "symbol": "LIN",
+    "name": "Linde",
+    "type": "stock"
+  },
+  {
+    "symbol": "APD",
+    "name": "Air Products and Chemicals",
+    "type": "stock"
+  },
+  {
+    "symbol": "FCX",
+    "name": "Freeport-McMoRan",
+    "type": "stock"
+  },
+  {
+    "symbol": "GM",
+    "name": "General Motors",
+    "type": "stock"
+  },
+  {
+    "symbol": "F",
+    "name": "Ford Motor",
+    "type": "stock"
+  },
+  {
+    "symbol": "RIVN",
+    "name": "Rivian Automotive",
+    "type": "stock"
+  },
+  {
+    "symbol": "LCID",
+    "name": "Lucid Group",
+    "type": "stock"
   }
 ]
