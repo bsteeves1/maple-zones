@@ -79,4 +79,18 @@ document.getElementById("filters").addEventListener("click",e=>{
 });
 document.getElementById("refreshBtn").addEventListener("click",load);
 if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{})}
+
+const AUTO_REFRESH_MS=5*60*1000;
+let lastLoadAt=0;
+const originalLoad=load;
+load=async function(){
+  lastLoadAt=Date.now();
+  return originalLoad();
+};
+setInterval(()=>{
+  if(document.visibilityState==="visible")load();
+},AUTO_REFRESH_MS);
+document.addEventListener("visibilitychange",()=>{
+  if(document.visibilityState==="visible"&&Date.now()-lastLoadAt>=AUTO_REFRESH_MS)load();
+});
 load();
