@@ -2753,5 +2753,15 @@
     "symbol": "LCID",
     "name": "Lucid Group",
     "type": "stock"
+  },
+  {
+    "symbol": "RBNK.TO",
+    "name": "RBC Canadian Bank Yield Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "BNKU.TO",
+    "name": "LongPoint MegaLong 3X Canadian Banks ETF",
+    "type": "etf"
   }
 ]
