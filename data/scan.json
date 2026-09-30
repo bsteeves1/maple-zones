@@ -1,0 +1,305 @@
+{
+  "generated_at": "2026-09-30T14:17:14.920517+00:00",
+  "method": "daily heuristic v1",
+  "results": [
+    {
+      "symbol": "XEQT.TO",
+      "name": "iShares Core Equity ETF Portfolio",
+      "type": "etf",
+      "price": 45.77000045776367,
+      "score": 80.7,
+      "rsi": 63.3,
+      "trend": "bullish",
+      "demand_distance_pct": 0.59,
+      "supply_distance_pct": 0.17,
+      "demand_zone": {
+        "low": 45.20000076293945,
+        "high": 45.5,
+        "i": 169
+      },
+      "supply_zone": {
+        "low": 45.849998474121094,
+        "high": 45.959999084472656,
+        "i": 172
+      }
+    },
+    {
+      "symbol": "VFV.TO",
+      "name": "Vanguard S&P 500 Index ETF",
+      "type": "etf",
+      "price": 193.88999938964844,
+      "score": 73.8,
+      "rsi": 74.9,
+      "trend": "bullish",
+      "demand_distance_pct": 2.84,
+      "supply_distance_pct": null,
+      "demand_zone": {
+        "low": 187.89999389648438,
+        "high": 188.38999938964844,
+        "i": 169
+      },
+      "supply_zone": null
+    },
+    {
+      "symbol": "XQQ.TO",
+      "name": "iShares NASDAQ 100 Index ETF (CAD-Hedged)",
+      "type": "etf",
+      "price": 74.20999908447266,
+      "score": 69.3,
+      "rsi": 70.4,
+      "trend": "bullish",
+      "demand_distance_pct": 0.74,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 72.16999816894531,
+        "high": 73.66000366210938,
+        "i": 117
+      },
+      "supply_zone": {
+        "low": 73.98999786376953,
+        "high": 74.62000274658203,
+        "i": 115
+      }
+    },
+    {
+      "symbol": "HXS.TO",
+      "name": "Global X S&P 500 Index Corporate Class ETF",
+      "type": "etf",
+      "price": 113.0999984741211,
+      "score": 68.3,
+      "rsi": 75.9,
+      "trend": "bullish",
+      "demand_distance_pct": 2.74,
+      "supply_distance_pct": null,
+      "demand_zone": {
+        "low": 109.62000274658203,
+        "high": 110.0,
+        "i": 169
+      },
+      "supply_zone": null
+    },
+    {
+      "symbol": "ENB.TO",
+      "name": "Enbridge",
+      "type": "stock",
+      "price": 66.30000305175781,
+      "score": 68.0,
+      "rsi": 45.9,
+      "trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 4.49,
+      "demand_zone": {
+        "low": 66.05999755859375,
+        "high": 67.0,
+        "i": 176
+      },
+      "supply_zone": {
+        "low": 69.27999877929688,
+        "high": 70.01000213623047,
+        "i": 174
+      }
+    },
+    {
+      "symbol": "ZSP.TO",
+      "name": "BMO S&P 500 Index ETF",
+      "type": "etf",
+      "price": 119.80000305175781,
+      "score": 67.4,
+      "rsi": 75.2,
+      "trend": "bullish",
+      "demand_distance_pct": 2.92,
+      "supply_distance_pct": null,
+      "demand_zone": {
+        "low": 115.98999786376953,
+        "high": 116.30000305175781,
+        "i": 169
+      },
+      "supply_zone": null
+    },
+    {
+      "symbol": "TD.TO",
+      "name": "Toronto-Dominion Bank",
+      "type": "stock",
+      "price": 168.36000061035156,
+      "score": 65.0,
+      "rsi": 55.6,
+      "trend": "mixed",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 164.11000061035156,
+        "high": 168.9499969482422,
+        "i": 146
+      },
+      "supply_zone": {
+        "low": 168.0500030517578,
+        "high": 170.4499969482422,
+        "i": 171
+      }
+    },
+    {
+      "symbol": "CNR.TO",
+      "name": "Canadian National Railway",
+      "type": "stock",
+      "price": 170.27000427246094,
+      "score": 65.0,
+      "rsi": 58.6,
+      "trend": "mixed",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 168.99000549316406,
+        "high": 170.6699981689453,
+        "i": 126
+      },
+      "supply_zone": {
+        "low": 169.80999755859375,
+        "high": 171.35000610351562,
+        "i": 177
+      }
+    },
+    {
+      "symbol": "TEC.TO",
+      "name": "TD Global Technology Leaders Index ETF",
+      "type": "etf",
+      "price": 65.0199966430664,
+      "score": 57.0,
+      "rsi": 79.1,
+      "trend": "bullish",
+      "demand_distance_pct": 5.51,
+      "supply_distance_pct": null,
+      "demand_zone": {
+        "low": 60.630001068115234,
+        "high": 61.439998626708984,
+        "i": 117
+      },
+      "supply_zone": null
+    },
+    {
+      "symbol": "CP.TO",
+      "name": "Canadian Pacific Kansas City",
+      "type": "stock",
+      "price": 122.4000015258789,
+      "score": 56.1,
+      "rsi": 47.8,
+      "trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 0.78,
+      "demand_zone": {
+        "low": 120.2300033569336,
+        "high": 122.5999984741211,
+        "i": 122
+      },
+      "supply_zone": {
+        "low": 123.3499984741211,
+        "high": 126.66000366210938,
+        "i": 102
+      }
+    },
+    {
+      "symbol": "QQC.TO",
+      "name": "Invesco NASDAQ 100 Index ETF",
+      "type": "etf",
+      "price": 51.529998779296875,
+      "score": 54.3,
+      "rsi": 78.3,
+      "trend": "bullish",
+      "demand_distance_pct": 2.54,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 49.70000076293945,
+        "high": 50.220001220703125,
+        "i": 117
+      },
+      "supply_zone": {
+        "low": 51.029998779296875,
+        "high": 51.56999969482422,
+        "i": 120
+      }
+    },
+    {
+      "symbol": "XIU.TO",
+      "name": "iShares S&P/TSX 60 Index ETF",
+      "type": "etf",
+      "price": 52.56999969482422,
+      "score": 53.0,
+      "rsi": 50.1,
+      "trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 52.43000030517578,
+        "high": 52.709999084472656,
+        "i": 175
+      },
+      "supply_zone": {
+        "low": 52.400001525878906,
+        "high": 52.709999084472656,
+        "i": 130
+      }
+    },
+    {
+      "symbol": "CSU.TO",
+      "name": "Constellation Software",
+      "type": "stock",
+      "price": 2850.0,
+      "score": 53.0,
+      "rsi": 57.4,
+      "trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 2749.989990234375,
+        "high": 2852.8701171875,
+        "i": 107
+      },
+      "supply_zone": {
+        "low": 2849.800048828125,
+        "high": 2997.75,
+        "i": 177
+      }
+    },
+    {
+      "symbol": "RY.TO",
+      "name": "Royal Bank of Canada",
+      "type": "stock",
+      "price": 281.2799987792969,
+      "score": 49.9,
+      "rsi": 43.1,
+      "trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 1.71,
+      "demand_zone": {
+        "low": 277.510009765625,
+        "high": 282.6199951171875,
+        "i": 163
+      },
+      "supply_zone": {
+        "low": 286.1000061035156,
+        "high": 289.25,
+        "i": 165
+      }
+    },
+    {
+      "symbol": "SHOP.TO",
+      "name": "Shopify",
+      "type": "stock",
+      "price": 213.27000427246094,
+      "score": 48.0,
+      "rsi": 75.0,
+      "trend": "bullish",
+      "demand_distance_pct": 7.86,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 192.8800048828125,
+        "high": 196.50999450683594,
+        "i": 170
+      },
+      "supply_zone": {
+        "low": 212.4199981689453,
+        "high": 217.2899932861328,
+        "i": 167
+      }
+    }
+  ]
+}
