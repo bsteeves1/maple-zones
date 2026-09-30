@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T20:15:53.482700+00:00",
+  "generated_at": "2026-09-30T20:32:06.919873+00:00",
   "method": "daily supply-demand heuristic v3 broad-universe",
   "universe_size": 553,
   "symbols_scored": 436,
@@ -355,43 +355,6 @@
       ]
     },
     {
-      "symbol": "USO",
-      "name": "United States Oil Fund",
-      "type": "etf",
-      "price": 145.62,
-      "score": 87.9,
-      "rsi": 37.9,
-      "trend": "mixed",
-      "weekly_trend": "bullish",
-      "demand_distance_pct": 0.14,
-      "supply_distance_pct": 3.77,
-      "demand_zone": {
-        "low": 142.6699981689453,
-        "high": 145.41000366210938,
-        "i": 370,
-        "departure_atr": 2.17,
-        "retests": 1,
-        "valid": true
-      },
-      "supply_zone": {
-        "low": 151.11000061035156,
-        "high": 155.60000610351562,
-        "i": 372,
-        "departure_atr": 1.71,
-        "retests": 0,
-        "valid": true
-      },
-      "demand_retests": 1,
-      "demand_age_bars": 6,
-      "departure_atr": 2.17,
-      "reasons": [
-        "Price is sitting at/very near demand",
-        "Demand has only one retest",
-        "Strong departure from demand",
-        "Weekly trend agrees bullish"
-      ]
-    },
-    {
       "symbol": "VGRO.TO",
       "name": "Vanguard Growth ETF Portfolio",
       "type": "etf",
@@ -426,6 +389,43 @@
         "Demand zone is fresh (untested)",
         "Strong departure from demand",
         "Limited room before supply",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "USO",
+      "name": "United States Oil Fund",
+      "type": "etf",
+      "price": 145.66,
+      "score": 87.7,
+      "rsi": 37.9,
+      "trend": "mixed",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 0.17,
+      "supply_distance_pct": 3.74,
+      "demand_zone": {
+        "low": 142.6699981689453,
+        "high": 145.41000366210938,
+        "i": 370,
+        "departure_atr": 2.17,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 151.11000061035156,
+        "high": 155.60000610351562,
+        "i": 372,
+        "departure_atr": 1.71,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 6,
+      "departure_atr": 2.17,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Strong departure from demand",
         "Weekly trend agrees bullish"
       ]
     },
@@ -501,6 +501,44 @@
         "Demand zone is fresh (untested)",
         "Strong departure from demand",
         "Limited room before supply",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
+      "symbol": "DPM.TO",
+      "name": "Dundee Precious Metals",
+      "type": "stock",
+      "price": 62.75,
+      "score": 86.4,
+      "rsi": 55.6,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 6.07,
+      "supply_distance_pct": 11.22,
+      "demand_zone": {
+        "low": 56.650001525878906,
+        "high": 58.939998626708984,
+        "i": 366,
+        "departure_atr": 2.0,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 69.79000091552734,
+        "high": 72.54000091552734,
+        "i": 351,
+        "departure_atr": 1.25,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 10,
+      "departure_atr": 2.0,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Good room before opposing supply",
+        "Daily trend is bullish",
         "Weekly trend agrees bullish"
       ]
     },
@@ -1283,13 +1321,13 @@
       "symbol": "SPY",
       "name": "SPDR S&P 500 ETF Trust",
       "type": "etf",
-      "price": 762.48,
-      "score": 81.7,
-      "rsi": 54.1,
+      "price": 762.63,
+      "score": 81.5,
+      "rsi": 54.2,
       "trend": "mixed",
       "weekly_trend": "bullish",
-      "demand_distance_pct": 0.39,
-      "supply_distance_pct": 0.71,
+      "demand_distance_pct": 0.41,
+      "supply_distance_pct": 0.69,
       "demand_zone": {
         "low": 749.5999755859375,
         "high": 759.5,
@@ -1758,44 +1796,6 @@
       ]
     },
     {
-      "symbol": "VOO",
-      "name": "Vanguard S&P 500 ETF",
-      "type": "etf",
-      "price": 700.74,
-      "score": 79.8,
-      "rsi": 53.8,
-      "trend": "mixed",
-      "weekly_trend": "mixed",
-      "demand_distance_pct": 0.37,
-      "supply_distance_pct": 1.65,
-      "demand_zone": {
-        "low": 689.0399780273438,
-        "high": 698.1699829101562,
-        "i": 366,
-        "departure_atr": 3.52,
-        "retests": 0,
-        "valid": true
-      },
-      "supply_zone": {
-        "low": 712.2999877929688,
-        "high": 716.3900146484375,
-        "i": 343,
-        "departure_atr": 1.29,
-        "retests": 2,
-        "valid": true
-      },
-      "demand_retests": 0,
-      "demand_age_bars": 10,
-      "departure_atr": 3.52,
-      "reasons": [
-        "Price is sitting at/very near demand",
-        "Demand zone is fresh (untested)",
-        "Strong departure from demand",
-        "Limited room before supply",
-        "RSI is constructive, not stretched"
-      ]
-    },
-    {
       "symbol": "CVX",
       "name": "Chevron",
       "type": "stock",
@@ -1870,40 +1870,40 @@
       ]
     },
     {
-      "symbol": "XLV",
-      "name": "Health Care Select Sector SPDR Fund",
+      "symbol": "VOO",
+      "name": "Vanguard S&P 500 ETF",
       "type": "etf",
-      "price": 168.41,
-      "score": 79.6,
-      "rsi": 61.2,
+      "price": 700.86,
+      "score": 79.7,
+      "rsi": 53.9,
       "trend": "mixed",
-      "weekly_trend": "bullish",
-      "demand_distance_pct": 0.94,
-      "supply_distance_pct": 2.19,
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0.38,
+      "supply_distance_pct": 1.63,
       "demand_zone": {
-        "low": 165.11000061035156,
-        "high": 166.8300018310547,
-        "i": 363,
-        "departure_atr": 1.6,
+        "low": 689.0399780273438,
+        "high": 698.1699829101562,
+        "i": 366,
+        "departure_atr": 3.52,
         "retests": 0,
         "valid": true
       },
       "supply_zone": {
-        "low": 172.08999633789062,
-        "high": 174.47999572753906,
-        "i": 357,
-        "departure_atr": 2.25,
-        "retests": 0,
+        "low": 712.2999877929688,
+        "high": 716.3900146484375,
+        "i": 343,
+        "departure_atr": 1.29,
+        "retests": 2,
         "valid": true
       },
       "demand_retests": 0,
-      "demand_age_bars": 13,
-      "departure_atr": 1.6,
+      "demand_age_bars": 10,
+      "departure_atr": 3.52,
       "reasons": [
         "Price is sitting at/very near demand",
         "Demand zone is fresh (untested)",
+        "Strong departure from demand",
         "Limited room before supply",
-        "Weekly trend agrees bullish",
         "RSI is constructive, not stretched"
       ]
     },
@@ -1940,6 +1940,44 @@
       "reasons": [
         "Price is sitting at/very near demand",
         "Strong departure from demand",
+        "Limited room before supply",
+        "Weekly trend agrees bullish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "XLV",
+      "name": "Health Care Select Sector SPDR Fund",
+      "type": "etf",
+      "price": 168.42,
+      "score": 79.5,
+      "rsi": 61.3,
+      "trend": "mixed",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 0.94,
+      "supply_distance_pct": 2.18,
+      "demand_zone": {
+        "low": 165.11000061035156,
+        "high": 166.8300018310547,
+        "i": 363,
+        "departure_atr": 1.6,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 172.08999633789062,
+        "high": 174.47999572753906,
+        "i": 357,
+        "departure_atr": 2.25,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 13,
+      "departure_atr": 1.6,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand zone is fresh (untested)",
         "Limited room before supply",
         "Weekly trend agrees bullish",
         "RSI is constructive, not stretched"
@@ -2962,13 +3000,13 @@
       "symbol": "XLF",
       "name": "Financial Select Sector SPDR Fund",
       "type": "etf",
-      "price": 53.382,
+      "price": 53.4,
       "score": 75.2,
       "rsi": 14.8,
       "trend": "bearish",
       "weekly_trend": "mixed",
       "demand_distance_pct": 0,
-      "supply_distance_pct": 7.25,
+      "supply_distance_pct": 7.21,
       "demand_zone": {
         "low": 53.20000076293945,
         "high": 53.56999969482422,
@@ -3564,9 +3602,9 @@
       "symbol": "VT",
       "name": "Vanguard Total World Stock ETF",
       "type": "etf",
-      "price": 157.86,
+      "price": 157.85,
       "score": 73.0,
-      "rsi": 47.7,
+      "rsi": 47.6,
       "trend": "mixed",
       "weekly_trend": "mixed",
       "demand_distance_pct": 0,
@@ -3601,13 +3639,13 @@
       "symbol": "SCHD",
       "name": "Schwab U.S. Dividend Equity ETF",
       "type": "etf",
-      "price": 32.5428,
+      "price": 32.53,
       "score": 73.0,
-      "rsi": 22.0,
+      "rsi": 21.9,
       "trend": "bearish",
       "weekly_trend": "mixed",
       "demand_distance_pct": 0,
-      "supply_distance_pct": 3.68,
+      "supply_distance_pct": 3.72,
       "demand_zone": {
         "low": 32.18000030517578,
         "high": 32.54999923706055,
@@ -4341,44 +4379,6 @@
       ]
     },
     {
-      "symbol": "IVV",
-      "name": "iShares Core S&P 500 ETF",
-      "type": "etf",
-      "price": 765.77,
-      "score": 70.2,
-      "rsi": 53.6,
-      "trend": "mixed",
-      "weekly_trend": "mixed",
-      "demand_distance_pct": 0.63,
-      "supply_distance_pct": 0.75,
-      "demand_zone": {
-        "low": 751.02001953125,
-        "high": 760.9199829101562,
-        "i": 366,
-        "departure_atr": 3.4,
-        "retests": 0,
-        "valid": true
-      },
-      "supply_zone": {
-        "low": 771.5399780273438,
-        "high": 777.72998046875,
-        "i": 358,
-        "departure_atr": 2.26,
-        "retests": 2,
-        "valid": true
-      },
-      "demand_retests": 0,
-      "demand_age_bars": 10,
-      "departure_atr": 3.4,
-      "reasons": [
-        "Price is sitting at/very near demand",
-        "Demand zone is fresh (untested)",
-        "Strong departure from demand",
-        "Very close to opposing supply",
-        "RSI is constructive, not stretched"
-      ]
-    },
-    {
       "symbol": "HDIV.TO",
       "name": "Hamilton Enhanced Multi-Sector Covered Call ETF",
       "type": "etf",
@@ -4447,6 +4447,44 @@
         "Price is sitting at/very near demand",
         "Strong departure from demand",
         "Good room before opposing supply"
+      ]
+    },
+    {
+      "symbol": "IVV",
+      "name": "iShares Core S&P 500 ETF",
+      "type": "etf",
+      "price": 765.85,
+      "score": 70.1,
+      "rsi": 53.6,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0.64,
+      "supply_distance_pct": 0.74,
+      "demand_zone": {
+        "low": 751.02001953125,
+        "high": 760.9199829101562,
+        "i": 366,
+        "departure_atr": 3.4,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 771.5399780273438,
+        "high": 777.72998046875,
+        "i": 358,
+        "departure_atr": 2.26,
+        "retests": 2,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 10,
+      "departure_atr": 3.4,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "RSI is constructive, not stretched"
       ]
     },
     {
@@ -5501,13 +5539,13 @@
       "symbol": "XLU",
       "name": "Utilities Select Sector SPDR Fund",
       "type": "etf",
-      "price": 39.43,
+      "price": 39.44,
       "score": 66.0,
       "rsi": 19.4,
       "trend": "bearish",
       "weekly_trend": "bearish",
       "demand_distance_pct": 0,
-      "supply_distance_pct": 9.18,
+      "supply_distance_pct": 9.15,
       "demand_zone": {
         "low": 39.05500030517578,
         "high": 39.7400016784668,
@@ -5539,13 +5577,13 @@
       "symbol": "UPS",
       "name": "UPS",
       "type": "stock",
-      "price": 93.43,
+      "price": 93.44,
       "score": 66.0,
       "rsi": 34.4,
       "trend": "bearish",
       "weekly_trend": "bearish",
-      "demand_distance_pct": 0.7,
-      "supply_distance_pct": 9.55,
+      "demand_distance_pct": 0.71,
+      "supply_distance_pct": 9.54,
       "demand_zone": {
         "low": 90.83999633789062,
         "high": 92.77999877929688,
@@ -6200,44 +6238,6 @@
       ]
     },
     {
-      "symbol": "DIA",
-      "name": "SPDR Dow Jones Industrial Average ETF",
-      "type": "etf",
-      "price": 508.5,
-      "score": 63.8,
-      "rsi": 36.7,
-      "trend": "bearish",
-      "weekly_trend": "mixed",
-      "demand_distance_pct": 0.2,
-      "supply_distance_pct": 1.87,
-      "demand_zone": {
-        "low": 500.1000061035156,
-        "high": 507.489990234375,
-        "i": 299,
-        "departure_atr": 3.29,
-        "retests": 0,
-        "valid": true
-      },
-      "supply_zone": {
-        "low": 518.0,
-        "high": 522.5499877929688,
-        "i": 370,
-        "departure_atr": 1.38,
-        "retests": 0,
-        "valid": true
-      },
-      "demand_retests": 0,
-      "demand_age_bars": 77,
-      "departure_atr": 3.29,
-      "reasons": [
-        "Price is sitting at/very near demand",
-        "Demand zone is fresh (untested)",
-        "Strong departure from demand",
-        "Limited room before supply",
-        "Daily trend is bearish"
-      ]
-    },
-    {
       "symbol": "HUTL.TO",
       "name": "Harvest Equal Weight Global Utilities Income ETF",
       "type": "etf",
@@ -6273,6 +6273,44 @@
         "Strong departure from demand",
         "Daily trend is bearish",
         "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "DIA",
+      "name": "SPDR Dow Jones Industrial Average ETF",
+      "type": "etf",
+      "price": 508.55,
+      "score": 63.7,
+      "rsi": 36.7,
+      "trend": "bearish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0.21,
+      "supply_distance_pct": 1.86,
+      "demand_zone": {
+        "low": 500.1000061035156,
+        "high": 507.489990234375,
+        "i": 299,
+        "departure_atr": 3.29,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 518.0,
+        "high": 522.5499877929688,
+        "i": 370,
+        "departure_atr": 1.38,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 77,
+      "departure_atr": 3.29,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Limited room before supply",
+        "Daily trend is bearish"
       ]
     },
     {
@@ -6377,44 +6415,6 @@
         "Strong departure from demand",
         "Daily trend is bearish",
         "Weekly trend is bearish"
-      ]
-    },
-    {
-      "symbol": "DPM.TO",
-      "name": "Dundee Precious Metals",
-      "type": "stock",
-      "price": 62.75,
-      "score": 63.1,
-      "rsi": 57.6,
-      "trend": "bullish",
-      "weekly_trend": "bullish",
-      "demand_distance_pct": 6.07,
-      "supply_distance_pct": 0,
-      "demand_zone": {
-        "low": 56.650001525878906,
-        "high": 58.939998626708984,
-        "i": 367,
-        "departure_atr": 2.09,
-        "retests": 0,
-        "valid": true
-      },
-      "supply_zone": {
-        "low": 60.40999984741211,
-        "high": 64.75,
-        "i": 371,
-        "departure_atr": 1.28,
-        "retests": 1,
-        "valid": true
-      },
-      "demand_retests": 0,
-      "demand_age_bars": 10,
-      "departure_atr": 2.09,
-      "reasons": [
-        "Demand zone is fresh (untested)",
-        "Strong departure from demand",
-        "Very close to opposing supply",
-        "Daily trend is bullish",
-        "Weekly trend agrees bullish"
       ]
     },
     {
@@ -6641,6 +6641,44 @@
       ]
     },
     {
+      "symbol": "XLY",
+      "name": "Consumer Discretionary Select Sector SPDR Fund",
+      "type": "etf",
+      "price": 108.84,
+      "score": 62.2,
+      "rsi": 35.7,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0.67,
+      "supply_distance_pct": 3.19,
+      "demand_zone": {
+        "low": 106.44999694824219,
+        "high": 108.11000061035156,
+        "i": 254,
+        "departure_atr": 2.35,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 112.30999755859375,
+        "high": 113.27999877929688,
+        "i": 364,
+        "departure_atr": 2.22,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 122,
+      "departure_atr": 2.35,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
+      ]
+    },
+    {
       "symbol": "WFG.TO",
       "name": "West Fraser Timber",
       "type": "stock",
@@ -6682,13 +6720,13 @@
       "symbol": "IWM",
       "name": "iShares Russell 2000 ETF",
       "type": "etf",
-      "price": 277.86,
-      "score": 62.1,
-      "rsi": 27.7,
+      "price": 277.89,
+      "score": 62.0,
+      "rsi": 27.8,
       "trend": "bearish",
       "weekly_trend": "mixed",
-      "demand_distance_pct": 1.42,
-      "supply_distance_pct": 3.37,
+      "demand_distance_pct": 1.43,
+      "supply_distance_pct": 3.35,
       "demand_zone": {
         "low": 270.3599853515625,
         "high": 273.9200134277344,
@@ -6713,44 +6751,6 @@
         "Demand has only one retest",
         "Strong departure from demand",
         "Daily trend is bearish"
-      ]
-    },
-    {
-      "symbol": "XLY",
-      "name": "Consumer Discretionary Select Sector SPDR Fund",
-      "type": "etf",
-      "price": 108.855,
-      "score": 62.1,
-      "rsi": 35.8,
-      "trend": "bearish",
-      "weekly_trend": "bearish",
-      "demand_distance_pct": 0.68,
-      "supply_distance_pct": 3.17,
-      "demand_zone": {
-        "low": 106.44999694824219,
-        "high": 108.11000061035156,
-        "i": 254,
-        "departure_atr": 2.35,
-        "retests": 0,
-        "valid": true
-      },
-      "supply_zone": {
-        "low": 112.30999755859375,
-        "high": 113.27999877929688,
-        "i": 364,
-        "departure_atr": 2.22,
-        "retests": 1,
-        "valid": true
-      },
-      "demand_retests": 0,
-      "demand_age_bars": 122,
-      "departure_atr": 2.35,
-      "reasons": [
-        "Price is sitting at/very near demand",
-        "Demand zone is fresh (untested)",
-        "Strong departure from demand",
-        "Daily trend is bearish",
-        "Weekly trend is bearish"
       ]
     },
     {
@@ -6832,7 +6832,7 @@
       "type": "stock",
       "price": 260.6,
       "score": 61.8,
-      "rsi": 41.5,
+      "rsi": 37.1,
       "trend": "mixed",
       "weekly_trend": "mixed",
       "demand_distance_pct": 2.46,
@@ -6848,13 +6848,13 @@
       "supply_zone": {
         "low": 277.7200012207031,
         "high": 287.760009765625,
-        "i": 371,
-        "departure_atr": 1.85,
+        "i": 370,
+        "departure_atr": 1.76,
         "retests": 0,
         "valid": true
       },
       "demand_retests": 0,
-      "demand_age_bars": 33,
+      "demand_age_bars": 32,
       "departure_atr": 1.39,
       "reasons": [
         "Price is within 3% of demand",
@@ -7560,13 +7560,13 @@
       "symbol": "LMT",
       "name": "Lockheed Martin",
       "type": "stock",
-      "price": 509.19,
+      "price": 509.25,
       "score": 59.6,
       "rsi": 31.8,
       "trend": "bearish",
       "weekly_trend": "bearish",
       "demand_distance_pct": 0,
-      "supply_distance_pct": 5.68,
+      "supply_distance_pct": 5.66,
       "demand_zone": {
         "low": 498.29998779296875,
         "high": 509.4599914550781,
@@ -7819,13 +7819,13 @@
       "symbol": "ARKK",
       "name": "ARK Innovation ETF",
       "type": "etf",
-      "price": 89.03,
+      "price": 89.1,
       "score": 59.0,
-      "rsi": 66.2,
+      "rsi": 66.4,
       "trend": "bullish",
       "weekly_trend": "bullish",
-      "demand_distance_pct": 5.78,
-      "supply_distance_pct": 0.91,
+      "demand_distance_pct": 5.86,
+      "supply_distance_pct": 0.83,
       "demand_zone": {
         "low": 82.04000091552734,
         "high": 83.87999725341797,
@@ -8008,13 +8008,13 @@
       "symbol": "DGRO",
       "name": "iShares Core Dividend Growth ETF",
       "type": "etf",
-      "price": 75.37,
-      "score": 58.4,
-      "rsi": 27.6,
+      "price": 75.39,
+      "score": 58.3,
+      "rsi": 27.7,
       "trend": "bearish",
       "weekly_trend": "mixed",
-      "demand_distance_pct": 0.33,
-      "supply_distance_pct": 2.1,
+      "demand_distance_pct": 0.36,
+      "supply_distance_pct": 2.07,
       "demand_zone": {
         "low": 74.68499755859375,
         "high": 75.12000274658203,
@@ -8269,13 +8269,13 @@
       "symbol": "XLP",
       "name": "Consumer Staples Select Sector SPDR Fund",
       "type": "etf",
-      "price": 80.582,
+      "price": 80.6,
       "score": 57.7,
-      "rsi": 34.8,
+      "rsi": 34.9,
       "trend": "bearish",
       "weekly_trend": "bearish",
       "demand_distance_pct": 0,
-      "supply_distance_pct": 4.71,
+      "supply_distance_pct": 4.69,
       "demand_zone": {
         "low": 80.45999908447266,
         "high": 81.2300033569336,
@@ -8592,6 +8592,43 @@
       ]
     },
     {
+      "symbol": "PFE",
+      "name": "Pfizer",
+      "type": "stock",
+      "price": 28.52,
+      "score": 57.2,
+      "rsi": 74.3,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 7.47,
+      "supply_distance_pct": 1.02,
+      "demand_zone": {
+        "low": 26.18000030517578,
+        "high": 26.389999389648438,
+        "i": 342,
+        "departure_atr": 1.23,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 28.809999465942383,
+        "high": 29.209999084472656,
+        "i": 358,
+        "departure_atr": 1.98,
+        "retests": 3,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 34,
+      "departure_atr": 1.23,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Limited room before supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
       "symbol": "CLS.TO",
       "name": "Celestica",
       "type": "stock",
@@ -8633,13 +8670,13 @@
       "symbol": "JEPI",
       "name": "JPMorgan Equity Premium Income ETF",
       "type": "etf",
-      "price": 56.21,
+      "price": 56.22,
       "score": 57.1,
-      "rsi": 49.1,
+      "rsi": 49.3,
       "trend": "bearish",
       "weekly_trend": "bearish",
       "demand_distance_pct": 0,
-      "supply_distance_pct": 2.05,
+      "supply_distance_pct": 2.03,
       "demand_zone": {
         "low": 55.689998626708984,
         "high": 56.349998474121094,
@@ -8741,13 +8778,13 @@
       "symbol": "DUK",
       "name": "Duke Energy",
       "type": "stock",
-      "price": 114.0,
+      "price": 114.01,
       "score": 56.9,
-      "rsi": 20.1,
+      "rsi": 20.2,
       "trend": "bearish",
       "weekly_trend": "bearish",
       "demand_distance_pct": 0.82,
-      "supply_distance_pct": 6.67,
+      "supply_distance_pct": 6.66,
       "demand_zone": {
         "low": 111.22000122070312,
         "high": 113.06999969482422,
@@ -10082,7 +10119,7 @@
       "type": "stock",
       "price": 57.87,
       "score": 52.2,
-      "rsi": 41.6,
+      "rsi": 37.7,
       "trend": "mixed",
       "weekly_trend": "mixed",
       "demand_distance_pct": 10.99,
@@ -10098,13 +10135,13 @@
       "supply_zone": {
         "low": 59.970001220703125,
         "high": 62.119998931884766,
-        "i": 371,
-        "departure_atr": 1.83,
+        "i": 370,
+        "departure_atr": 1.73,
         "retests": 0,
         "valid": true
       },
       "demand_retests": 0,
-      "demand_age_bars": 43,
+      "demand_age_bars": 42,
       "departure_atr": 1.85,
       "reasons": [
         "Demand zone is fresh (untested)",
@@ -10823,13 +10860,13 @@
       "symbol": "VIG",
       "name": "Vanguard Dividend Appreciation ETF",
       "type": "etf",
-      "price": 233.24,
-      "score": 49.4,
-      "rsi": 36.5,
+      "price": 233.31,
+      "score": 49.2,
+      "rsi": 36.6,
       "trend": "bearish",
       "weekly_trend": "mixed",
-      "demand_distance_pct": 0.94,
-      "supply_distance_pct": 2.05,
+      "demand_distance_pct": 0.97,
+      "supply_distance_pct": 2.02,
       "demand_zone": {
         "low": 228.88999938964844,
         "high": 231.0500030517578,
@@ -10854,43 +10891,6 @@
         "Demand has only one retest",
         "Limited room before supply",
         "Daily trend is bearish"
-      ]
-    },
-    {
-      "symbol": "PFE",
-      "name": "Pfizer",
-      "type": "stock",
-      "price": 28.53,
-      "score": 49.2,
-      "rsi": 74.7,
-      "trend": "bullish",
-      "weekly_trend": "bullish",
-      "demand_distance_pct": 7.5,
-      "supply_distance_pct": 0.98,
-      "demand_zone": {
-        "low": 26.18000030517578,
-        "high": 26.389999389648438,
-        "i": 342,
-        "departure_atr": 1.23,
-        "retests": 0,
-        "valid": true
-      },
-      "supply_zone": {
-        "low": 28.809999465942383,
-        "high": 29.209999084472656,
-        "i": 358,
-        "departure_atr": 1.98,
-        "retests": 3,
-        "valid": true
-      },
-      "demand_retests": 0,
-      "demand_age_bars": 34,
-      "departure_atr": 1.23,
-      "reasons": [
-        "Demand zone is fresh (untested)",
-        "Very close to opposing supply",
-        "Daily trend is bullish",
-        "Weekly trend agrees bullish"
       ]
     },
     {
@@ -10935,7 +10935,7 @@
       "symbol": "XLRE",
       "name": "Real Estate Select Sector SPDR Fund",
       "type": "etf",
-      "price": 40.9089,
+      "price": 40.91,
       "score": 49.1,
       "rsi": 17.2,
       "trend": "bearish",
@@ -11077,6 +11077,43 @@
         "Strong departure from demand",
         "Very close to opposing supply",
         "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "ACO-X.TO",
+      "name": "ATCO",
+      "type": "stock",
+      "price": 73.68,
+      "score": 48.8,
+      "rsi": 49.7,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 1.89,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 70.55000305175781,
+        "high": 72.29000091552734,
+        "i": 366,
+        "departure_atr": 1.22,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 73.19999694824219,
+        "high": 73.95999908447266,
+        "i": 362,
+        "departure_atr": 2.18,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 10,
+      "departure_atr": 1.22,
+      "reasons": [
+        "Price is within 3% of demand",
+        "Demand has only one retest",
+        "Very close to opposing supply",
+        "RSI is constructive, not stretched"
       ]
     },
     {
@@ -12411,43 +12448,6 @@
       ]
     },
     {
-      "symbol": "XLI",
-      "name": "Industrial Select Sector SPDR Fund",
-      "type": "etf",
-      "price": 166.95,
-      "score": 44.0,
-      "rsi": 37.4,
-      "trend": "bearish",
-      "weekly_trend": "bearish",
-      "demand_distance_pct": 3.83,
-      "supply_distance_pct": 4.43,
-      "demand_zone": {
-        "low": 156.0800018310547,
-        "high": 160.5500030517578,
-        "i": 249,
-        "departure_atr": 2.84,
-        "retests": 0,
-        "valid": true
-      },
-      "supply_zone": {
-        "low": 174.33999633789062,
-        "high": 175.77999877929688,
-        "i": 359,
-        "departure_atr": 2.19,
-        "retests": 0,
-        "valid": true
-      },
-      "demand_retests": 0,
-      "demand_age_bars": 127,
-      "departure_atr": 2.84,
-      "reasons": [
-        "Demand zone is fresh (untested)",
-        "Strong departure from demand",
-        "Daily trend is bearish",
-        "Weekly trend is bearish"
-      ]
-    },
-    {
       "symbol": "CSCO",
       "name": "Cisco Systems",
       "type": "stock",
@@ -12483,6 +12483,43 @@
         "Limited room before supply",
         "Daily trend is bearish",
         "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "XLI",
+      "name": "Industrial Select Sector SPDR Fund",
+      "type": "etf",
+      "price": 166.98,
+      "score": 43.9,
+      "rsi": 37.5,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 3.85,
+      "supply_distance_pct": 4.41,
+      "demand_zone": {
+        "low": 156.0800018310547,
+        "high": 160.5500030517578,
+        "i": 249,
+        "departure_atr": 2.84,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 174.33999633789062,
+        "high": 175.77999877929688,
+        "i": 359,
+        "departure_atr": 2.19,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 127,
+      "departure_atr": 2.84,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Daily trend is bearish",
+        "Weekly trend is bearish"
       ]
     },
     {
@@ -13699,42 +13736,6 @@
         "Strong departure from demand",
         "Daily trend is bearish",
         "Weekly trend is bearish"
-      ]
-    },
-    {
-      "symbol": "ACO-X.TO",
-      "name": "ATCO",
-      "type": "stock",
-      "price": 73.68,
-      "score": 38.9,
-      "rsi": 58.7,
-      "trend": "mixed",
-      "weekly_trend": "mixed",
-      "demand_distance_pct": 3.77,
-      "supply_distance_pct": 0,
-      "demand_zone": {
-        "low": 69.31999969482422,
-        "high": 70.9000015258789,
-        "i": 307,
-        "departure_atr": 2.02,
-        "retests": 2,
-        "valid": true
-      },
-      "supply_zone": {
-        "low": 73.19999694824219,
-        "high": 73.95999908447266,
-        "i": 362,
-        "departure_atr": 2.18,
-        "retests": 1,
-        "valid": true
-      },
-      "demand_retests": 2,
-      "demand_age_bars": 70,
-      "departure_atr": 2.02,
-      "reasons": [
-        "Strong departure from demand",
-        "Very close to opposing supply",
-        "RSI is constructive, not stretched"
       ]
     },
     {
