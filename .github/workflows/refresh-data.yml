@@ -10,14 +10,19 @@ on:
       - "requirements.txt"
       - ".github/workflows/refresh-data.yml"
   schedule:
-    - cron: "*/15 13-21 * * 1-5"
+    - cron: "*/5 13-21 * * 1-5"
 
 permissions:
   contents: write
 
+concurrency:
+  group: market-scan
+  cancel-in-progress: true
+
 jobs:
   scan:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -33,4 +38,5 @@ jobs:
           git add data/scan.json
           git diff --cached --quiet && exit 0
           git commit -m "Refresh market scan"
+          git pull --rebase
           git push
