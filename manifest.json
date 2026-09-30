@@ -1,0 +1,10 @@
+{
+  "name":"Maple Zones",
+  "short_name":"Maple Zones",
+  "description":"Canadian stock, ETF and CDR supply/demand scanner",
+  "start_url":"./",
+  "display":"standalone",
+  "background_color":"#08101d",
+  "theme_color":"#0b1220",
+  "icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
