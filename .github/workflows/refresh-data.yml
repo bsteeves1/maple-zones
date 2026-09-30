@@ -30,34 +30,27 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
-      - run: python scanner.py
-      - name: Preserve completed scan
-        run: cp data/scan.json /tmp/maple-scan.json
+      - name: Scan market universe
+        run: python scanner.py
       - name: Publish refreshed scan safely
         run: |
+          cp data/scan.json /tmp/scan.json
           git config user.name "maple-zones-bot"
           git config user.email "actions@users.noreply.github.com"
 
-          # The app can be updated while a long market scan is running.
-          # Move to the newest main branch first, then restore only the
-          # freshly generated scan so data/scan.json cannot rebase-conflict.
+          # Move onto the newest main branch first so app/code edits that
+          # happened while the scan was running cannot conflict with scan data.
           git fetch origin main
           git reset --hard origin/main
-          mkdir -p data
-          cp /tmp/maple-scan.json data/scan.json
 
+          # Put only the newly generated market data back on top.
+          cp /tmp/scan.json data/scan.json
           git add data/scan.json
-          git diff --cached --quiet && exit 0
-          git commit -m "Refresh market scan"
 
-          # One retry handles the rare case where main changes again
-          # during these few seconds.
-          if ! git push origin HEAD:main; then
-            cp data/scan.json /tmp/maple-scan.json
-            git fetch origin main
-            git reset --hard origin/main
-            cp /tmp/maple-scan.json data/scan.json
-            git add data/scan.json
-            git commit -m "Refresh market scan"
-            git push origin HEAD:main
+          if git diff --cached --quiet; then
+            echo "No scan-data changes to publish"
+            exit 0
           fi
+
+          git commit -m "Refresh market scan"
+          git push origin HEAD:main
