@@ -3,6 +3,7 @@ const list=document.getElementById("list"),tpl=document.getElementById("rowTempl
 
 const pct=v=>Number.isFinite(v)?(v>=0?"+":"")+v.toFixed(1)+"%":"—";
 const money=v=>Number.isFinite(v)?"$"+v.toFixed(v>=100?2:3):"—";
+const zoneText=z=>z&&Number.isFinite(z.low)&&Number.isFinite(z.high)?money(z.low)+"–"+money(z.high):"—";
 function badge(text,type=""){return '<span class="badge '+type+'">'+text+'</span>'}
 
 function render(){
@@ -22,8 +23,8 @@ function render(){
     n.querySelector(".name").textContent=r.name;
     const s=n.querySelector(".score");s.textContent=Math.round(r.score);s.classList.add(r.score>=80?"good":r.score>=60?"mid":"low");
     n.querySelector(".price").textContent=money(r.price);
-    n.querySelector(".demand").textContent=r.demand_distance_pct==null?"—":pct(r.demand_distance_pct);
-    n.querySelector(".supply").textContent=r.supply_distance_pct==null?"—":pct(r.supply_distance_pct);
+    n.querySelector(".demand").textContent=zoneText(r.demand_zone);
+    n.querySelector(".supply").textContent=zoneText(r.supply_zone);
     n.querySelector(".rsi").textContent=r.rsi==null?"—":r.rsi.toFixed(0);
 
     const b=[];
@@ -40,8 +41,14 @@ function render(){
 
     const why=n.querySelector(".why");
     const reasons=(r.reasons||[]).map(x=>"<li>"+x+"</li>").join("");
+    const demandDist=r.demand_distance_pct==null?"—":pct(r.demand_distance_pct);
+    const supplyDist=r.supply_distance_pct==null?"—":pct(r.supply_distance_pct);
     why.innerHTML="<ul>"+reasons+"</ul>"+
-      '<div class="zone-stats"><span>Retests: <b>'+(r.demand_retests??"—")+'</b></span>'+
+      '<div class="zone-stats"><span>Demand zone: <b>'+zoneText(r.demand_zone)+'</b></span>'+
+      '<span>Distance to demand: <b>'+demandDist+'</b></span>'+
+      '<span>Supply zone: <b>'+zoneText(r.supply_zone)+'</b></span>'+
+      '<span>Distance to supply: <b>'+supplyDist+'</b></span>'+
+      '<span>Retests: <b>'+(r.demand_retests??"—")+'</b></span>'+
       '<span>Departure: <b>'+(r.departure_atr==null?"—":r.departure_atr.toFixed(1)+" ATR")+'</b></span>'+
       '<span>Weekly: <b>'+((r.weekly_trend||"mixed").replace(/^./,c=>c.toUpperCase()))+'</b></span></div>';
     const btn=n.querySelector(".why-btn");
