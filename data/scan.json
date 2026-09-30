@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T21:21:37.449012+00:00",
+  "generated_at": "2026-09-30T21:39:04.097303+00:00",
   "method": "daily supply-demand heuristic v3 broad-universe",
   "universe_size": 553,
   "symbols_scored": 436,
@@ -501,44 +501,6 @@
         "Demand zone is fresh (untested)",
         "Strong departure from demand",
         "Limited room before supply",
-        "Weekly trend agrees bullish"
-      ]
-    },
-    {
-      "symbol": "DPM.TO",
-      "name": "Dundee Precious Metals",
-      "type": "stock",
-      "price": 62.75,
-      "score": 86.4,
-      "rsi": 55.6,
-      "trend": "bullish",
-      "weekly_trend": "bullish",
-      "demand_distance_pct": 6.07,
-      "supply_distance_pct": 11.22,
-      "demand_zone": {
-        "low": 56.650001525878906,
-        "high": 58.939998626708984,
-        "i": 366,
-        "departure_atr": 2.0,
-        "retests": 0,
-        "valid": true
-      },
-      "supply_zone": {
-        "low": 69.79000091552734,
-        "high": 72.54000091552734,
-        "i": 351,
-        "departure_atr": 1.25,
-        "retests": 0,
-        "valid": true
-      },
-      "demand_retests": 0,
-      "demand_age_bars": 10,
-      "departure_atr": 2.0,
-      "reasons": [
-        "Demand zone is fresh (untested)",
-        "Strong departure from demand",
-        "Good room before opposing supply",
-        "Daily trend is bullish",
         "Weekly trend agrees bullish"
       ]
     },
@@ -6418,6 +6380,44 @@
       ]
     },
     {
+      "symbol": "DPM.TO",
+      "name": "Dundee Precious Metals",
+      "type": "stock",
+      "price": 62.75,
+      "score": 63.1,
+      "rsi": 57.6,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 6.07,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 56.650001525878906,
+        "high": 58.939998626708984,
+        "i": 367,
+        "departure_atr": 2.09,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 60.40999984741211,
+        "high": 64.75,
+        "i": 371,
+        "departure_atr": 1.28,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 0,
+      "demand_age_bars": 10,
+      "departure_atr": 2.09,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish"
+      ]
+    },
+    {
       "symbol": "SSRM.TO",
       "name": "SSR Mining",
       "type": "stock",
@@ -6832,7 +6832,7 @@
       "type": "stock",
       "price": 260.6,
       "score": 61.8,
-      "rsi": 37.1,
+      "rsi": 41.5,
       "trend": "mixed",
       "weekly_trend": "mixed",
       "demand_distance_pct": 2.46,
@@ -6848,13 +6848,13 @@
       "supply_zone": {
         "low": 277.7200012207031,
         "high": 287.760009765625,
-        "i": 370,
-        "departure_atr": 1.76,
+        "i": 371,
+        "departure_atr": 1.85,
         "retests": 0,
         "valid": true
       },
       "demand_retests": 0,
-      "demand_age_bars": 32,
+      "demand_age_bars": 33,
       "departure_atr": 1.39,
       "reasons": [
         "Price is within 3% of demand",
@@ -10119,7 +10119,7 @@
       "type": "stock",
       "price": 57.87,
       "score": 52.2,
-      "rsi": 37.7,
+      "rsi": 41.6,
       "trend": "mixed",
       "weekly_trend": "mixed",
       "demand_distance_pct": 10.99,
@@ -10135,13 +10135,13 @@
       "supply_zone": {
         "low": 59.970001220703125,
         "high": 62.119998931884766,
-        "i": 370,
-        "departure_atr": 1.73,
+        "i": 371,
+        "departure_atr": 1.83,
         "retests": 0,
         "valid": true
       },
       "demand_retests": 0,
-      "demand_age_bars": 42,
+      "demand_age_bars": 43,
       "departure_atr": 1.85,
       "reasons": [
         "Demand zone is fresh (untested)",
@@ -11077,43 +11077,6 @@
         "Strong departure from demand",
         "Very close to opposing supply",
         "Daily trend is bearish"
-      ]
-    },
-    {
-      "symbol": "ACO-X.TO",
-      "name": "ATCO",
-      "type": "stock",
-      "price": 73.68,
-      "score": 48.8,
-      "rsi": 49.7,
-      "trend": "mixed",
-      "weekly_trend": "mixed",
-      "demand_distance_pct": 1.89,
-      "supply_distance_pct": 0,
-      "demand_zone": {
-        "low": 70.55000305175781,
-        "high": 72.29000091552734,
-        "i": 366,
-        "departure_atr": 1.22,
-        "retests": 1,
-        "valid": true
-      },
-      "supply_zone": {
-        "low": 73.19999694824219,
-        "high": 73.95999908447266,
-        "i": 362,
-        "departure_atr": 2.18,
-        "retests": 1,
-        "valid": true
-      },
-      "demand_retests": 1,
-      "demand_age_bars": 10,
-      "departure_atr": 1.22,
-      "reasons": [
-        "Price is within 3% of demand",
-        "Demand has only one retest",
-        "Very close to opposing supply",
-        "RSI is constructive, not stretched"
       ]
     },
     {
@@ -13736,6 +13699,42 @@
         "Strong departure from demand",
         "Daily trend is bearish",
         "Weekly trend is bearish"
+      ]
+    },
+    {
+      "symbol": "ACO-X.TO",
+      "name": "ATCO",
+      "type": "stock",
+      "price": 73.68,
+      "score": 38.9,
+      "rsi": 58.7,
+      "trend": "mixed",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 3.77,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 69.31999969482422,
+        "high": 70.9000015258789,
+        "i": 307,
+        "departure_atr": 2.02,
+        "retests": 2,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 73.19999694824219,
+        "high": 73.95999908447266,
+        "i": 362,
+        "departure_atr": 2.18,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 2,
+      "demand_age_bars": 70,
+      "departure_atr": 2.02,
+      "reasons": [
+        "Strong departure from demand",
+        "Very close to opposing supply",
+        "RSI is constructive, not stretched"
       ]
     },
     {
