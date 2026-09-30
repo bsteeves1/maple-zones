@@ -1,25 +1,1227 @@
 [
-  {"symbol":"VFV.TO","name":"Vanguard S&P 500 Index ETF","type":"etf"},
-  {"symbol":"XQQ.TO","name":"iShares NASDAQ 100 Index ETF (CAD-Hedged)","type":"etf"},
-  {"symbol":"QQC.TO","name":"Invesco NASDAQ 100 Index ETF","type":"etf"},
-  {"symbol":"TEC.TO","name":"TD Global Technology Leaders Index ETF","type":"etf"},
-  {"symbol":"XEQT.TO","name":"iShares Core Equity ETF Portfolio","type":"etf"},
-  {"symbol":"XIU.TO","name":"iShares S&P/TSX 60 Index ETF","type":"etf"},
-  {"symbol":"HXS.TO","name":"Global X S&P 500 Index Corporate Class ETF","type":"etf"},
-  {"symbol":"ZSP.TO","name":"BMO S&P 500 Index ETF","type":"etf"},
-  {"symbol":"SHOP.TO","name":"Shopify","type":"stock"},
-  {"symbol":"CSU.TO","name":"Constellation Software","type":"stock"},
-  {"symbol":"RY.TO","name":"Royal Bank of Canada","type":"stock"},
-  {"symbol":"TD.TO","name":"Toronto-Dominion Bank","type":"stock"},
-  {"symbol":"ENB.TO","name":"Enbridge","type":"stock"},
-  {"symbol":"CNR.TO","name":"Canadian National Railway","type":"stock"},
-  {"symbol":"CP.TO","name":"Canadian Pacific Kansas City","type":"stock"},
-  {"symbol":"WMT.NE","name":"Walmart CDR (CAD Hedged)","type":"cdr"},
-  {"symbol":"AAPL.NE","name":"Apple CDR (CAD Hedged)","type":"cdr"},
-  {"symbol":"MSFT.NE","name":"Microsoft CDR (CAD Hedged)","type":"cdr"},
-  {"symbol":"NVDA.NE","name":"NVIDIA CDR (CAD Hedged)","type":"cdr"},
-  {"symbol":"AMZN.NE","name":"Amazon CDR (CAD Hedged)","type":"cdr"},
-  {"symbol":"GOOG.NE","name":"Alphabet CDR (CAD Hedged)","type":"cdr"},
-  {"symbol":"META.NE","name":"Meta Platforms CDR (CAD Hedged)","type":"cdr"},
-  {"symbol":"TSLA.NE","name":"Tesla CDR (CAD Hedged)","type":"cdr"}
+  {
+    "symbol": "XEQT.TO",
+    "name": "iShares Core Equity ETF Portfolio",
+    "type": "etf"
+  },
+  {
+    "symbol": "VEQT.TO",
+    "name": "Vanguard All-Equity ETF Portfolio",
+    "type": "etf"
+  },
+  {
+    "symbol": "ZEQT.TO",
+    "name": "BMO All-Equity ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "XGRO.TO",
+    "name": "iShares Core Growth ETF Portfolio",
+    "type": "etf"
+  },
+  {
+    "symbol": "VGRO.TO",
+    "name": "Vanguard Growth ETF Portfolio",
+    "type": "etf"
+  },
+  {
+    "symbol": "ZGRO.TO",
+    "name": "BMO Growth ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "XBAL.TO",
+    "name": "iShares Core Balanced ETF Portfolio",
+    "type": "etf"
+  },
+  {
+    "symbol": "VBAL.TO",
+    "name": "Vanguard Balanced ETF Portfolio",
+    "type": "etf"
+  },
+  {
+    "symbol": "XIU.TO",
+    "name": "iShares S&P/TSX 60 Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "XIC.TO",
+    "name": "iShares Core S&P/TSX Capped Composite ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "VCN.TO",
+    "name": "Vanguard FTSE Canada All Cap Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "ZCN.TO",
+    "name": "BMO S&P/TSX Capped Composite Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "HXT.TO",
+    "name": "Global X S&P/TSX 60 Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "XDIV.TO",
+    "name": "iShares Core MSCI Canadian Quality Dividend ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "VDY.TO",
+    "name": "Vanguard FTSE Canadian High Dividend Yield ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "ZDV.TO",
+    "name": "BMO Canadian Dividend ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "CDZ.TO",
+    "name": "iShares S&P/TSX Canadian Dividend Aristocrats Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "XEI.TO",
+    "name": "iShares S&P/TSX Composite High Dividend Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "VFV.TO",
+    "name": "Vanguard S&P 500 Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "XUS.TO",
+    "name": "iShares Core S&P 500 Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "ZSP.TO",
+    "name": "BMO S&P 500 Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "HXS.TO",
+    "name": "Global X S&P 500 Index Corporate Class ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "VSP.TO",
+    "name": "Vanguard S&P 500 Index ETF CAD-Hedged",
+    "type": "etf"
+  },
+  {
+    "symbol": "XSP.TO",
+    "name": "iShares Core S&P 500 Index ETF CAD-Hedged",
+    "type": "etf"
+  },
+  {
+    "symbol": "ZUE.TO",
+    "name": "BMO S&P 500 Hedged to CAD Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "QQC.TO",
+    "name": "Invesco NASDAQ 100 Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "XQQ.TO",
+    "name": "iShares NASDAQ 100 Index ETF CAD-Hedged",
+    "type": "etf"
+  },
+  {
+    "symbol": "ZNQ.TO",
+    "name": "BMO NASDAQ 100 Equity Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "HXQ.TO",
+    "name": "Global X NASDAQ-100 Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "TEC.TO",
+    "name": "TD Global Technology Leaders Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "CHPS.TO",
+    "name": "Global X Semiconductor Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "VIU.TO",
+    "name": "Vanguard FTSE Developed All Cap ex North America ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "XEF.TO",
+    "name": "iShares Core MSCI EAFE IMI Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "ZEA.TO",
+    "name": "BMO MSCI EAFE Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "XEC.TO",
+    "name": "iShares Core MSCI Emerging Markets IMI Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "VEE.TO",
+    "name": "Vanguard FTSE Emerging Markets All Cap Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "ZEM.TO",
+    "name": "BMO MSCI Emerging Markets Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "XAW.TO",
+    "name": "iShares Core MSCI All Country World ex Canada Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "VXC.TO",
+    "name": "Vanguard FTSE Global All Cap ex Canada Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "XFN.TO",
+    "name": "iShares S&P/TSX Capped Financials Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "ZEB.TO",
+    "name": "BMO Equal Weight Banks Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "ZWB.TO",
+    "name": "BMO Covered Call Canadian Banks ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "XEG.TO",
+    "name": "iShares S&P/TSX Capped Energy Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "ZEO.TO",
+    "name": "BMO Equal Weight Oil & Gas Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "XMA.TO",
+    "name": "iShares S&P/TSX Capped Materials Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "XIT.TO",
+    "name": "iShares S&P/TSX Capped Information Technology Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "XUT.TO",
+    "name": "iShares S&P/TSX Capped Utilities Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "ZUT.TO",
+    "name": "BMO Equal Weight Utilities Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "XRE.TO",
+    "name": "iShares S&P/TSX Capped REIT Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "ZRE.TO",
+    "name": "BMO Equal Weight REITs Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "CGL.C.TO",
+    "name": "iShares Gold Bullion ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "KILO.TO",
+    "name": "Purpose Gold Bullion Fund",
+    "type": "etf"
+  },
+  {
+    "symbol": "HUG.TO",
+    "name": "Global X Gold ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "HUC.TO",
+    "name": "Global X Crude Oil ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "HURA.TO",
+    "name": "Global X Uranium Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "URA.TO",
+    "name": "Global X Uranium ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "COPP.TO",
+    "name": "Global X Copper Producers Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "ZAG.TO",
+    "name": "BMO Aggregate Bond Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "XBB.TO",
+    "name": "iShares Core Canadian Universe Bond Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "VAB.TO",
+    "name": "Vanguard Canadian Aggregate Bond Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "XSB.TO",
+    "name": "iShares Core Canadian Short Term Bond Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "ZFL.TO",
+    "name": "BMO Long Federal Bond Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "XLB.TO",
+    "name": "iShares Core Canadian Long Term Bond Index ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "HMAX.TO",
+    "name": "Hamilton Canadian Financials Yield Maximizer ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "HDIV.TO",
+    "name": "Hamilton Enhanced Multi-Sector Covered Call ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "HYLD.TO",
+    "name": "Hamilton Enhanced U.S. Covered Call ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "BANK.TO",
+    "name": "Evolve Canadian Banks and Lifecos Enhanced Yield Index Fund",
+    "type": "etf"
+  },
+  {
+    "symbol": "ZWU.TO",
+    "name": "BMO Covered Call Utilities ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "ZWC.TO",
+    "name": "BMO Canadian High Dividend Covered Call ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "TXF.TO",
+    "name": "CI Tech Giants Covered Call ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "ETHY.TO",
+    "name": "Purpose Ether Yield ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "BTCY.TO",
+    "name": "Purpose Bitcoin Yield ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "BTCC-B.TO",
+    "name": "Purpose Bitcoin ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "ETHH-B.TO",
+    "name": "Purpose Ether ETF",
+    "type": "etf"
+  },
+  {
+    "symbol": "RY.TO",
+    "name": "Royal Bank of Canada",
+    "type": "stock"
+  },
+  {
+    "symbol": "TD.TO",
+    "name": "Toronto-Dominion Bank",
+    "type": "stock"
+  },
+  {
+    "symbol": "BMO.TO",
+    "name": "Bank of Montreal",
+    "type": "stock"
+  },
+  {
+    "symbol": "BNS.TO",
+    "name": "Bank of Nova Scotia",
+    "type": "stock"
+  },
+  {
+    "symbol": "CM.TO",
+    "name": "CIBC",
+    "type": "stock"
+  },
+  {
+    "symbol": "NA.TO",
+    "name": "National Bank of Canada",
+    "type": "stock"
+  },
+  {
+    "symbol": "ENB.TO",
+    "name": "Enbridge",
+    "type": "stock"
+  },
+  {
+    "symbol": "TRP.TO",
+    "name": "TC Energy",
+    "type": "stock"
+  },
+  {
+    "symbol": "PPL.TO",
+    "name": "Pembina Pipeline",
+    "type": "stock"
+  },
+  {
+    "symbol": "KEY.TO",
+    "name": "Keyera",
+    "type": "stock"
+  },
+  {
+    "symbol": "WCP.TO",
+    "name": "Whitecap Resources",
+    "type": "stock"
+  },
+  {
+    "symbol": "CNQ.TO",
+    "name": "Canadian Natural Resources",
+    "type": "stock"
+  },
+  {
+    "symbol": "SU.TO",
+    "name": "Suncor Energy",
+    "type": "stock"
+  },
+  {
+    "symbol": "CVE.TO",
+    "name": "Cenovus Energy",
+    "type": "stock"
+  },
+  {
+    "symbol": "IMO.TO",
+    "name": "Imperial Oil",
+    "type": "stock"
+  },
+  {
+    "symbol": "ARX.TO",
+    "name": "ARC Resources",
+    "type": "stock"
+  },
+  {
+    "symbol": "TOU.TO",
+    "name": "Tourmaline Oil",
+    "type": "stock"
+  },
+  {
+    "symbol": "MEG.TO",
+    "name": "MEG Energy",
+    "type": "stock"
+  },
+  {
+    "symbol": "CNR.TO",
+    "name": "Canadian National Railway",
+    "type": "stock"
+  },
+  {
+    "symbol": "CP.TO",
+    "name": "Canadian Pacific Kansas City",
+    "type": "stock"
+  },
+  {
+    "symbol": "TFII.TO",
+    "name": "TFI International",
+    "type": "stock"
+  },
+  {
+    "symbol": "WSP.TO",
+    "name": "WSP Global",
+    "type": "stock"
+  },
+  {
+    "symbol": "STN.TO",
+    "name": "Stantec",
+    "type": "stock"
+  },
+  {
+    "symbol": "ATD.TO",
+    "name": "Alimentation Couche-Tard",
+    "type": "stock"
+  },
+  {
+    "symbol": "MRU.TO",
+    "name": "Metro",
+    "type": "stock"
+  },
+  {
+    "symbol": "L.TO",
+    "name": "Loblaw",
+    "type": "stock"
+  },
+  {
+    "symbol": "DOL.TO",
+    "name": "Dollarama",
+    "type": "stock"
+  },
+  {
+    "symbol": "CTC-A.TO",
+    "name": "Canadian Tire",
+    "type": "stock"
+  },
+  {
+    "symbol": "QSR.TO",
+    "name": "Restaurant Brands International",
+    "type": "stock"
+  },
+  {
+    "symbol": "GIL.TO",
+    "name": "Gildan Activewear",
+    "type": "stock"
+  },
+  {
+    "symbol": "SHOP.TO",
+    "name": "Shopify",
+    "type": "stock"
+  },
+  {
+    "symbol": "CSU.TO",
+    "name": "Constellation Software",
+    "type": "stock"
+  },
+  {
+    "symbol": "DSG.TO",
+    "name": "Descartes Systems",
+    "type": "stock"
+  },
+  {
+    "symbol": "OTEX.TO",
+    "name": "OpenText",
+    "type": "stock"
+  },
+  {
+    "symbol": "KXS.TO",
+    "name": "Kinaxis",
+    "type": "stock"
+  },
+  {
+    "symbol": "BB.TO",
+    "name": "BlackBerry",
+    "type": "stock"
+  },
+  {
+    "symbol": "LSPD.TO",
+    "name": "Lightspeed Commerce",
+    "type": "stock"
+  },
+  {
+    "symbol": "DCBO.TO",
+    "name": "Docebo",
+    "type": "stock"
+  },
+  {
+    "symbol": "BCE.TO",
+    "name": "BCE",
+    "type": "stock"
+  },
+  {
+    "symbol": "T.TO",
+    "name": "TELUS",
+    "type": "stock"
+  },
+  {
+    "symbol": "RCI-B.TO",
+    "name": "Rogers Communications",
+    "type": "stock"
+  },
+  {
+    "symbol": "QBR-B.TO",
+    "name": "Quebecor",
+    "type": "stock"
+  },
+  {
+    "symbol": "FTS.TO",
+    "name": "Fortis",
+    "type": "stock"
+  },
+  {
+    "symbol": "EMA.TO",
+    "name": "Emera",
+    "type": "stock"
+  },
+  {
+    "symbol": "AQN.TO",
+    "name": "Algonquin Power",
+    "type": "stock"
+  },
+  {
+    "symbol": "NPI.TO",
+    "name": "Northland Power",
+    "type": "stock"
+  },
+  {
+    "symbol": "BEPC.TO",
+    "name": "Brookfield Renewable",
+    "type": "stock"
+  },
+  {
+    "symbol": "BEP-UN.TO",
+    "name": "Brookfield Renewable Partners",
+    "type": "stock"
+  },
+  {
+    "symbol": "BIPC.TO",
+    "name": "Brookfield Infrastructure",
+    "type": "stock"
+  },
+  {
+    "symbol": "BIP-UN.TO",
+    "name": "Brookfield Infrastructure Partners",
+    "type": "stock"
+  },
+  {
+    "symbol": "BN.TO",
+    "name": "Brookfield Corporation",
+    "type": "stock"
+  },
+  {
+    "symbol": "BAM.TO",
+    "name": "Brookfield Asset Management",
+    "type": "stock"
+  },
+  {
+    "symbol": "MFC.TO",
+    "name": "Manulife Financial",
+    "type": "stock"
+  },
+  {
+    "symbol": "SLF.TO",
+    "name": "Sun Life Financial",
+    "type": "stock"
+  },
+  {
+    "symbol": "GWO.TO",
+    "name": "Great-West Lifeco",
+    "type": "stock"
+  },
+  {
+    "symbol": "IFC.TO",
+    "name": "Intact Financial",
+    "type": "stock"
+  },
+  {
+    "symbol": "FFH.TO",
+    "name": "Fairfax Financial",
+    "type": "stock"
+  },
+  {
+    "symbol": "POW.TO",
+    "name": "Power Corporation of Canada",
+    "type": "stock"
+  },
+  {
+    "symbol": "TRI.TO",
+    "name": "Thomson Reuters",
+    "type": "stock"
+  },
+  {
+    "symbol": "CCO.TO",
+    "name": "Cameco",
+    "type": "stock"
+  },
+  {
+    "symbol": "NTR.TO",
+    "name": "Nutrien",
+    "type": "stock"
+  },
+  {
+    "symbol": "ABX.TO",
+    "name": "Barrick Mining",
+    "type": "stock"
+  },
+  {
+    "symbol": "AEM.TO",
+    "name": "Agnico Eagle Mines",
+    "type": "stock"
+  },
+  {
+    "symbol": "WPM.TO",
+    "name": "Wheaton Precious Metals",
+    "type": "stock"
+  },
+  {
+    "symbol": "K.TO",
+    "name": "Kinross Gold",
+    "type": "stock"
+  },
+  {
+    "symbol": "LUN.TO",
+    "name": "Lundin Mining",
+    "type": "stock"
+  },
+  {
+    "symbol": "TECK-B.TO",
+    "name": "Teck Resources",
+    "type": "stock"
+  },
+  {
+    "symbol": "FM.TO",
+    "name": "First Quantum Minerals",
+    "type": "stock"
+  },
+  {
+    "symbol": "IVN.TO",
+    "name": "Ivanhoe Mines",
+    "type": "stock"
+  },
+  {
+    "symbol": "CS.TO",
+    "name": "Capstone Copper",
+    "type": "stock"
+  },
+  {
+    "symbol": "WN.TO",
+    "name": "George Weston",
+    "type": "stock"
+  },
+  {
+    "symbol": "SAP.TO",
+    "name": "Saputo",
+    "type": "stock"
+  },
+  {
+    "symbol": "EMP-A.TO",
+    "name": "Empire",
+    "type": "stock"
+  },
+  {
+    "symbol": "CCL-B.TO",
+    "name": "CCL Industries",
+    "type": "stock"
+  },
+  {
+    "symbol": "CAE.TO",
+    "name": "CAE",
+    "type": "stock"
+  },
+  {
+    "symbol": "MDA.TO",
+    "name": "MDA Space",
+    "type": "stock"
+  },
+  {
+    "symbol": "AC.TO",
+    "name": "Air Canada",
+    "type": "stock"
+  },
+  {
+    "symbol": "CHR.TO",
+    "name": "Chorus Aviation",
+    "type": "stock"
+  },
+  {
+    "symbol": "DOO.TO",
+    "name": "BRP",
+    "type": "stock"
+  },
+  {
+    "symbol": "MG.TO",
+    "name": "Magna International",
+    "type": "stock"
+  },
+  {
+    "symbol": "ATS.TO",
+    "name": "ATS Corporation",
+    "type": "stock"
+  },
+  {
+    "symbol": "GFL.TO",
+    "name": "GFL Environmental",
+    "type": "stock"
+  },
+  {
+    "symbol": "NVEI.TO",
+    "name": "Nuvei",
+    "type": "stock"
+  },
+  {
+    "symbol": "GSY.TO",
+    "name": "goeasy",
+    "type": "stock"
+  },
+  {
+    "symbol": "EQB.TO",
+    "name": "EQB",
+    "type": "stock"
+  },
+  {
+    "symbol": "CIX.TO",
+    "name": "CI Financial",
+    "type": "stock"
+  },
+  {
+    "symbol": "IGM.TO",
+    "name": "IGM Financial",
+    "type": "stock"
+  },
+  {
+    "symbol": "ONEX.TO",
+    "name": "Onex",
+    "type": "stock"
+  },
+  {
+    "symbol": "CAR-UN.TO",
+    "name": "Canadian Apartment Properties REIT",
+    "type": "stock"
+  },
+  {
+    "symbol": "REI-UN.TO",
+    "name": "RioCan REIT",
+    "type": "stock"
+  },
+  {
+    "symbol": "SRU-UN.TO",
+    "name": "SmartCentres REIT",
+    "type": "stock"
+  },
+  {
+    "symbol": "DIR-UN.TO",
+    "name": "Dream Industrial REIT",
+    "type": "stock"
+  },
+  {
+    "symbol": "GRT-UN.TO",
+    "name": "Granite REIT",
+    "type": "stock"
+  },
+  {
+    "symbol": "HR-UN.TO",
+    "name": "H&R REIT",
+    "type": "stock"
+  },
+  {
+    "symbol": "AP-UN.TO",
+    "name": "Allied Properties REIT",
+    "type": "stock"
+  },
+  {
+    "symbol": "CRT-UN.TO",
+    "name": "CT REIT",
+    "type": "stock"
+  },
+  {
+    "symbol": "WFG.TO",
+    "name": "West Fraser Timber",
+    "type": "stock"
+  },
+  {
+    "symbol": "IFP.TO",
+    "name": "Interfor",
+    "type": "stock"
+  },
+  {
+    "symbol": "SJ.TO",
+    "name": "Stella-Jones",
+    "type": "stock"
+  },
+  {
+    "symbol": "AFN.TO",
+    "name": "Ag Growth International",
+    "type": "stock"
+  },
+  {
+    "symbol": "NFI.TO",
+    "name": "NFI Group",
+    "type": "stock"
+  },
+  {
+    "symbol": "TIH.TO",
+    "name": "Toromont Industries",
+    "type": "stock"
+  },
+  {
+    "symbol": "BDGI.TO",
+    "name": "Badger Infrastructure Solutions",
+    "type": "stock"
+  },
+  {
+    "symbol": "FTT.TO",
+    "name": "Finning International",
+    "type": "stock"
+  },
+  {
+    "symbol": "RBA.TO",
+    "name": "RB Global",
+    "type": "stock"
+  },
+  {
+    "symbol": "ALA.TO",
+    "name": "AltaGas",
+    "type": "stock"
+  },
+  {
+    "symbol": "CU.TO",
+    "name": "Canadian Utilities",
+    "type": "stock"
+  },
+  {
+    "symbol": "CPX.TO",
+    "name": "Capital Power",
+    "type": "stock"
+  },
+  {
+    "symbol": "TA.TO",
+    "name": "TransAlta",
+    "type": "stock"
+  },
+  {
+    "symbol": "BLX.TO",
+    "name": "Boralex",
+    "type": "stock"
+  },
+  {
+    "symbol": "RNW.TO",
+    "name": "TransAlta Renewables",
+    "type": "stock"
+  },
+  {
+    "symbol": "CLS.TO",
+    "name": "Celestica",
+    "type": "stock"
+  },
+  {
+    "symbol": "HPS-A.TO",
+    "name": "Hammond Power Solutions",
+    "type": "stock"
+  },
+  {
+    "symbol": "BYD.TO",
+    "name": "Boyd Group Services",
+    "type": "stock"
+  },
+  {
+    "symbol": "ATZ.TO",
+    "name": "Aritzia",
+    "type": "stock"
+  },
+  {
+    "symbol": "TOY.TO",
+    "name": "Spin Master",
+    "type": "stock"
+  },
+  {
+    "symbol": "PKI.TO",
+    "name": "Parkland",
+    "type": "stock"
+  },
+  {
+    "symbol": "TFPM.TO",
+    "name": "Triple Flag Precious Metals",
+    "type": "stock"
+  },
+  {
+    "symbol": "OR.TO",
+    "name": "Osisko Gold Royalties",
+    "type": "stock"
+  },
+  {
+    "symbol": "NGD.TO",
+    "name": "New Gold",
+    "type": "stock"
+  },
+  {
+    "symbol": "B2G.TO",
+    "name": "B2Gold",
+    "type": "stock"
+  },
+  {
+    "symbol": "ERO.TO",
+    "name": "Ero Copper",
+    "type": "stock"
+  },
+  {
+    "symbol": "NXE.TO",
+    "name": "NexGen Energy",
+    "type": "stock"
+  },
+  {
+    "symbol": "DML.TO",
+    "name": "Denison Mines",
+    "type": "stock"
+  },
+  {
+    "symbol": "AAPL.NE",
+    "name": "Apple CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "MSFT.NE",
+    "name": "Microsoft CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "NVDA.NE",
+    "name": "NVIDIA CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "AMZN.NE",
+    "name": "Amazon CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "GOOG.NE",
+    "name": "Alphabet CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "META.NE",
+    "name": "Meta Platforms CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "TSLA.NE",
+    "name": "Tesla CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "WMT.NE",
+    "name": "Walmart CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "COST.NE",
+    "name": "Costco CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "NFLX.NE",
+    "name": "Netflix CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "AMD.NE",
+    "name": "AMD CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "AVGO.NE",
+    "name": "Broadcom CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "ORCL.NE",
+    "name": "Oracle CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "CRM.NE",
+    "name": "Salesforce CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "ADBE.NE",
+    "name": "Adobe CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "INTC.NE",
+    "name": "Intel CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "QCOM.NE",
+    "name": "Qualcomm CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "IBM.NE",
+    "name": "IBM CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "JPM.NE",
+    "name": "JPMorgan Chase CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "BAC.NE",
+    "name": "Bank of America CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "GS.NE",
+    "name": "Goldman Sachs CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "V.NE",
+    "name": "Visa CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "MA.NE",
+    "name": "Mastercard CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "AXP.NE",
+    "name": "American Express CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "BRK.NE",
+    "name": "Berkshire Hathaway CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "JNJ.NE",
+    "name": "Johnson & Johnson CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "PFE.NE",
+    "name": "Pfizer CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "LLY.NE",
+    "name": "Eli Lilly CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "UNH.NE",
+    "name": "UnitedHealth CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "ABBV.NE",
+    "name": "AbbVie CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "MRK.NE",
+    "name": "Merck CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "KO.NE",
+    "name": "Coca-Cola CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "PEP.NE",
+    "name": "PepsiCo CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "MCD.NE",
+    "name": "McDonald's CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "NKE.NE",
+    "name": "Nike CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "SBUX.NE",
+    "name": "Starbucks CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "DIS.NE",
+    "name": "Disney CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "HD.NE",
+    "name": "Home Depot CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "LOW.NE",
+    "name": "Lowe's CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "TGT.NE",
+    "name": "Target CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "XOM.NE",
+    "name": "Exxon Mobil CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "CVX.NE",
+    "name": "Chevron CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "CAT.NE",
+    "name": "Caterpillar CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "BA.NE",
+    "name": "Boeing CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "GE.NE",
+    "name": "GE Aerospace CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "UPS.NE",
+    "name": "UPS CDR (CAD Hedged)",
+    "type": "cdr"
+  },
+  {
+    "symbol": "FDX.NE",
+    "name": "FedEx CDR (CAD Hedged)",
+    "type": "cdr"
+  }
 ]
