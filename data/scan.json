@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-30T15:06:00.152410+00:00",
+  "generated_at": "2026-09-30T15:27:25.926617+00:00",
   "method": "daily supply-demand heuristic v2",
   "results": [
     {
       "symbol": "XEQT.TO",
       "name": "iShares Core Equity ETF Portfolio",
       "type": "etf",
-      "price": 45.76,
-      "score": 87.4,
-      "rsi": 63.2,
+      "price": 45.75,
+      "score": 87.6,
+      "rsi": 63.1,
       "trend": "bullish",
       "weekly_trend": "bullish",
-      "demand_distance_pct": 1.09,
-      "supply_distance_pct": 0.96,
+      "demand_distance_pct": 1.07,
+      "supply_distance_pct": 0.98,
       "demand_zone": {
         "low": 44.7400016784668,
         "high": 45.2599983215332,
@@ -44,12 +44,12 @@
       "symbol": "VFV.TO",
       "name": "Vanguard S&P 500 Index ETF",
       "type": "etf",
-      "price": 194.06,
-      "score": 80.5,
-      "rsi": 75.2,
+      "price": 194.1,
+      "score": 80.3,
+      "rsi": 75.3,
       "trend": "bullish",
       "weekly_trend": "bullish",
-      "demand_distance_pct": 2.92,
+      "demand_distance_pct": 2.94,
       "supply_distance_pct": null,
       "demand_zone": {
         "low": 186.75,
@@ -63,37 +63,6 @@
       "demand_retests": 0,
       "demand_age_bars": 10,
       "departure_atr": 4.23,
-      "reasons": [
-        "Price is within 3% of demand",
-        "Demand zone is fresh (untested)",
-        "Strong departure from demand",
-        "Daily trend is bullish",
-        "Weekly trend agrees bullish"
-      ]
-    },
-    {
-      "symbol": "HXS.TO",
-      "name": "Global X S&P 500 Index Corporate Class ETF",
-      "type": "etf",
-      "price": 113.3,
-      "score": 80.0,
-      "rsi": 76.4,
-      "trend": "bullish",
-      "weekly_trend": "bullish",
-      "demand_distance_pct": 2.99,
-      "supply_distance_pct": null,
-      "demand_zone": {
-        "low": 108.9800033569336,
-        "high": 109.91000366210938,
-        "i": 367,
-        "departure_atr": 4.54,
-        "retests": 0,
-        "valid": true
-      },
-      "supply_zone": null,
-      "demand_retests": 0,
-      "demand_age_bars": 10,
-      "departure_atr": 4.54,
       "reasons": [
         "Price is within 3% of demand",
         "Demand zone is fresh (untested)",
@@ -134,15 +103,46 @@
       ]
     },
     {
+      "symbol": "HXS.TO",
+      "name": "Global X S&P 500 Index Corporate Class ETF",
+      "type": "etf",
+      "price": 113.49,
+      "score": 79.1,
+      "rsi": 76.9,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 3.15,
+      "supply_distance_pct": null,
+      "demand_zone": {
+        "low": 108.9800033569336,
+        "high": 109.91000366210938,
+        "i": 367,
+        "departure_atr": 4.54,
+        "retests": 0,
+        "valid": true
+      },
+      "supply_zone": null,
+      "demand_retests": 0,
+      "demand_age_bars": 10,
+      "departure_atr": 4.54,
+      "reasons": [
+        "Demand zone is fresh (untested)",
+        "Strong departure from demand",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish",
+        "RSI is stretched"
+      ]
+    },
+    {
       "symbol": "TEC.TO",
       "name": "TD Global Technology Leaders Index ETF",
       "type": "etf",
-      "price": 64.99,
+      "price": 65.02,
       "score": 70.0,
-      "rsi": 79.0,
+      "rsi": 79.1,
       "trend": "bullish",
       "weekly_trend": "bullish",
-      "demand_distance_pct": 5.74,
+      "demand_distance_pct": 5.78,
       "supply_distance_pct": null,
       "demand_zone": {
         "low": 60.70000076293945,
@@ -168,13 +168,13 @@
       "symbol": "TD.TO",
       "name": "Toronto-Dominion Bank",
       "type": "stock",
-      "price": 168.14,
-      "score": 66.6,
-      "rsi": 54.9,
+      "price": 168.04,
+      "score": 66.9,
+      "rsi": 54.6,
       "trend": "mixed",
       "weekly_trend": "mixed",
-      "demand_distance_pct": 0.44,
-      "supply_distance_pct": 2.72,
+      "demand_distance_pct": 0.38,
+      "supply_distance_pct": 2.78,
       "demand_zone": {
         "low": 164.25,
         "high": 167.39999389648438,
@@ -202,15 +202,91 @@
       ]
     },
     {
+      "symbol": "ENB.TO",
+      "name": "Enbridge",
+      "type": "stock",
+      "price": 66.3,
+      "score": 64.2,
+      "rsi": 45.9,
+      "trend": "bearish",
+      "weekly_trend": "bearish",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 4.49,
+      "demand_zone": {
+        "low": 66.05999755859375,
+        "high": 67.0,
+        "i": 364,
+        "departure_atr": 1.72,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 69.27999877929688,
+        "high": 70.01000213623047,
+        "i": 362,
+        "departure_atr": 2.8,
+        "retests": 0,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 13,
+      "departure_atr": 1.72,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Daily trend is bearish",
+        "Weekly trend is bearish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
+      "symbol": "CP.TO",
+      "name": "Canadian Pacific Kansas City",
+      "type": "stock",
+      "price": 122.62,
+      "score": 61.8,
+      "rsi": 48.6,
+      "trend": "bearish",
+      "weekly_trend": "mixed",
+      "demand_distance_pct": 0,
+      "supply_distance_pct": 1.27,
+      "demand_zone": {
+        "low": 121.04000091552734,
+        "high": 122.63999938964844,
+        "i": 370,
+        "departure_atr": 1.68,
+        "retests": 1,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 124.18000030517578,
+        "high": 125.55999755859375,
+        "i": 365,
+        "departure_atr": 1.23,
+        "retests": 1,
+        "valid": true
+      },
+      "demand_retests": 1,
+      "demand_age_bars": 7,
+      "departure_atr": 1.68,
+      "reasons": [
+        "Price is sitting at/very near demand",
+        "Demand has only one retest",
+        "Limited room before supply",
+        "Daily trend is bearish",
+        "RSI is constructive, not stretched"
+      ]
+    },
+    {
       "symbol": "CNR.TO",
       "name": "Canadian National Railway",
       "type": "stock",
-      "price": 170.79,
-      "score": 57.4,
-      "rsi": 60.6,
+      "price": 171.15,
+      "score": 56.2,
+      "rsi": 62.1,
       "trend": "mixed",
       "weekly_trend": "mixed",
-      "demand_distance_pct": 2.32,
+      "demand_distance_pct": 2.53,
       "supply_distance_pct": 0,
       "demand_zone": {
         "low": 163.86000061035156,
@@ -240,53 +316,16 @@
       ]
     },
     {
-      "symbol": "ENB.TO",
-      "name": "Enbridge",
-      "type": "stock",
-      "price": 66.13,
-      "score": 57.2,
-      "rsi": 44.4,
-      "trend": "bearish",
-      "weekly_trend": "bearish",
-      "demand_distance_pct": 0,
-      "supply_distance_pct": 4.76,
-      "demand_zone": {
-        "low": 66.05999755859375,
-        "high": 67.0,
-        "i": 364,
-        "departure_atr": 1.72,
-        "retests": 1,
-        "valid": true
-      },
-      "supply_zone": {
-        "low": 69.27999877929688,
-        "high": 70.01000213623047,
-        "i": 362,
-        "departure_atr": 2.8,
-        "retests": 0,
-        "valid": true
-      },
-      "demand_retests": 1,
-      "demand_age_bars": 13,
-      "departure_atr": 1.72,
-      "reasons": [
-        "Price is sitting at/very near demand",
-        "Demand has only one retest",
-        "Daily trend is bearish",
-        "Weekly trend is bearish"
-      ]
-    },
-    {
       "symbol": "XIU.TO",
       "name": "iShares S&P/TSX 60 Index ETF",
       "type": "etf",
-      "price": 52.56,
+      "price": 52.55,
       "score": 53.6,
-      "rsi": 50.0,
+      "rsi": 49.9,
       "trend": "bearish",
       "weekly_trend": "mixed",
       "demand_distance_pct": 0,
-      "supply_distance_pct": 2.02,
+      "supply_distance_pct": 2.04,
       "demand_zone": {
         "low": 52.43000030517578,
         "high": 52.709999084472656,
@@ -314,53 +353,15 @@
       ]
     },
     {
-      "symbol": "CP.TO",
-      "name": "Canadian Pacific Kansas City",
-      "type": "stock",
-      "price": 122.28,
-      "score": 51.2,
-      "rsi": 47.3,
-      "trend": "bearish",
-      "weekly_trend": "mixed",
-      "demand_distance_pct": 0,
-      "supply_distance_pct": 1.55,
-      "demand_zone": {
-        "low": 120.2300033569336,
-        "high": 122.5999984741211,
-        "i": 310,
-        "departure_atr": 1.85,
-        "retests": 5,
-        "valid": true
-      },
-      "supply_zone": {
-        "low": 124.18000030517578,
-        "high": 125.55999755859375,
-        "i": 365,
-        "departure_atr": 1.23,
-        "retests": 1,
-        "valid": true
-      },
-      "demand_retests": 5,
-      "demand_age_bars": 67,
-      "departure_atr": 1.85,
-      "reasons": [
-        "Price is sitting at/very near demand",
-        "Strong departure from demand",
-        "Limited room before supply",
-        "Daily trend is bearish",
-        "RSI is constructive, not stretched"
-      ]
-    },
-    {
       "symbol": "SHOP.TO",
       "name": "Shopify",
       "type": "stock",
-      "price": 213.62,
+      "price": 214.49,
       "score": 46.7,
-      "rsi": 75.1,
+      "rsi": 75.3,
       "trend": "bullish",
       "weekly_trend": "bullish",
-      "demand_distance_pct": 9.47,
+      "demand_distance_pct": 9.84,
       "supply_distance_pct": 0,
       "demand_zone": {
         "low": 177.0449981689453,
@@ -430,13 +431,13 @@
       "symbol": "RY.TO",
       "name": "Royal Bank of Canada",
       "type": "stock",
-      "price": 280.74,
+      "price": 280.87,
       "score": 40.0,
-      "rsi": 42.3,
+      "rsi": 42.5,
       "trend": "bearish",
       "weekly_trend": "mixed",
       "demand_distance_pct": 0,
-      "supply_distance_pct": 2.29,
+      "supply_distance_pct": 2.24,
       "demand_zone": {
         "low": 277.510009765625,
         "high": 282.6199951171875,
@@ -460,6 +461,42 @@
         "Price is sitting at/very near demand",
         "Limited room before supply",
         "Daily trend is bearish"
+      ]
+    },
+    {
+      "symbol": "XQQ.TO",
+      "name": "iShares NASDAQ 100 Index ETF (CAD-Hedged)",
+      "type": "etf",
+      "price": 74.2,
+      "score": 38.0,
+      "rsi": 70.3,
+      "trend": "bullish",
+      "weekly_trend": "bullish",
+      "demand_distance_pct": 4.54,
+      "supply_distance_pct": 0,
+      "demand_zone": {
+        "low": 70.19999694824219,
+        "high": 70.83000183105469,
+        "i": 351,
+        "departure_atr": 1.73,
+        "retests": 3,
+        "valid": true
+      },
+      "supply_zone": {
+        "low": 73.98999786376953,
+        "high": 74.75,
+        "i": 308,
+        "departure_atr": 1.88,
+        "retests": 2,
+        "valid": true
+      },
+      "demand_retests": 3,
+      "demand_age_bars": 26,
+      "departure_atr": 1.73,
+      "reasons": [
+        "Very close to opposing supply",
+        "Daily trend is bullish",
+        "Weekly trend agrees bullish"
       ]
     },
     {
@@ -498,42 +535,6 @@
         "Daily trend is bullish",
         "Weekly trend agrees bullish",
         "RSI is stretched"
-      ]
-    },
-    {
-      "symbol": "XQQ.TO",
-      "name": "iShares NASDAQ 100 Index ETF (CAD-Hedged)",
-      "type": "etf",
-      "price": 74.23,
-      "score": 37.8,
-      "rsi": 70.5,
-      "trend": "bullish",
-      "weekly_trend": "bullish",
-      "demand_distance_pct": 4.58,
-      "supply_distance_pct": 0,
-      "demand_zone": {
-        "low": 70.19999694824219,
-        "high": 70.83000183105469,
-        "i": 351,
-        "departure_atr": 1.73,
-        "retests": 3,
-        "valid": true
-      },
-      "supply_zone": {
-        "low": 73.98999786376953,
-        "high": 74.75,
-        "i": 308,
-        "departure_atr": 1.88,
-        "retests": 2,
-        "valid": true
-      },
-      "demand_retests": 3,
-      "demand_age_bars": 26,
-      "departure_atr": 1.73,
-      "reasons": [
-        "Very close to opposing supply",
-        "Daily trend is bullish",
-        "Weekly trend agrees bullish"
       ]
     }
   ]
