@@ -1,4 +1,4 @@
-import json, os
+import json, os, time
 from datetime import datetime, timezone
 import numpy as np
 import pandas as pd
@@ -120,17 +120,15 @@ def score_row(df):
     reasons=[]
 
     if dd is not None:
-        near=max(0,28-dd*6)
-        score+=near
+        score+=max(0,28-dd*6)
         if dd<=1: reasons.append("Price is sitting at/very near demand")
         elif dd<=3: reasons.append("Price is within 3% of demand")
     else:
         reasons.append("No valid nearby demand zone found")
 
     if dz:
-        fp=freshness_points(dz); score+=fp
-        dep=min(10,max(0,(float(dz.get("departure_atr",1.2))-1.2)*8))
-        score+=dep
+        score+=freshness_points(dz)
+        score+=min(10,max(0,(float(dz.get("departure_atr",1.2))-1.2)*8))
         if dz.get("retests",0)==0: reasons.append("Demand zone is fresh (untested)")
         elif dz.get("retests",0)==1: reasons.append("Demand has only one retest")
         if dz.get("departure_atr",0)>=1.8: reasons.append("Strong departure from demand")
@@ -162,45 +160,86 @@ def score_row(df):
 
     score=max(0,min(100,score))
     return {
-      "price":round(price,4),
-      "score":round(score,1),
-      "rsi":round(rv,1),
-      "trend":dtrend,
-      "weekly_trend":wtrend,
+      "price":round(price,4),"score":round(score,1),"rsi":round(rv,1),
+      "trend":dtrend,"weekly_trend":wtrend,
       "demand_distance_pct":None if dd is None else round(dd,2),
       "supply_distance_pct":None if sd is None else round(sd,2),
-      "demand_zone":dz,
-      "supply_zone":sz,
+      "demand_zone":dz,"supply_zone":sz,
       "demand_retests":None if not dz else int(dz.get("retests",0)),
       "demand_age_bars":zone_age(df,dz),
       "departure_atr":None if not dz else round(float(dz.get("departure_atr",0)),2),
       "reasons":reasons[:5]
     }
 
+def extract_symbol_frame(batch, sym):
+    if batch is None or batch.empty:
+        return None
+    try:
+        if isinstance(batch.columns,pd.MultiIndex):
+            lvl0=set(batch.columns.get_level_values(0))
+            lvl1=set(batch.columns.get_level_values(1))
+            if sym in lvl0:
+                df=batch[sym].copy()
+            elif sym in lvl1:
+                df=batch.xs(sym,axis=1,level=1).copy()
+            else:
+                return None
+        else:
+            df=batch.copy()
+        need=["Open","High","Low","Close","Volume"]
+        if not all(c in df.columns for c in need):
+            return None
+        df=df[need].dropna(subset=["Open","High","Low","Close"])
+        return df if len(df)>=120 else None
+    except Exception:
+        return None
+
 def main():
     results=[]
-    for item in WATCH:
-        sym=item["symbol"]
+    symbols=[x["symbol"] for x in WATCH]
+    items={x["symbol"]:x for x in WATCH}
+    chunk_size=40
+    downloaded=0
+
+    for start in range(0,len(symbols),chunk_size):
+        chunk=symbols[start:start+chunk_size]
+        print(f"batch {start+1}-{min(start+len(chunk),len(symbols))} of {len(symbols)}")
         try:
-            df=yf.download(sym,period="18mo",interval="1d",auto_adjust=False,progress=False,threads=False)
-            if isinstance(df.columns,pd.MultiIndex): df.columns=df.columns.get_level_values(0)
-            df=df.dropna()
-            if len(df)<120: raise ValueError("not enough history")
-            row={**item,**score_row(df)}
-            results.append(row)
-            print(sym,row["score"])
+            batch=yf.download(
+                chunk,period="18mo",interval="1d",auto_adjust=False,
+                progress=False,threads=True,group_by="ticker"
+            )
         except Exception as e:
-            print("SKIP",sym,str(e)[:120])
+            print("BATCH ERROR",str(e)[:160])
+            batch=None
+
+        for sym in chunk:
+            try:
+                df=extract_symbol_frame(batch,sym)
+                if df is None:
+                    print("SKIP",sym,"no usable history")
+                    continue
+                row={**items[sym],**score_row(df)}
+                results.append(row)
+                downloaded+=1
+                print(sym,row["score"])
+            except Exception as e:
+                print("SKIP",sym,str(e)[:120])
+
+        time.sleep(1)
+
     results.sort(key=lambda x:x["score"],reverse=True)
     out={
       "generated_at":datetime.now(timezone.utc).isoformat(),
-      "method":"daily supply-demand heuristic v2",
+      "method":"daily supply-demand heuristic v3 broad-universe",
+      "universe_size":len(WATCH),
+      "symbols_scored":downloaded,
       "results":results
     }
     os.makedirs(os.path.join(ROOT,"data"),exist_ok=True)
     with open(os.path.join(ROOT,"data","scan.json"),"w",encoding="utf-8") as f:
         json.dump(out,f,indent=2)
-    print("wrote",len(results),"symbols")
+    print("wrote",len(results),"of",len(WATCH),"symbols")
 
 if __name__=="__main__":
     main()
