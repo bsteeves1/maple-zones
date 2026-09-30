@@ -198,7 +198,7 @@ def main():
     results=[]
     symbols=[x["symbol"] for x in WATCH]
     items={x["symbol"]:x for x in WATCH}
-    chunk_size=40
+    chunk_size=25
     downloaded=0
 
     for start in range(0,len(symbols),chunk_size):
@@ -226,7 +226,7 @@ def main():
             except Exception as e:
                 print("SKIP",sym,str(e)[:120])
 
-        time.sleep(1)
+        time.sleep(0.5)
 
     results.sort(key=lambda x:x["score"],reverse=True)
     out={
