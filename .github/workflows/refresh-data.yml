@@ -2,6 +2,13 @@ name: Refresh market scan
 
 on:
   workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - "scanner.py"
+      - "watchlist.json"
+      - "requirements.txt"
+      - ".github/workflows/refresh-data.yml"
   schedule:
     - cron: "15 13-21 * * 1-5"
 
