@@ -1,4 +1,4 @@
-/* Maple UI V3.6: entry readiness is not the V3.4 watchlist-quality score. */
+/* Maple UI V3.7: entry readiness is not the V3.4 watchlist-quality score. */
 (async function(){
   'use strict';
   // An old installed HTML shell can briefly load the new app.js first.
@@ -108,6 +108,8 @@
       setText(n,'.price',money(r.price));setText(n,'.rsi',Number.isFinite(r.rsi)?r.rsi.toFixed(0):'—');
       setText(n,'.demand',zoneText(r.demand_zone));setText(n,'.supply',zoneText(r.supply_zone));
       setText(n,'.demand-meta',zoneMeta(r.demand_zone));setText(n,'.supply-meta',zoneMeta(r.supply_zone));
+      const supplyLabel=n.querySelector('.supply')?.parentElement?.querySelector('span');
+      if(supplyLabel)supplyLabel.textContent=r.breached_supply_reference?'Next intact supply':'Supply candidate';
       const entry=n.querySelector('.swing-view');entry.className='swing-view '+e.tone;
       entry.innerHTML='<span class="swing-kicker">ENTRY READINESS</span><b>'+esc(e.label)+'</b><small>'+esc(e.detail)+'</small>';
       // Put the status before the price/zone blocks on every card, not only #1.
@@ -133,7 +135,16 @@
       distance.textContent=(e.distancePct===null?'Demand distance: unknown':e.distancePct===0?
         'Price at / inside the displayed demand range':'Pullback to demand: '+pct(e.distancePct))+
         ' • Room to supply: '+pct(e.supplyRoomPct);
-      n.querySelector('.metrics').after(distance);
+      const metrics=n.querySelector('.metrics');
+      metrics.after(distance);
+      if(r.breached_supply_reference){
+        const ref=document.createElement('div');ref.className='breached-reference';
+        ref.innerHTML='<span>BREACHED SUPPLY REFERENCE</span><b>'+esc(zoneText(r.breached_supply_reference))+
+          '</b><small>'+esc(zoneMeta(r.breached_supply_reference))+'</small><p>'+
+          (r.supply_zone?'Kept for historical resistance context. Room-to-supply uses the next intact supply above it.':
+            'Kept for historical resistance context. No higher intact supply candidate is currently available.')+'</p>';
+        metrics.after(ref);
+      }
       const meta=document.createElement('p');meta.className='candle-meta';
       meta.textContent=isCurrent(r)?'Price candle: '+dateText(r.last_candle_date)+
         (r.bar_is_provisional?' • provisional':'')+'. Completed-candle checks through '+dateText(r.validated_through)+'.':
@@ -149,6 +160,7 @@
       if(e.bounceCandidate)b.push(badge(bounceLabel(r),e.state==='break_review'?'positive':''));
       if(r.demand_zone?.wick_breached)b.push(badge('Demand boundary breached','warning'));
       if(r.supply_zone?.wick_breached)b.push(badge('Supply boundary breached','warning'));
+      if(r.breached_supply_reference)b.push(badge('Prior supply breached','warning'));
       if(r.overlap_conflict)b.push(badge('Overlapping zones','warning'));
       if(cleanDemand(r)&&r.demand_zone.touch_bars===0)b.push(badge('Untested demand'));
       if(r.trend==='bullish'&&r.weekly_trend==='bullish')b.push(badge('D+W bull trend'));
@@ -158,13 +170,14 @@
       const details=['Entry readiness: '+e.label,e.detail,
         'Watchlist quality: '+(e.qualityScore===null?'unknown':e.qualityScore+'/100')+' — not entry timing',
         'Demand: '+zoneText(r.demand_zone)+' • '+zoneMeta(r.demand_zone),
-        'Supply: '+zoneText(r.supply_zone)+' • '+zoneMeta(r.supply_zone),
+        (r.breached_supply_reference?'Next intact supply: ':'Supply: ')+zoneText(r.supply_zone)+' • '+zoneMeta(r.supply_zone),
+        r.breached_supply_reference?'Breached supply reference: '+zoneText(r.breached_supply_reference)+' • '+zoneMeta(r.breached_supply_reference):'',
         'Pullback to demand: '+pct(e.distancePct),'Room to supply: '+pct(e.supplyRoomPct),
         'Zone-engine reaction: '+bounceLabel(r),r.bounce_detail||'',
         'Local lower high: '+money(r.bounce_swing_high)+' • '+dateText(r.bounce_swing_high_at),
         'Bullish confirmation trigger: '+money(e.confirmationTrigger),
         'Completed break date: '+dateText(r.bounce_break_at)];
-      for(const [label,z] of [['Demand',r.demand_zone],['Supply',r.supply_zone]]){
+      for(const [label,z] of [['Demand',r.demand_zone],['Supply',r.supply_zone],['Breached supply reference',r.breached_supply_reference]]){
         if(!z)continue;
         details.push(label+' first eligible: '+dateText(z.confirmed_at));
         details.push(label+' longest continuous visit: '+(z.max_consecutive_touch_bars??'unknown')+' daily candles');

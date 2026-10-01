@@ -31,6 +31,9 @@
     .rank-context{display:inline-flex;align-items:center;border:1px solid #2a3e5d;border-radius:999px;background:#0b1525;color:#9fb3ce;padding:4px 8px;margin-bottom:8px;font-size:9px;line-height:1;font-weight:900;letter-spacing:.05em;text-transform:uppercase}
     .confirmation-meta{margin:9px 0 0;padding:9px 10px;border:1px solid #2a3e5d;border-radius:10px;background:#0b1525;color:#bdcce0;font-size:11px;line-height:1.45;font-weight:700}
     .confirmation-meta.pending{border-color:#5d5425;background:#24210f;color:#eadb96}.confirmation-meta.confirmed{border-color:#2c6b49;background:#102d20;color:#9cecb8}
+    .breached-reference{margin:10px 0 0;padding:10px 11px;border:1px solid #80622b;border-radius:12px;background:#2b2412;color:#ead99b}
+    .breached-reference span{display:block;font-size:9px;letter-spacing:.07em;font-weight:900}.breached-reference b{display:block;margin-top:4px;font-size:13px}
+    .breached-reference small{display:block;margin-top:4px;color:#cdbd86;font-size:10px;line-height:1.4}.breached-reference p{margin:7px 0 0;font-size:10px;line-height:1.45;color:#d7c99a}
   </style>
 </head>
 <body>
@@ -45,9 +48,9 @@
   <main>
     <section class="hero card">
       <div>
-        <span class="pill">V3.6 • Confirmation trigger</span>
+        <span class="pill">V3.7 • Intact supply targeting</span>
         <h2>Near demand now, or watchlist only?</h2>
-        <p>Entry readiness is separate from watchlist quality. The default ranking prioritizes clean candidates within 3% of demand, with visible room to supply. Numbered results are explicitly labeled Watch candidate, and eligible cards show the exact completed-daily-close confirmation trigger when one exists.</p>
+        <p>Entry readiness is separate from watchlist quality. The default ranking prioritizes clean candidates within 3% of demand. If the nearest supply has already been boundary-breached, Maple keeps it as a historical reference and uses the next intact supply above it for the active room-to-supply target.</p>
       </div>
       <p class="fineprint">A quality score of 90 is not 90% confidence or a buy signal. All stages need review. Daily zone-engine rules remain V3.4; this update changes ranking and presentation, not the zone boundaries.</p>
     </section>
@@ -80,7 +83,7 @@
       <p><b>Near demand — waiting:</b> within 3% of intact demand with more than 2% room to an intact supply candidate, but no qualifying reaction. <b>Early bounce — unconfirmed:</b> the same location checks plus a recent upward reaction. <b>Bullish reversal confirmed — review:</b> the same checks plus dated, completed local lower-high break evidence. None of these labels instructs you to buy.</p>
       <p><b>Watchlist only:</b> a distant zone or unknown supply cannot qualify as an immediate demand-zone setup. Breaches, overlaps, insufficient room, invalid data and aging scans block the entry list. No qualifying setups means the app says so; it does not promote the best of unsuitable entries.</p>
       <p><b>Screening defaults:</b> distance is measured as the pullback from the displayed price to demand's upper edge, divided by that price. The limits are 3% to demand, more than 2% to supply and at most 20 minutes since scan completion. The price candle must be dated today in New York. These are screening choices, not backtested performance guarantees. Outside market hours, prior-session data may be normal and stays available as watchlist/reference data.</p>
-      <p><b>Zone safety is unchanged:</b> completed-close invalidation, wick-breach warnings, separate visits versus days touched, formation dates and overlap cautions remain. The local-pivot model is not a certified reproduction of the trading course.</p>
+      <p><b>Zone safety:</b> completed-close invalidation, wick-breach warnings, separate visits versus days touched, formation dates and overlap cautions remain. A breached supply is not silently deleted: it stays visible as a historical resistance reference, while the next intact supply above it becomes the active target when one exists. The local-pivot model is not a certified reproduction of the trading course.</p>
       <p class="fineprint">Daily Yahoo Finance data via yfinance may be delayed or incomplete. Today's candle remains provisional until the next date. Scan completion time is not quote time. This is not a tick-by-tick feed or a live ChatGPT consultation.</p>
     </section>
   </main>
@@ -105,6 +108,6 @@
     </article>
   </template>
   <script src="readiness.js?v=3.6"></script>
-  <script src="app.js?v=3.6"></script>
+  <script src="app.js?v=3.7"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
-const CACHE="maple-zones-v12";
-const ASSETS=["./","index.html","style.css","readiness.js?v=3.6","app.js?v=3.6","manifest.json","icon.svg"];
+const CACHE="maple-zones-v13";
+const ASSETS=["./","index.html","style.css","readiness.js?v=3.6","app.js?v=3.7","manifest.json","icon.svg"];
 self.addEventListener("install",e=>{
   e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting()));
 });

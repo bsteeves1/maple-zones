@@ -215,6 +215,25 @@ def nearest_zone(price, zones, kind):
     return z, float(distance/price*100)
 
 
+def select_supply_view(price, zones):
+    """Use the nearest intact supply target, preserving a nearer breached zone.
+
+    If the closest surviving supply candidate has traded through its distal
+    boundary (without a completed-close invalidation), keep it as historical
+    resistance context and look strictly above it for the next intact supply.
+    """
+    nearest, nearest_distance = nearest_zone(price, zones, "supply")
+    if not nearest or not nearest.get("wick_breached"):
+        return nearest, nearest_distance, None
+    intact_above = [
+        z for z in zones
+        if z.get("valid", True) and not z.get("wick_breached")
+        and z["low"] > nearest["high"]
+    ]
+    intact, intact_distance = nearest_zone(price, intact_above, "supply")
+    return intact, intact_distance, nearest
+
+
 def zones_overlap(dz, sz):
     # Keep opposing supply visible rather than delete a risk from the screen.
     return bool(dz and sz and min(dz["high"], sz["high"]) >= max(dz["low"], sz["low"]))
@@ -289,7 +308,7 @@ def score_row(df, now=None):
     pivots = confirmed_pivots(df, last_complete)
     demand, supply = find_zones(df, last_complete, pivots)
     dz, dd = nearest_zone(price, demand, "demand")
-    sz, sd = nearest_zone(price, supply, "supply")
+    sz, sd, breached_supply_reference = select_supply_view(price, supply)
     overlap = zones_overlap(dz, sz)
     bounce = demand_bounce_state(df, dz, last_complete, pivots)
     warnings, reasons = [], []
@@ -309,6 +328,18 @@ def score_row(df, now=None):
     for label, z in (("Demand", dz), ("Supply", sz)):
         if z and z["wick_breached"]:
             warnings.append(f"{label} boundary traded through on {z['first_breach_at']}; retained only under the close rule")
+    if breached_supply_reference:
+        ref = breached_supply_reference
+        if sz:
+            warnings.append(
+                f"Nearest historical supply {ref['low']:.2f}-{ref['high']:.2f} was boundary-breached "
+                f"on {ref['first_breach_at']}; next intact supply is shown as the active target"
+            )
+        else:
+            warnings.append(
+                f"Nearest historical supply {ref['low']:.2f}-{ref['high']:.2f} was boundary-breached "
+                f"on {ref['first_breach_at']}; no higher intact supply candidate was found"
+            )
     if overlap:
         warnings.append("Demand and supply overlap; not a clean setup")
         bounce.update(status="none", bounce_score=0.0, detail="Opposing zones overlap")
@@ -344,6 +375,7 @@ def score_row(df, now=None):
         "bar_is_provisional": last_complete < len(df)-1,
         "score": round(max(0, min(100, score)), 1), "rsi": round(rv, 1),
         "trend": dtrend, "weekly_trend": wtrend, "demand_zone": dz, "supply_zone": sz,
+        "breached_supply_reference": breached_supply_reference,
         "demand_distance_pct": None if dd is None else round(dd, 2),
         "supply_distance_pct": None if sd is None else round(sd, 2),
         "demand_retests": None if dz is None else dz["retests"],

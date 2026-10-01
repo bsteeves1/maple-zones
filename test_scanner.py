@@ -166,6 +166,30 @@ class SafetyTests(unittest.TestCase):
         second = {**zone(99,99.9),"i":20}
         self.assertEqual(s.nearest_zone(100,[first,second],"demand")[0],first)
 
+    def test_breached_supply_becomes_reference_and_next_intact_is_target(self):
+        breached = {**zone(110,112), "i":10, "wick_breached":True,
+                    "first_breach_at":"2026-09-22"}
+        intact = {**zone(120,122), "i":20, "wick_breached":False}
+        active, distance, ref = s.select_supply_view(100, [breached, intact])
+        self.assertIs(active, intact)
+        self.assertIs(ref, breached)
+        self.assertAlmostEqual(distance, 20.0)
+
+    def test_breached_supply_without_higher_intact_target_stays_reference_only(self):
+        breached = {**zone(110,112), "i":10, "wick_breached":True,
+                    "first_breach_at":"2026-09-22"}
+        active, distance, ref = s.select_supply_view(100, [breached])
+        self.assertIsNone(active)
+        self.assertIsNone(distance)
+        self.assertIs(ref, breached)
+
+    def test_intact_nearest_supply_needs_no_reference(self):
+        intact = {**zone(110,112), "i":10, "wick_breached":False}
+        active, distance, ref = s.select_supply_view(100, [intact])
+        self.assertIs(active, intact)
+        self.assertAlmostEqual(distance, 10.0)
+        self.assertIsNone(ref)
+
     def test_warning_score_cap(self):
         df = bars([[100,102,99,101]]*130)
         z = {**zone(99,101),"wick_breached":True,"first_breach_at":"2026-09-29"}

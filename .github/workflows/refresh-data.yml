@@ -94,6 +94,15 @@ jobs:
               if (r.get("demand_zone") or {}).get("wick_breached"):
                   if r["demand_bounce"]!="none" or r["score"]>55:
                       raise SystemExit("Breached demand escaped safety checks")
+              ref=r.get("breached_supply_reference")
+              active=r.get("supply_zone")
+              if ref:
+                  if not ref.get("wick_breached"):
+                      raise SystemExit("Supply reference is not actually breached")
+                  if active and active.get("wick_breached"):
+                      raise SystemExit("Breached supply published as active target")
+                  if active and not (active.get("low",0)>ref.get("high",0)):
+                      raise SystemExit("Active intact supply is not above breached reference")
           rows.sort(key=lambda r:r["score"], reverse=True)
           out={"generated_at":datetime.now(timezone.utc).isoformat(),
                "rules_version":"3.4", "method":parts[0]["method"]+"; parallel-4",
