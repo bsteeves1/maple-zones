@@ -1,4 +1,4 @@
-import json, os, time
+import json, os, time, math
 from datetime import datetime, timezone
 import numpy as np
 import pandas as pd
@@ -7,6 +7,19 @@ import yfinance as yf
 ROOT=os.path.dirname(__file__)
 with open(os.path.join(ROOT,"watchlist.json"),encoding="utf-8") as f:
     WATCH=json.load(f)
+
+def json_safe(v):
+    """Convert NumPy/non-finite values into strict JSON-safe values for browsers."""
+    if isinstance(v, dict):
+        return {k: json_safe(x) for k, x in v.items()}
+    if isinstance(v, (list, tuple)):
+        return [json_safe(x) for x in v]
+    if isinstance(v, np.integer):
+        return int(v)
+    if isinstance(v, (np.floating, float)):
+        x=float(v)
+        return x if math.isfinite(x) else None
+    return v
 
 def rsi(close,period=14):
     d=close.diff()
@@ -291,7 +304,7 @@ def main():
     }
     os.makedirs(os.path.join(ROOT,"data"),exist_ok=True)
     with open(os.path.join(ROOT,"data","scan.json"),"w",encoding="utf-8") as f:
-        json.dump(out,f,indent=2)
+        json.dump(json_safe(out),f,indent=2,allow_nan=False)
     print("wrote",len(results),"of",len(WATCH),"symbols")
 
 if __name__=="__main__":
