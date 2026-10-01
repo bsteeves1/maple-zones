@@ -1,24 +1,21 @@
 name: Refresh market scan
-
 on:
   workflow_dispatch:
   push:
     branches: ["main"]
     paths:
       - "scanner.py"
+      - "test_scanner.py"
       - "watchlist.json"
       - "requirements.txt"
       - ".github/workflows/refresh-data.yml"
   schedule:
     - cron: "2-57/5 13-21 * * 1-5"
-
 permissions:
   contents: write
-
 concurrency:
   group: market-scan
-  cancel-in-progress: true
-
+  cancel-in-progress: false
 jobs:
   scan:
     name: Scan shard ${{ matrix.shard }}/4
@@ -35,28 +32,23 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
-
+      - name: Verify zone rules before scanning
+        run: python -m unittest -v test_scanner
       - name: Build shard watchlist
         env:
           SHARD: ${{ matrix.shard }}
-          SHARDS: 4
         run: |
           python - <<'PY'
           import json, os
-          path="watchlist.json"
-          with open(path,encoding="utf-8") as f:
+          with open("watchlist.json", encoding="utf-8") as f:
               items=json.load(f)
-          shard=int(os.environ["SHARD"])
-          shards=int(os.environ["SHARDS"])
-          part=items[shard::shards]
-          with open(path,"w",encoding="utf-8") as f:
-              json.dump(part,f,indent=2)
-          print(f"Shard {shard+1}/{shards}: {len(part)} symbols")
+          part=items[int(os.environ["SHARD"])::4]
+          with open("watchlist.json", "w", encoding="utf-8") as f:
+              json.dump(part, f)
+          print(f"Shard contains {len(part)} symbols")
           PY
-
       - name: Scan market shard
         run: python scanner.py
-
       - name: Upload shard result
         uses: actions/upload-artifact@v4
         with:
@@ -64,74 +56,84 @@ jobs:
           path: data/scan.json
           retention-days: 1
           if-no-files-found: error
-
   merge:
-    name: Merge and publish scan
+    name: Validate and publish scan
     needs: scan
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-
-      - name: Download shard results
-        uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v4
         with:
           pattern: maple-scan-*
           path: /tmp/maple-scans
-
-      - name: Merge shard results
+      - name: Strictly validate and merge four shards
         run: |
           python - <<'PY'
           import glob, json, os
           from datetime import datetime, timezone
-
-          files=sorted(glob.glob("/tmp/maple-scans/*/scan.json"))
-          if len(files)!=4:
-              raise SystemExit(f"Expected 4 shard results, found {len(files)}")
-
-          results=[]
-          universe_size=0
-          symbols_scored=0
-          for path in files:
-              with open(path,encoding="utf-8") as f:
-                  data=json.load(f)
-              results.extend(data.get("results",[]))
-              universe_size+=int(data.get("universe_size",0))
-              symbols_scored+=int(data.get("symbols_scored",0))
-
-          results.sort(key=lambda x:x.get("score",0),reverse=True)
-          out={
-              "generated_at":datetime.now(timezone.utc).isoformat(),
-              "method":"daily supply-demand heuristic v3 broad-universe parallel-4",
-              "universe_size":universe_size,
-              "symbols_scored":symbols_scored,
-              "results":results,
-          }
-          os.makedirs("data",exist_ok=True)
-          with open("data/scan.json","w",encoding="utf-8") as f:
-              json.dump(out,f,indent=2)
-          print(f"Merged {symbols_scored} scored symbols from {universe_size} watchlist entries")
+          def reject_constant(value):
+              raise ValueError(f"Non-JSON number: {value}")
+          paths=sorted(glob.glob("/tmp/maple-scans/*/scan.json"))
+          if len(paths)!=4:
+              raise SystemExit(f"Expected 4 shards, found {len(paths)}")
+          parts=[]
+          for path in paths:
+              with open(path, encoding="utf-8") as f:
+                  parts.append(json.load(f, parse_constant=reject_constant))
+          if any(p.get("rules_version")!="3.4" or not p.get("results") for p in parts):
+              raise SystemExit("Wrong rules version or empty shard; refusing publication")
+          rows=[r for p in parts for r in p["results"]]
+          if any(r.get("rules_version")!="3.4" for r in rows):
+              raise SystemExit("Mixed row versions")
+          if len({r["symbol"] for r in rows})!=len(rows):
+              raise SystemExit("Duplicate symbols across shards")
+          for r in rows:
+              if r["demand_bounce"]=="confirmed":
+                  raise SystemExit("Legacy confirmation label detected")
+              if (r.get("demand_zone") or {}).get("wick_breached"):
+                  if r["demand_bounce"]!="none" or r["score"]>55:
+                      raise SystemExit("Breached demand escaped safety checks")
+          rows.sort(key=lambda r:r["score"], reverse=True)
+          out={"generated_at":datetime.now(timezone.utc).isoformat(),
+               "rules_version":"3.4", "method":parts[0]["method"]+"; parallel-4",
+               "universe_size":sum(p["universe_size"] for p in parts),
+               "symbols_scored":len(rows), "results":rows}
+          os.makedirs("data", exist_ok=True)
+          with open("data/scan.json", "w", encoding="utf-8") as f:
+              json.dump(out, f, indent=2, allow_nan=False)
+          print(f"Validated {len(rows)} rows; all use rules 3.4")
+          for r in rows:
+              if r["symbol"] in ("BTE.TO", "TGT", "HBLK.TO"):
+                  print(json.dumps(r, allow_nan=False))
           PY
-
-      - name: Publish refreshed scan safely
+      - name: Publish without overwriting newer code or data
         run: |
           cp data/scan.json /tmp/scan.json
+          source_commit=$(git rev-parse HEAD)
           git config user.name "maple-zones-bot"
           git config user.email "actions@users.noreply.github.com"
-
-          # Move onto the newest main branch first so app/code edits that
-          # happened while the scan was running cannot conflict with scan data.
-          git fetch origin main
-          git reset --hard origin/main
-
-          # Put only the newly generated market data back on top.
-          cp /tmp/scan.json data/scan.json
-          git add data/scan.json
-
-          if git diff --cached --quiet; then
-            echo "No scan-data changes to publish"
-            exit 0
-          fi
-
-          git commit -m "Refresh market scan"
-          git push origin HEAD:main
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if ! git diff --quiet "$source_commit" origin/main -- scanner.py watchlist.json requirements.txt .github/workflows/refresh-data.yml; then
+              echo "Scanner inputs changed during this run; leaving newer code/data untouched"
+              exit 0
+            fi
+            git reset --hard origin/main
+            python - <<'PY'
+          import json
+          with open('/tmp/scan.json') as f:
+              new=json.load(f)
+          with open('data/scan.json') as f:
+              old=json.load(f)
+          if old.get('generated_at','')>new['generated_at']:
+              raise SystemExit('A newer scan already exists; refusing older data')
+          PY
+            cp /tmp/scan.json data/scan.json
+            git add data/scan.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Refresh market scan with V3.4 safety validation"
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          exit 1
