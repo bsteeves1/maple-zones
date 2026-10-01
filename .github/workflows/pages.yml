@@ -29,6 +29,15 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Verify entry-readiness ranking before publication
+        run: |
+          node --check readiness.js
+          node --check app.js
+          node --check sw.js
+          node --test test_readiness.cjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

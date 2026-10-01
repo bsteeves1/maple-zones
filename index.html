@@ -10,12 +10,24 @@
   <style>
     .metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
     .metrics .zone-meta{font-size:11px;line-height:1.45;overflow-wrap:anywhere}
-    .candle-meta{font-size:11px;line-height:1.5;color:#a7b5c9;margin:10px 0}
+    .candle-meta,.distance-meta{font-size:11px;line-height:1.5;color:#a7b5c9;margin:10px 0}
+    .distance-meta{font-weight:700;color:#c4d3e7}
     .zone-warnings{padding:10px 12px;border:1px solid #80622b;border-radius:12px;background:#302412;color:#f2d592;font-size:12px;line-height:1.45}
-    .zone-warnings ul{padding-left:17px;margin:6px 0 0}
-    .zone-warnings li+li{margin-top:5px}
+    .zone-warnings ul{padding-left:17px;margin:6px 0 0}.zone-warnings li+li{margin-top:5px}
     .name{max-width:100%}.ticker-head>div:first-child{min-width:0}
     .topbar p{line-height:1.5}.icon-btn{flex-shrink:0}
+    .quality-summary{flex:0 0 86px;text-align:right;color:#9bacbf}
+    .quality-summary span{display:block;font-size:10px;line-height:1.3}
+    .quality-score{display:block;font-size:14px;font-weight:700;color:#b6c5d8;margin-top:3px}
+    .ranking-control{display:block;margin-top:14px;color:#aebbd0;font-size:12px;font-weight:700}
+    .ranking-control select{display:block;width:100%;max-width:100%;margin-top:6px;padding:11px 8px;border:1px solid #2a3e5d;border-radius:10px;background:#0b1525;color:#eef4ff;font:inherit}
+    .ranking-summary{font-size:12px;line-height:1.5;color:#a7b5c9;margin:2px 4px 12px}
+    .rank-group{grid-column:1/-1;margin:8px 4px 0;color:#8ea6c9;font-size:10px;letter-spacing:.06em;line-height:1.5}
+    .swing-view.muted{border-color:#344458;background:#101b2a}.swing-view.muted b{color:#b9c7d8}
+    .swing-view.review{border-color:#42647f;background:#11273a}.swing-view.review b{color:#a1d5f5}
+    .swing-view small{font-size:12px}.swing-view .swing-kicker{font-size:10px}
+    .section-title{gap:12px}.section-title span{white-space:nowrap}
+    .ticker-card{align-items:flex-start}.ticker-main{overflow-wrap:anywhere}
   </style>
 </head>
 <body>
@@ -30,16 +42,11 @@
   <main>
     <section class="hero card">
       <div>
-        <span class="pill">V3.4 • Zone safety checks</span>
-        <h2>Review demand bounces with the risks visible.</h2>
-        <p>Daily zone candidates with formation dates, separate visits, days touched and boundary-breach warnings. A completed close through a known local pivot is required for the stronger swing-break label. These local-pivot rules are not a certified reproduction of the trading course.</p>
+        <span class="pill">V3.5 • Entry readiness first</span>
+        <h2>Near demand now, or watchlist only?</h2>
+        <p>Entry readiness is separate from watchlist quality. The default ranking prioritizes clean candidates within 3% of demand, with visible room to supply. Distant candidates stay on the watchlist—not at the top as immediate entries.</p>
       </div>
-      <div class="score-key">
-        <div><b>80–100</b><span>High score</span></div>
-        <div><b>60–79</b><span>Watch</span></div>
-        <div><b>&lt;60</b><span>Lower score</span></div>
-      </div>
-      <p class="fineprint">Scores are rankings, not probabilities. Missing supply means unknown room, not unlimited upside.</p>
+      <p class="fineprint">A quality score of 90 is not 90% confidence or a buy signal. All stages need review. Daily zone-engine rules remain V3.4; this update changes ranking and presentation, not the zone boundaries.</p>
     </section>
     <section class="controls card">
       <input id="search" type="search" placeholder="Search symbol or name…" autocomplete="off" />
@@ -52,18 +59,26 @@
         <button class="chip" data-filter="demand">Near demand</button>
         <button class="chip" data-filter="fresh">Untested zones</button>
       </div>
+      <label class="ranking-control" for="rankingMode">Rank by
+        <select id="rankingMode">
+          <option value="entry" selected>Entry readiness (default)</option>
+          <option value="quality">Watchlist quality (not entry timing)</option>
+        </select>
+      </label>
     </section>
     <section>
-      <div class="section-title"><h3 id="sectionHeading">Top setups</h3><span id="count"></span></div>
+      <div class="section-title"><h3 id="sectionHeading">Entry-readiness ranking</h3><span id="count"></span></div>
+      <p id="rankingSummary" class="ranking-summary">Waiting for scan evidence…</p>
       <div id="list" class="list"></div>
       <div id="empty" class="empty hidden">No matching tickers.</div>
     </section>
     <section class="card info">
-      <h3>What V3.4 checks</h3>
-      <p><b>Boundary rules:</b> a completed daily close beyond the far edge invalidates a zone. A wick through that edge is explicitly flagged, even if price recovers. Breached demand is downgraded and excluded from clean bounce signals. Overlapping demand and supply remain visible with a conflict warning.</p>
-      <p><b>Visits versus days:</b> one visit can span several daily candles. The app shows both counts; daily data cannot count every intraday touch. “Untested” means no post-departure daily candle touched the zone and no boundary breach was found.</p>
-      <p><b>Early bounce</b> is not reversal confirmation. <b>Completed local swing break</b> requires a completed prior-session close above a local lower high that was already known before the demand visit. A later recross or a breached demand boundary removes that stronger label.</p>
-      <p class="fineprint">The scanner uses daily Yahoo Finance data via yfinance. Today's candle is conservatively treated as provisional until the next calendar date. Scan completion time is not the quote time. Free data and scheduled refreshes may be delayed or incomplete; this is not a tick-by-tick live feed, a ChatGPT consultation, or a performance guarantee.</p>
+      <h3>How entry readiness differs from quality</h3>
+      <p><b>Near demand — waiting:</b> within 3% of intact demand with more than 2% room to an intact supply candidate, but no qualifying reaction. <b>Early bounce — unconfirmed:</b> the same location checks plus a recent upward reaction. <b>Local break — review:</b> the same checks plus dated, completed local lower-high break evidence. None of these labels instructs you to buy.</p>
+      <p><b>Watchlist only:</b> a distant zone or unknown supply cannot qualify as an immediate demand-zone setup. Breaches, overlaps, insufficient room, invalid data and aging scans block the entry list. No qualifying setups means the app says so; it does not promote the best of unsuitable entries.</p>
+      <p><b>Screening defaults:</b> distance is measured as the pullback from the displayed price to demand's upper edge, divided by that price. The limits are 3% to demand, more than 2% to supply and at most 20 minutes since scan completion. The price candle must be dated today in New York. These are screening choices, not backtested performance guarantees. Outside market hours, prior-session data may be normal and stays available as watchlist/reference data.</p>
+      <p><b>Zone safety is unchanged:</b> completed-close invalidation, wick-breach warnings, separate visits versus days touched, formation dates and overlap cautions remain. The local-pivot model is not a certified reproduction of the trading course.</p>
+      <p class="fineprint">Daily Yahoo Finance data via yfinance may be delayed or incomplete. Today's candle remains provisional until the next date. Scan completion time is not quote time. This is not a tick-by-tick feed or a live ChatGPT consultation.</p>
     </section>
   </main>
   <template id="rowTemplate">
@@ -71,19 +86,22 @@
       <div class="rank"></div>
       <div class="ticker-main">
         <div class="ticker-head">
-          <div><h4 class="symbol"></h4><div class="name"></div></div><div class="score"></div>
+          <div><h4 class="symbol"></h4><div class="name"></div></div>
+          <div class="quality-summary"><span>Watchlist quality</span><b class="quality-score"></b></div>
         </div>
+        <div class="swing-view hidden"></div>
         <div class="metrics">
           <div><span>Price</span><b class="price"></b></div>
           <div><span>RSI</span><b class="rsi"></b></div>
           <div><span>Demand candidate</span><b class="demand"></b><small class="zone-meta demand-meta"></small></div>
           <div><span>Supply candidate</span><b class="supply"></b><small class="zone-meta supply-meta"></small></div>
         </div>
-        <div class="swing-view hidden"></div><div class="badges"></div>
-        <button class="why-btn" type="button">Why this score ▾</button><div class="why hidden"></div>
+        <div class="badges"></div>
+        <button class="why-btn" type="button">Why this ranking ▾</button><div class="why hidden"></div>
       </div>
     </article>
   </template>
-  <script src="app.js?v=3.4"></script>
+  <script src="readiness.js?v=3.5"></script>
+  <script src="app.js?v=3.5"></script>
 </body>
 </html>
