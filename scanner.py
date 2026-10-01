@@ -68,9 +68,20 @@ def zone_retests_and_validity(df, zone, kind):
     return retests, valid
 
 def find_zones(df):
+    """
+    Stricter daily supply/demand zones.
+
+    A candidate must:
+      1) form at a local extreme,
+      2) leave with meaningful displacement,
+      3) be reasonably sized relative to ATR, and
+      4) break a prior swing extreme after departure.
+
+    This avoids treating oversized event candles or ordinary reactions as zones.
+    """
     a=atr(df)
     demand=[]; supply=[]
-    for i in range(3,len(df)-4):
+    for i in range(6,len(df)-4):
         lo=float(df["Low"].iloc[i]); hi=float(df["High"].iloc[i])
         op=float(df["Open"].iloc[i]); cl=float(df["Close"].iloc[i])
         av=float(a.iloc[i]) if pd.notna(a.iloc[i]) else 0
@@ -78,15 +89,40 @@ def find_zones(df):
 
         local_low=float(df["Low"].iloc[i-2:i+3].min())
         local_high=float(df["High"].iloc[i-2:i+3].max())
-        up_move=float(df["High"].iloc[i+1:i+4].max())-cl
-        dn_move=cl-float(df["Low"].iloc[i+1:i+4].min())
+        prior_high=float(df["High"].iloc[i-5:i].max())
+        prior_low=float(df["Low"].iloc[i-5:i].min())
+        future_high=float(df["High"].iloc[i+1:i+4].max())
+        future_low=float(df["Low"].iloc[i+1:i+4].min())
+        up_move=future_high-cl
+        dn_move=cl-future_low
 
-        if lo<=local_low and up_move>=1.2*av:
-            z={"low":lo,"high":max(op,cl),"i":i,"departure_atr":round(up_move/av,2)}
+        demand_high=max(op,cl)
+        supply_low=min(op,cl)
+        demand_width=max(0.0,demand_high-lo)
+        supply_width=max(0.0,hi-supply_low)
+
+        demand_break = future_high > prior_high + 0.05*av
+        supply_break = future_low < prior_low - 0.05*av
+        demand_size_ok = demand_width <= 1.50*av
+        supply_size_ok = supply_width <= 1.50*av
+
+        if lo<=local_low and up_move>=1.2*av and demand_break and demand_size_ok:
+            z={
+                "low":lo,"high":demand_high,"i":i,
+                "departure_atr":round(up_move/av,2),
+                "width_atr":round(demand_width/av,2),
+                "structure_break":True
+            }
             z["retests"],z["valid"]=zone_retests_and_validity(df,z,"demand")
             if z["valid"]: demand.append(z)
-        if hi>=local_high and dn_move>=1.2*av:
-            z={"low":min(op,cl),"high":hi,"i":i,"departure_atr":round(dn_move/av,2)}
+
+        if hi>=local_high and dn_move>=1.2*av and supply_break and supply_size_ok:
+            z={
+                "low":supply_low,"high":hi,"i":i,
+                "departure_atr":round(dn_move/av,2),
+                "width_atr":round(supply_width/av,2),
+                "structure_break":True
+            }
             z["retests"],z["valid"]=zone_retests_and_validity(df,z,"supply")
             if z["valid"]: supply.append(z)
     return demand,supply
@@ -118,6 +154,32 @@ def freshness_points(z):
     if r==1:return 8
     if r==2:return 3
     return -4
+
+def zone_quality(z, age_bars=0):
+    if not z:return -999
+    return (
+        float(z.get("departure_atr",0))*10
+        - int(z.get("retests",0))*5
+        - max(0,age_bars)*0.03
+        - max(0,float(z.get("width_atr",0))-0.8)*2
+    )
+
+def resolve_opposing_overlap(df, dz, dd, sz, sd):
+    """Do not present materially overlapping demand and supply as simultaneous clean zones."""
+    if not dz or not sz:
+        return dz,dd,sz,sd
+    overlap=max(0.0,min(float(dz["high"]),float(sz["high"]))-max(float(dz["low"]),float(sz["low"])))
+    dw=max(1e-9,float(dz["high"])-float(dz["low"]))
+    sw=max(1e-9,float(sz["high"])-float(sz["low"]))
+    overlap_fraction=overlap/min(dw,sw)
+    if overlap_fraction < 0.25:
+        return dz,dd,sz,sd
+
+    dq=zone_quality(dz,zone_age(df,dz))
+    sq=zone_quality(sz,zone_age(df,sz))
+    if dq>=sq:
+        return dz,dd,None,None
+    return None,None,sz,sd
 
 def demand_bounce_state(df, zone, lookback=7):
     """Detect a bullish reversal after price trades into a valid demand zone."""
@@ -176,6 +238,7 @@ def score_row(df):
     demand,supply=find_zones(df)
     dz,dd=nearest_zone(price,demand,"demand")
     sz,sd=nearest_zone(price,supply,"supply")
+    dz,dd,sz,sd=resolve_opposing_overlap(df,dz,dd,sz,sd)
     bounce=demand_bounce_state(df,dz)
 
     score=35.0
@@ -297,7 +360,7 @@ def main():
     results.sort(key=lambda x:x["score"],reverse=True)
     out={
       "generated_at":datetime.now(timezone.utc).isoformat(),
-      "method":"daily supply-demand heuristic v3 broad-universe",
+      "method":"daily supply-demand heuristic v3.2 structure-validated zones",
       "universe_size":len(WATCH),
       "symbols_scored":downloaded,
       "results":results
