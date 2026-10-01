@@ -108,15 +108,18 @@ class BounceTests(unittest.TestCase):
         b = s.demand_bounce_state(self.df,self.z,29,self.pivots,lookback=9)
         self.assertEqual(b["status"],"early")
         self.assertIsNone(b["swing_break_at"])
+        self.assertGreater(b["confirmation_trigger"],b["swing_high"])
 
     def test_completed_close_break_of_lower_high(self):
         b = s.demand_bounce_state(self.df,self.z,30,self.pivots,lookback=9)
         self.assertEqual(b["status"],"swing_break")
         self.assertEqual(b["swing_high"],104.)
+        self.assertGreater(b["confirmation_trigger"],104.)
 
     def test_simple_bounce_without_pivot_not_confirmed(self):
         b = s.demand_bounce_state(self.df,self.z,30,{"high":[],"low":[]},lookback=9)
         self.assertEqual(b["status"],"early")
+        self.assertIsNone(b["confirmation_trigger"])
 
     def test_wick_above_pivot_not_close_break(self):
         self.df.iloc[30,:4] = [102,106,101.5,103]
