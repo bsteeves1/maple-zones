@@ -101,7 +101,7 @@ jobs:
                "symbols_scored":len(rows), "results":rows}
           os.makedirs("data", exist_ok=True)
           with open("data/scan.json", "w", encoding="utf-8") as f:
-              json.dump(out, f, indent=2, allow_nan=False)
+              json.dump(out, f, separators=(",", ":"), allow_nan=False)
           print(f"Validated {len(rows)} rows; all use rules 3.4")
           for r in rows:
               if r["symbol"] in ("BTE.TO", "TGT", "HBLK.TO"):
