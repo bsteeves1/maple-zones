@@ -106,6 +106,54 @@ def freshness_points(z):
     if r==2:return 3
     return -4
 
+def demand_bounce_state(df, zone, lookback=7):
+    """Detect a recent reaction upward after price traded into a valid demand zone."""
+    if not zone or len(df)<3:
+        return {"status":"none","bars_since_touch":None,"bounce_pct":None,"bounce_score":0.0}
+
+    start=max(int(zone["i"])+4, len(df)-lookback)
+    touch_i=None
+    touch_low=None
+    for j in range(start,len(df)):
+        lo=float(df["Low"].iloc[j]); hi=float(df["High"].iloc[j])
+        if hi>=zone["low"] and lo<=zone["high"]:
+            touch_i=j
+            touch_low=lo if touch_low is None else min(touch_low,lo)
+
+    if touch_i is None:
+        return {"status":"none","bars_since_touch":None,"bounce_pct":None,"bounce_score":0.0}
+
+    bars_since=(len(df)-1)-touch_i
+    price=float(df["Close"].iloc[-1])
+    prev=float(df["Close"].iloc[-2])
+    op=float(df["Open"].iloc[-1])
+    base=max(float(zone["low"]), min(float(zone["high"]), touch_low if touch_low is not None else float(zone["high"])))
+    bounce_pct=((price-base)/base*100) if base>0 else 0.0
+    above_zone=price>float(zone["high"])
+    rising=price>prev
+    bullish_candle=price>op
+
+    status="none"
+    if bars_since<=5 and above_zone and bounce_pct>=0.75 and (rising or bullish_candle):
+        status="confirmed"
+    elif bars_since<=3 and price>=float(zone["high"])*0.995 and bounce_pct>=0.25 and (rising or bullish_candle):
+        status="early"
+
+    score=0.0
+    if status!="none":
+        score=60.0
+        score+=max(0,15-bars_since*3)
+        score+=min(15,max(0,bounce_pct*4))
+        if rising: score+=5
+        if bullish_candle: score+=5
+        if status=="confirmed": score+=10
+    return {
+        "status":status,
+        "bars_since_touch":int(bars_since),
+        "bounce_pct":round(float(bounce_pct),2),
+        "bounce_score":round(min(100,score),1)
+    }
+
 def score_row(df):
     close=df["Close"].astype(float)
     price=float(close.iloc[-1])
@@ -115,6 +163,7 @@ def score_row(df):
     demand,supply=find_zones(df)
     dz,dd=nearest_zone(price,demand,"demand")
     sz,sd=nearest_zone(price,supply,"supply")
+    bounce=demand_bounce_state(df,dz)
 
     score=35.0
     reasons=[]
@@ -168,6 +217,10 @@ def score_row(df):
       "demand_retests":None if not dz else int(dz.get("retests",0)),
       "demand_age_bars":zone_age(df,dz),
       "departure_atr":None if not dz else round(float(dz.get("departure_atr",0)),2),
+      "demand_bounce":bounce["status"],
+      "bounce_bars_since_touch":bounce["bars_since_touch"],
+      "bounce_pct":bounce["bounce_pct"],
+      "bounce_score":bounce["bounce_score"],
       "reasons":reasons[:5]
     }
 
