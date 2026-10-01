@@ -1,4 +1,4 @@
-const CACHE="maple-zones-v8";
+const CACHE="maple-zones-v9";
 const ASSETS=["./","index.html","style.css","app.js","manifest.json","icon.svg"];
 self.addEventListener("install",e=>{
   self.skipWaiting();
