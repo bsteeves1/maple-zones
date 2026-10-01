@@ -1,4 +1,4 @@
-/* Maple UI V3.5. Deterministic entry-readiness classification, not a forecast.
+/* Maple UI V3.6. Deterministic entry-readiness classification, not a forecast.
  * The V3.4 zone engine and its quality score are unchanged.
  * 3% proximity / 2% supply room / 20-minute scan age are explicit screening
  * defaults, NOT backtested probabilities or trading-performance claims.
@@ -40,7 +40,9 @@
     // Compute from unrounded prices, not the backend's rounded percentage.
     const dd=finite(p)&&p>0&&zoneGeometry(dz)?Math.max(0,(p-dz.high)/p*100):null;
     const sd=finite(p)&&p>0&&zoneGeometry(sz)?Math.max(0,(sz.low-p)/p*100):null;
-    const base={qualityScore:quality(r),distancePct:dd,supplyRoomPct:sd,
+    const confirmationTrigger=finite(r.bounce_confirmation_trigger)&&r.bounce_confirmation_trigger>0?
+      r.bounce_confirmation_trigger:null;
+    const base={qualityScore:quality(r),distancePct:dd,supplyRoomPct:sd,confirmationTrigger,
       tier:0,nearCandidate:false,bounceCandidate:false};
     const result=(state,label,detail,tone='caution',tier=0)=>({...base,state,label,detail,tone,tier,
       nearCandidate:tier>=3,bounceCandidate:tier>=4});
@@ -89,7 +91,7 @@
       validDate(r.bounce_break_at)&&validDate(r.validated_through)&&
       r.bounce_break_at<=r.validated_through&&r.validated_through<today&&
       validDate(r.bounce_swing_high_at)&&r.bounce_swing_high_at<r.bounce_break_at;
-    if(breakEvidence)return result('break_review','Local break — review',
+    if(breakEvidence)return result('break_review','Bullish reversal confirmed — review',
       'Within 3% of intact demand, with room to supply and a completed local lower-high break after a recent visit. Review the chart; this is not a buy instruction or a success probability.','review',5);
     if(touched&&above&&r.demand_bounce==='early')return result('early_bounce','Early bounce — unconfirmed',
       'Within 3% of intact demand with room to supply and a recent upward reaction. There is no completed local swing-break confirmation.'+
