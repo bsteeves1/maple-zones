@@ -21,9 +21,9 @@
   <main>
     <section class="hero card">
       <div>
-        <span class="pill">V3.2 • Structure-validated zones</span>
+        <span class="pill">V3.3 • Dated structure-validated zones</span>
         <h2>Find bullish reversals from demand.</h2>
-        <p>Scans a broad universe of Canadian ETFs, liquid TSX stocks, Canadian-listed U.S. CDRs, plus major direct U.S. stocks and ETFs available through brokers such as Wealthsimple. V3.2 only keeps reasonably sized zones that leave with displacement and break a prior swing extreme, then ranks them using zone proximity, freshness, trend, RSI and room to opposing supply.</p>
+        <p>Scans a broad universe of Canadian ETFs, liquid TSX stocks, Canadian-listed U.S. CDRs, plus major direct U.S. stocks and ETFs available through brokers such as Wealthsimple. V3.3 keeps reasonably sized zones that leave with displacement and break a prior swing extreme, revalidates them against the newest market data, and now shows when each zone formed plus its retest count.</p>
       </div>
       <div class="score-key">
         <div><b>80–100</b><span>High score</span></div>
@@ -55,7 +55,7 @@
     </section>
 
     <section class="card info">
-      <h3>How V3 scores a setup</h3>
+      <h3>How V3.3 scores a setup</h3>
       <p><b>Bullish reversal at demand</b> finds symbols that recently touched a valid demand zone and are now turning upward. “Early bullish reversal” marks the first upward reaction; “Confirmed bullish reversal” requires a stronger move back above the zone. <b>Higher scores</b> favor price near a still-valid demand zone, few/no retests, strong departure, bullish daily + weekly alignment and useful room before supply. <b>Lower scores</b> reflect nearby supply, repeated zone tests, bearish trend or stretched RSI.</p>
       <p class="fineprint">The “Swing view” shown on the #1 setup is a rule-based opinion generated from the live scanner inputs (zone location, trend, freshness, RSI and room to supply). It is not a live ChatGPT consultation or a guarantee of performance. Market data may be delayed or incomplete.</p>
     </section>
@@ -74,8 +74,8 @@
         </div>
         <div class="metrics">
           <div><span>Price</span><b class="price"></b></div>
-          <div><span>Demand zone</span><b class="demand"></b></div>
-          <div><span>Supply zone</span><b class="supply"></b></div>
+          <div><span>Demand zone</span><b class="demand"></b><small class="zone-meta demand-meta"></small></div>
+          <div><span>Supply zone</span><b class="supply"></b><small class="zone-meta supply-meta"></small></div>
           <div><span>RSI</span><b class="rsi"></b></div>
         </div>
         <div class="swing-view hidden"></div>
