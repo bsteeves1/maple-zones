@@ -39,6 +39,7 @@
         <button class="chip" data-filter="etf">ETFs</button>
         <button class="chip" data-filter="stock">Stocks</button>
         <button class="chip" data-filter="cdr">CDRs</button>
+        <button class="chip" data-filter="bounce">Demand bouncing</button>
         <button class="chip" data-filter="demand">Near demand</button>
         <button class="chip" data-filter="fresh">Fresh zones</button>
       </div>
@@ -46,7 +47,7 @@
 
     <section>
       <div class="section-title">
-        <h3>Top setups</h3>
+        <h3 id="sectionHeading">Top setups</h3>
         <span id="count"></span>
       </div>
       <div id="list" class="list"></div>
@@ -55,7 +56,7 @@
 
     <section class="card info">
       <h3>How V3 scores a setup</h3>
-      <p><b>Higher scores</b> favor price near a still-valid demand zone, few/no retests, strong departure, bullish daily + weekly alignment and useful room before supply. <b>Lower scores</b> reflect nearby supply, repeated zone tests, bearish trend or stretched RSI.</p>
+      <p><b>Demand bouncing</b> finds symbols that recently touched a valid demand zone and are now reacting upward. “Early bounce” is a newer reaction; “Confirmed bounce” requires a stronger move back above the zone. <b>Higher scores</b> favor price near a still-valid demand zone, few/no retests, strong departure, bullish daily + weekly alignment and useful room before supply. <b>Lower scores</b> reflect nearby supply, repeated zone tests, bearish trend or stretched RSI.</p>
       <p class="fineprint">The “Swing view” shown on the #1 setup is a rule-based opinion generated from the live scanner inputs (zone location, trend, freshness, RSI and room to supply). It is not a live ChatGPT consultation or a guarantee of performance. Market data may be delayed or incomplete.</p>
     </section>
   </main>
