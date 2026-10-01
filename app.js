@@ -4,6 +4,19 @@ const list=document.getElementById("list"),tpl=document.getElementById("rowTempl
 const pct=v=>Number.isFinite(v)?(v>=0?"+":"")+v.toFixed(1)+"%":"—";
 const money=v=>Number.isFinite(v)?"$"+v.toFixed(v>=100?2:3):"—";
 const zoneText=z=>z&&Number.isFinite(z.low)&&Number.isFinite(z.high)?money(z.low)+"–"+money(z.high):"—";
+const zoneDate=z=>{
+  if(!z||!z.formed_at)return "—";
+  const d=new Date(z.formed_at+"T00:00:00");
+  return Number.isNaN(d.getTime())?z.formed_at:d.toLocaleDateString([], {month:"short",day:"numeric"});
+};
+const retestText=z=>{
+  if(!z)return "";
+  const r=Number.isFinite(z.retests)?z.retests:null;
+  if(r===0)return "Fresh • 0 retests";
+  if(r===1)return "1 retest";
+  return r==null?"Retests —":r+" retests";
+};
+const zoneMeta=z=>z&&z.formed_at?"Formed "+zoneDate(z)+" • "+retestText(z):"";
 function badge(text,type=""){return '<span class="badge '+type+'">'+text+'</span>'}
 function swingView(r){
   const dd=r.demand_distance_pct, sd=r.supply_distance_pct, rsi=r.rsi;
@@ -49,7 +62,9 @@ function render(){
     const s=n.querySelector(".score");s.textContent=Math.round(r.score);s.classList.add(r.score>=80?"good":r.score>=60?"mid":"low");
     n.querySelector(".price").textContent=money(r.price);
     n.querySelector(".demand").textContent=zoneText(r.demand_zone);
+    n.querySelector(".demand-meta").textContent=zoneMeta(r.demand_zone);
     n.querySelector(".supply").textContent=zoneText(r.supply_zone);
+    n.querySelector(".supply-meta").textContent=zoneMeta(r.supply_zone);
     n.querySelector(".rsi").textContent=r.rsi==null?"—":r.rsi.toFixed(0);
 
     const swing=n.querySelector(".swing-view");
@@ -79,9 +94,9 @@ function render(){
     const demandDist=r.demand_distance_pct==null?"—":pct(r.demand_distance_pct);
     const supplyDist=r.supply_distance_pct==null?"—":pct(r.supply_distance_pct);
     why.innerHTML="<ul>"+reasons+"</ul>"+
-      '<div class="zone-stats"><span>Demand zone: <b>'+zoneText(r.demand_zone)+'</b></span>'+
+      '<div class="zone-stats"><span>Demand zone: <b>'+zoneText(r.demand_zone)+'</b> • '+(zoneMeta(r.demand_zone)||'—')+'</span>'+
       '<span>Distance to demand: <b>'+demandDist+'</b></span>'+
-      '<span>Supply zone: <b>'+zoneText(r.supply_zone)+'</b></span>'+
+      '<span>Supply zone: <b>'+zoneText(r.supply_zone)+'</b> • '+(zoneMeta(r.supply_zone)||'—')+'</span>'+
       '<span>Distance to supply: <b>'+supplyDist+'</b></span>'+
       '<span>Bullish reversal: <b>'+(r.demand_bounce&&r.demand_bounce!=="none"?(r.demand_bounce==="confirmed"?"Confirmed":"Early")+" reversal • "+(r.bounce_pct==null?"—":pct(r.bounce_pct)):"—")+'</b></span>'+
       '<span>Retests: <b>'+(r.demand_retests??"—")+'</b></span>'+
