@@ -21,7 +21,7 @@ concurrency:
 
 jobs:
   scan:
-    name: Scan shard ${{ matrix.shard + 1 }}/4
+    name: Scan shard ${{ matrix.shard }}/4
     runs-on: ubuntu-latest
     timeout-minutes: 8
     strategy:
