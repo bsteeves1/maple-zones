@@ -2006,7 +2006,7 @@
       "type": "stock",
       "price": 91.93,
       "score": 77.0,
-      "rsi": NaN,
+      "rsi": null,
       "trend": "bullish",
       "weekly_trend": "bullish",
       "demand_distance_pct": 20.24,
