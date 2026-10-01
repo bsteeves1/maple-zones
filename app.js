@@ -1,10 +1,10 @@
-/* Maple UI V3.5: entry readiness is not the V3.4 watchlist-quality score. */
+/* Maple UI V3.6: entry readiness is not the V3.4 watchlist-quality score. */
 (async function(){
   'use strict';
   // An old installed HTML shell can briefly load the new app.js first.
   if(!globalThis.MapleReadiness){
     try{await new Promise((resolve,reject)=>{
-      const s=document.createElement('script');s.src='readiness.js?v=3.5';
+      const s=document.createElement('script');s.src='readiness.js?v=3.6';
       s.onload=resolve;s.onerror=reject;document.head.appendChild(s);
     });}catch(e){
       document.getElementById('updated').textContent='Ranking module could not load — reopen Maple to retry.';
@@ -49,7 +49,7 @@
   const cleanDemand=r=>isCurrent(r)&&r.demand_zone?.valid&&!r.demand_zone.wick_breached&&!r.overlap_conflict;
   function bounceLabel(r){
     if(!isCurrent(r))return 'Legacy signal — needs rescan';
-    if(r.demand_bounce==='swing_break')return 'Completed local swing break';
+    if(r.demand_bounce==='swing_break')return 'Bullish reversal confirmed';
     if(r.demand_bounce==='early')return r.bar_is_provisional?'Early bounce • provisional':'Early bounce • unconfirmed';
     return 'No clean bounce signal';
   }
@@ -71,19 +71,29 @@
       activeFilter==='bounce'?'Near-demand bounces — for review':'Entry-readiness ranking';
     rankingSummary.textContent=mode==='quality'?
       'Sorted by general watchlist quality. A high number does not mean a good entry now; each card keeps its separate entry-readiness status.':
-      candidates?candidates+' near-demand review '+(candidates===1?'candidate':'candidates')+
-        '. Sorted by reaction evidence, then distance to demand, then quality. Waiting or review is not a buy signal.':
+      candidates?candidates+' near-demand watch '+(candidates===1?'candidate':'candidates')+
+        '. Sorted by reaction evidence, then distance to demand, then quality. Waiting, confirmation, or review is not a buy signal.':
         'No qualifying near-demand setups in this view. Any remaining results are watchlist/reference only — not entry-ready.';
     const fragment=document.createDocumentFragment();let lastGroup=null,entryOrdinal=0;
     filtered.forEach(({row:r,readiness:e},i)=>{
-      const group=e.nearCandidate?'NEAR-DEMAND REVIEW CANDIDATES':'WATCHLIST & CAUTIONS — NOT ENTRY-READY';
+      const group=e.nearCandidate?'NEAR-DEMAND WATCH CANDIDATES':'WATCHLIST & CAUTIONS — NOT ENTRY-READY';
       if(mode==='entry'&&group!==lastGroup){
         const h=document.createElement('h4');h.className='rank-group';h.textContent=group;
         fragment.appendChild(h);lastGroup=group;
       }
       const n=tpl.content.cloneNode(true),card=n.querySelector('.ticker-card');
       card.dataset.symbol=r.symbol;card.dataset.readiness=e.state;
-      setText(n,'.rank',mode==='quality'?i+1:e.nearCandidate?++entryOrdinal:'—');
+      const rankEl=n.querySelector('.rank');
+      let shownRank='—',watchOrdinal=null;
+      if(mode==='quality')shownRank=String(i+1);
+      else if(e.nearCandidate){watchOrdinal=++entryOrdinal;shownRank='#'+watchOrdinal;}
+      rankEl.textContent=shownRank;
+      if(watchOrdinal){
+        rankEl.setAttribute('aria-label','Watch candidate #'+watchOrdinal);
+        const rankContext=document.createElement('div');rankContext.className='rank-context';
+        rankContext.textContent='Watch candidate #'+watchOrdinal;
+        n.querySelector('.ticker-main').prepend(rankContext);
+      }
       setText(n,'.symbol',r.symbol);setText(n,'.name',r.name);
       const quality=n.querySelector('.quality-score')||n.querySelector('.score');
       if(quality){
@@ -102,6 +112,23 @@
       entry.innerHTML='<span class="swing-kicker">ENTRY READINESS</span><b>'+esc(e.label)+'</b><small>'+esc(e.detail)+'</small>';
       // Put the status before the price/zone blocks on every card, not only #1.
       n.querySelector('.metrics').before(entry);
+      if(e.nearCandidate){
+        const confirmation=document.createElement('div');
+        const trigger=Number.isFinite(e.confirmationTrigger)?e.confirmationTrigger:null;
+        if(e.state==='break_review'){
+          confirmation.className='confirmation-meta confirmed';
+          confirmation.textContent=trigger?
+            'Bullish reversal confirmed: a completed daily close broke the '+money(trigger)+' local swing trigger on '+dateText(r.bounce_break_at)+'.':
+            'Bullish reversal confirmed by a completed prior-session local swing break on '+dateText(r.bounce_break_at)+'.';
+        }else{
+          confirmation.className='confirmation-meta pending';
+          confirmation.textContent=trigger?
+            'Bullish confirmation needed: completed daily close above the '+money(trigger)+' local swing trigger.':
+            'Bullish confirmation needed: waiting for a valid local lower-high trigger.';
+          if(r.bar_is_provisional)confirmation.textContent+=' Today\'s provisional candle does not count as completed confirmation.';
+        }
+        entry.after(confirmation);
+      }
       const distance=document.createElement('p');distance.className='distance-meta';
       distance.textContent=(e.distancePct===null?'Demand distance: unknown':e.distancePct===0?
         'Price at / inside the displayed demand range':'Pullback to demand: '+pct(e.distancePct))+
@@ -135,6 +162,7 @@
         'Pullback to demand: '+pct(e.distancePct),'Room to supply: '+pct(e.supplyRoomPct),
         'Zone-engine reaction: '+bounceLabel(r),r.bounce_detail||'',
         'Local lower high: '+money(r.bounce_swing_high)+' • '+dateText(r.bounce_swing_high_at),
+        'Bullish confirmation trigger: '+money(e.confirmationTrigger),
         'Completed break date: '+dateText(r.bounce_break_at)];
       for(const [label,z] of [['Demand',r.demand_zone],['Supply',r.supply_zone]]){
         if(!z)continue;
