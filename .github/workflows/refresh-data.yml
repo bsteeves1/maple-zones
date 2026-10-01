@@ -21,8 +21,13 @@ concurrency:
 
 jobs:
   scan:
+    name: Scan shard ${{ matrix.shard + 1 }}/4
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 8
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -30,8 +35,84 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
-      - name: Scan market universe
+
+      - name: Build shard watchlist
+        env:
+          SHARD: ${{ matrix.shard }}
+          SHARDS: 4
+        run: |
+          python - <<'PY'
+          import json, os
+          path="watchlist.json"
+          with open(path,encoding="utf-8") as f:
+              items=json.load(f)
+          shard=int(os.environ["SHARD"])
+          shards=int(os.environ["SHARDS"])
+          part=items[shard::shards]
+          with open(path,"w",encoding="utf-8") as f:
+              json.dump(part,f,indent=2)
+          print(f"Shard {shard+1}/{shards}: {len(part)} symbols")
+          PY
+
+      - name: Scan market shard
         run: python scanner.py
+
+      - name: Upload shard result
+        uses: actions/upload-artifact@v4
+        with:
+          name: maple-scan-${{ matrix.shard }}
+          path: data/scan.json
+          retention-days: 1
+          if-no-files-found: error
+
+  merge:
+    name: Merge and publish scan
+    needs: scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download shard results
+        uses: actions/download-artifact@v4
+        with:
+          pattern: maple-scan-*
+          path: /tmp/maple-scans
+
+      - name: Merge shard results
+        run: |
+          python - <<'PY'
+          import glob, json, os
+          from datetime import datetime, timezone
+
+          files=sorted(glob.glob("/tmp/maple-scans/*/scan.json"))
+          if len(files)!=4:
+              raise SystemExit(f"Expected 4 shard results, found {len(files)}")
+
+          results=[]
+          universe_size=0
+          symbols_scored=0
+          for path in files:
+              with open(path,encoding="utf-8") as f:
+                  data=json.load(f)
+              results.extend(data.get("results",[]))
+              universe_size+=int(data.get("universe_size",0))
+              symbols_scored+=int(data.get("symbols_scored",0))
+
+          results.sort(key=lambda x:x.get("score",0),reverse=True)
+          out={
+              "generated_at":datetime.now(timezone.utc).isoformat(),
+              "method":"daily supply-demand heuristic v3 broad-universe parallel-4",
+              "universe_size":universe_size,
+              "symbols_scored":symbols_scored,
+              "results":results,
+          }
+          os.makedirs("data",exist_ok=True)
+          with open("data/scan.json","w",encoding="utf-8") as f:
+              json.dump(out,f,indent=2)
+          print(f"Merged {symbols_scored} scored symbols from {universe_size} watchlist entries")
+          PY
+
       - name: Publish refreshed scan safely
         run: |
           cp data/scan.json /tmp/scan.json
