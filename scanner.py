@@ -100,6 +100,7 @@ def find_zones(df):
         supply_low=min(op,cl)
         demand_width=max(0.0,demand_high-lo)
         supply_width=max(0.0,hi-supply_low)
+        formed_at=pd.Timestamp(df.index[i]).date().isoformat()
 
         demand_break = future_high > prior_high + 0.05*av
         supply_break = future_low < prior_low - 0.05*av
@@ -111,7 +112,8 @@ def find_zones(df):
                 "low":lo,"high":demand_high,"i":i,
                 "departure_atr":round(up_move/av,2),
                 "width_atr":round(demand_width/av,2),
-                "structure_break":True
+                "structure_break":True,
+                "formed_at":formed_at
             }
             z["retests"],z["valid"]=zone_retests_and_validity(df,z,"demand")
             if z["valid"]: demand.append(z)
@@ -121,7 +123,8 @@ def find_zones(df):
                 "low":supply_low,"high":hi,"i":i,
                 "departure_atr":round(dn_move/av,2),
                 "width_atr":round(supply_width/av,2),
-                "structure_break":True
+                "structure_break":True,
+                "formed_at":formed_at
             }
             z["retests"],z["valid"]=zone_retests_and_validity(df,z,"supply")
             if z["valid"]: supply.append(z)
@@ -360,7 +363,7 @@ def main():
     results.sort(key=lambda x:x["score"],reverse=True)
     out={
       "generated_at":datetime.now(timezone.utc).isoformat(),
-      "method":"daily supply-demand heuristic v3.2 structure-validated zones",
+      "method":"daily supply-demand heuristic v3.3 dated structure-validated zones",
       "universe_size":len(WATCH),
       "symbols_scored":downloaded,
       "results":results
