@@ -223,7 +223,8 @@ def zones_overlap(dz, sz):
 def demand_bounce_state(df, zone, last_complete=None, pivots=None, lookback=7):
     result = {"status": "none", "bars_since_touch": None, "bounce_pct": None,
               "bounce_score": 0.0, "swing_high": None, "swing_high_at": None,
-              "swing_break_at": None, "detail": "No recent qualifying demand reaction"}
+              "confirmation_trigger": None, "swing_break_at": None,
+              "detail": "No recent qualifying demand reaction"}
     if not zone or len(df) < 3:
         return result
     if zone.get("wick_breached") or not zone.get("valid", True):
@@ -265,8 +266,10 @@ def demand_bounce_state(df, zone, last_complete=None, pivots=None, lookback=7):
     if not np.isfinite(av) or av <= 0:
         return result
     threshold = target["price"]+0.05*av
+    trigger = max(threshold, zone["high"])
+    result["confirmation_trigger"] = float(trigger)
     for j in range(first_touch+1, last_complete+1):
-        if cl[j] > max(threshold, zone["high"]) and cl[j-1] <= threshold:
+        if cl[j] > trigger and cl[j-1] <= threshold:
             # Do not keep confirmation after a recross back under the pivot.
             if np.all(cl[j:] > target["price"]) and cl[-1] > zone["high"]:
                 result.update(status="swing_break", bounce_score=85.0,
@@ -350,6 +353,7 @@ def score_row(df, now=None):
         "bounce_bars_since_touch": bounce["bars_since_touch"], "bounce_pct": bounce["bounce_pct"],
         "bounce_score": bounce["bounce_score"], "bounce_detail": bounce["detail"],
         "bounce_swing_high": bounce["swing_high"], "bounce_swing_high_at": bounce["swing_high_at"],
+        "bounce_confirmation_trigger": bounce["confirmation_trigger"],
         "bounce_break_at": bounce["swing_break_at"], "warnings": warnings, "reasons": reasons})
 
 
