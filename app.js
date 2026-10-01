@@ -121,9 +121,9 @@ async function fetchScan(){
   return await r.json();
 }
 
-async function load(){
+async function load({quiet=false}={}){
   lastLoadAt=Date.now();
-  updated.textContent=lastGeneratedAt?"Checking for newer market data…":"Loading latest scan…";
+  if(!quiet) updated.textContent=lastGeneratedAt?"Checking for newer market data…":"Loading latest scan…";
   try{
     const data=await fetchScan();
     rows=(data.results||[]).sort((a,b)=>b.score-a.score);
@@ -145,9 +145,9 @@ document.getElementById("filters").addEventListener("click",e=>{
 document.getElementById("refreshBtn").addEventListener("click",load);
 if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js",{updateViaCache:"none"}).then(reg=>reg.update()).catch(()=>{})}
 
-const AUTO_REFRESH_MS=60*1000;
-setInterval(()=>{if(document.visibilityState==="visible")load();},AUTO_REFRESH_MS);
+const AUTO_REFRESH_MS=15*1000;
+setInterval(()=>{if(document.visibilityState==="visible")load({quiet:true});},AUTO_REFRESH_MS);
 document.addEventListener("visibilitychange",()=>{
-  if(document.visibilityState==="visible"&&Date.now()-lastLoadAt>=AUTO_REFRESH_MS)load();
+  if(document.visibilityState==="visible"&&Date.now()-lastLoadAt>=AUTO_REFRESH_MS)load({quiet:true});
 });
 load();
