@@ -39,7 +39,7 @@ function render(){
   });
   if(activeFilter==="bounce") filtered.sort((a,b)=>(b.bounce_score||0)-(a.bounce_score||0)||b.score-a.score);
   else filtered.sort((a,b)=>b.score-a.score);
-  sectionHeading.textContent=activeFilter==="bounce"?"Demand zone bouncing":"Top setups";
+  sectionHeading.textContent=activeFilter==="bounce"?"Bullish reversals at demand":"Top setups";
   list.innerHTML="";
   filtered.forEach((r,i)=>{
     const n=tpl.content.cloneNode(true);
@@ -61,10 +61,10 @@ function render(){
     }
 
     const b=[];
-    if(r.demand_bounce==="confirmed")b.push(badge("Confirmed bounce","positive"));
-    else if(r.demand_bounce==="early")b.push(badge("Early bounce","positive"));
-    if(r.demand_distance_pct!=null&&r.demand_distance_pct<=1)b.push(badge("At demand","positive"));
-    else if(r.demand_distance_pct!=null&&r.demand_distance_pct<=3)b.push(badge("Near demand","positive"));
+    if(r.demand_bounce==="confirmed")b.push(badge("Confirmed bullish reversal","positive"));
+    else if(r.demand_bounce==="early")b.push(badge("Early bullish reversal","positive"));
+    if(r.demand_distance_pct!=null&&r.demand_distance_pct<=0.35)b.push(badge("At demand","positive"));
+    else if(r.demand_distance_pct!=null&&r.demand_distance_pct<=3)b.push(badge("Approaching demand","positive"));
     if(r.demand_retests===0)b.push(badge("Fresh zone","positive"));
     else if(r.demand_retests===1)b.push(badge("1 retest"));
     if(r.departure_atr>=1.8)b.push(badge("Strong departure","positive"));
@@ -83,7 +83,7 @@ function render(){
       '<span>Distance to demand: <b>'+demandDist+'</b></span>'+
       '<span>Supply zone: <b>'+zoneText(r.supply_zone)+'</b></span>'+
       '<span>Distance to supply: <b>'+supplyDist+'</b></span>'+
-      '<span>Bounce: <b>'+(r.demand_bounce&&r.demand_bounce!=="none"?(r.demand_bounce==="confirmed"?"Confirmed":"Early")+" • "+(r.bounce_pct==null?"—":pct(r.bounce_pct)):"—")+'</b></span>'+
+      '<span>Bullish reversal: <b>'+(r.demand_bounce&&r.demand_bounce!=="none"?(r.demand_bounce==="confirmed"?"Confirmed":"Early")+" reversal • "+(r.bounce_pct==null?"—":pct(r.bounce_pct)):"—")+'</b></span>'+
       '<span>Retests: <b>'+(r.demand_retests??"—")+'</b></span>'+
       '<span>Departure: <b>'+(r.departure_atr==null?"—":r.departure_atr.toFixed(1)+" ATR")+'</b></span>'+
       '<span>Weekly: <b>'+((r.weekly_trend||"mixed").replace(/^./,c=>c.toUpperCase()))+'</b></span></div>';
@@ -143,7 +143,7 @@ document.getElementById("filters").addEventListener("click",e=>{
   e.target.classList.add("active"); activeFilter=e.target.dataset.filter; render();
 });
 document.getElementById("refreshBtn").addEventListener("click",load);
-if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{})}
+if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js",{updateViaCache:"none"}).then(reg=>reg.update()).catch(()=>{})}
 
 const AUTO_REFRESH_MS=60*1000;
 setInterval(()=>{if(document.visibilityState==="visible")load();},AUTO_REFRESH_MS);
