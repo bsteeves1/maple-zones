@@ -17,9 +17,10 @@ function dcbo(){return row({symbol:'DCBO.TO',price:33.6,score:90,
   supply_zone:{low:39.35,high:40.08,valid:true,wick_breached:false,touch_bars:0,retests:0,
     formed_at:'2025-10-27'}});}
 const c=r=>R.classify(r,context);
-const early=()=>row({demand_bounce:'early',bounce_bars_since_touch:1});
+const early=()=>row({demand_bounce:'early',bounce_bars_since_touch:1,bounce_confirmation_trigger:101.2});
 const swing=()=>row({demand_bounce:'swing_break',bounce_bars_since_touch:2,
-  bounce_swing_high:99.5,bounce_swing_high_at:'2026-09-24',bounce_break_at:'2026-09-30'});
+  bounce_swing_high:99.5,bounce_swing_high_at:'2026-09-24',bounce_confirmation_trigger:99.75,
+  bounce_break_at:'2026-09-30'});
 
 test('DCBO screenshot: high quality remains watchlist-only at 14.55% from demand',()=>{
   const x=c(dcbo());assert.equal(x.state,'far_demand');assert.equal(x.qualityScore,90);
@@ -84,6 +85,10 @@ test('Below the lower demand boundary is excluded',()=>{
 });
 test('Provisional early bounce is explicitly unconfirmed',()=>{
   const x=c(early());assert.equal(x.state,'early_bounce');assert.match(x.detail,/provisional/);
+  assert.equal(x.confirmationTrigger,101.2);
+});
+test('Completed local break uses an explicit bullish reversal confirmed review label',()=>{
+  assert.equal(c(swing()).label,'Bullish reversal confirmed — review');
 });
 test('Untested demand cannot carry an early bounce',()=>{
   const r=early();r.demand_zone.touch_bars=0;assert.equal(c(r).state,'near_demand');
