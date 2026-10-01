@@ -1,5 +1,5 @@
 let rows=[];let activeFilter="all";
-const list=document.getElementById("list"),tpl=document.getElementById("rowTemplate"),search=document.getElementById("search"),count=document.getElementById("count"),empty=document.getElementById("empty"),updated=document.getElementById("updated");
+const list=document.getElementById("list"),tpl=document.getElementById("rowTemplate"),search=document.getElementById("search"),count=document.getElementById("count"),empty=document.getElementById("empty"),updated=document.getElementById("updated"),sectionHeading=document.getElementById("sectionHeading");
 
 const pct=v=>Number.isFinite(v)?(v>=0?"+":"")+v.toFixed(1)+"%":"—";
 const money=v=>Number.isFinite(v)?"$"+v.toFixed(v>=100?2:3):"—";
@@ -33,9 +33,13 @@ function render(){
     const text=(r.symbol+" "+r.name).toLowerCase();
     const nearDemand=r.demand_distance_pct!=null&&r.demand_distance_pct<=3;
     const fresh=r.demand_retests===0;
-    const typeOk=activeFilter==="all"||r.type===activeFilter||(activeFilter==="demand"&&nearDemand)||(activeFilter==="fresh"&&fresh);
+    const bouncing=r.demand_bounce==="early"||r.demand_bounce==="confirmed";
+    const typeOk=activeFilter==="all"||r.type===activeFilter||(activeFilter==="bounce"&&bouncing)||(activeFilter==="demand"&&nearDemand)||(activeFilter==="fresh"&&fresh);
     return typeOk&&text.includes(q);
   });
+  if(activeFilter==="bounce") filtered.sort((a,b)=>(b.bounce_score||0)-(a.bounce_score||0)||b.score-a.score);
+  else filtered.sort((a,b)=>b.score-a.score);
+  sectionHeading.textContent=activeFilter==="bounce"?"Demand zone bouncing":"Top setups";
   list.innerHTML="";
   filtered.forEach((r,i)=>{
     const n=tpl.content.cloneNode(true);
@@ -57,6 +61,8 @@ function render(){
     }
 
     const b=[];
+    if(r.demand_bounce==="confirmed")b.push(badge("Confirmed bounce","positive"));
+    else if(r.demand_bounce==="early")b.push(badge("Early bounce","positive"));
     if(r.demand_distance_pct!=null&&r.demand_distance_pct<=1)b.push(badge("At demand","positive"));
     else if(r.demand_distance_pct!=null&&r.demand_distance_pct<=3)b.push(badge("Near demand","positive"));
     if(r.demand_retests===0)b.push(badge("Fresh zone","positive"));
@@ -77,6 +83,7 @@ function render(){
       '<span>Distance to demand: <b>'+demandDist+'</b></span>'+
       '<span>Supply zone: <b>'+zoneText(r.supply_zone)+'</b></span>'+
       '<span>Distance to supply: <b>'+supplyDist+'</b></span>'+
+      '<span>Bounce: <b>'+(r.demand_bounce&&r.demand_bounce!=="none"?(r.demand_bounce==="confirmed"?"Confirmed":"Early")+" • "+(r.bounce_pct==null?"—":pct(r.bounce_pct)):"—")+'</b></span>'+
       '<span>Retests: <b>'+(r.demand_retests??"—")+'</b></span>'+
       '<span>Departure: <b>'+(r.departure_atr==null?"—":r.departure_atr.toFixed(1)+" ATR")+'</b></span>'+
       '<span>Weekly: <b>'+((r.weekly_trend||"mixed").replace(/^./,c=>c.toUpperCase()))+'</b></span></div>';
