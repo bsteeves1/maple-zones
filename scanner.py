@@ -107,7 +107,7 @@ def freshness_points(z):
     return -4
 
 def demand_bounce_state(df, zone, lookback=7):
-    """Detect a recent reaction upward after price traded into a valid demand zone."""
+    """Detect a bullish reversal after price trades into a valid demand zone."""
     if not zone or len(df)<3:
         return {"status":"none","bars_since_touch":None,"bounce_pct":None,"bounce_score":0.0}
 
@@ -134,9 +134,9 @@ def demand_bounce_state(df, zone, lookback=7):
     bullish_candle=price>op
 
     status="none"
-    if bars_since<=5 and above_zone and bounce_pct>=0.75 and (rising or bullish_candle):
+    if bars_since<=5 and above_zone and bounce_pct>=0.75 and rising and bullish_candle:
         status="confirmed"
-    elif bars_since<=3 and price>=float(zone["high"])*0.995 and bounce_pct>=0.25 and (rising or bullish_candle):
+    elif bars_since<=3 and price>=float(zone["low"]) and bounce_pct>=0.25 and (rising or bullish_candle):
         status="early"
 
     score=0.0
